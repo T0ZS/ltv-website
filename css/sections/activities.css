@@ -1,0 +1,339 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - HOMEPAGE ACTIVITIES SECTION
+ * File: css/sections/activities.css
+ * Spec: Editorial Premium Enhancement v3.0
+ * Direction: Student Life, Club Ecosystem & School Community Highlights
+ */
+
+.activities-section {
+  padding: var(--spacing-4xl) 0;
+  background:
+    radial-gradient(ellipse 65% 45% at 4% 12%, rgba(5, 150, 105, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 40% at 96% 88%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+    var(--bg-band-emerald, linear-gradient(180deg, #D1FAE5 0%, #ECFDF5 100%));
+  border-top: 1px solid #A7F3D0;
+  border-bottom: 2px solid #059669;
+  position: relative;
+}
+
+.activities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-3xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.activities-header-content {
+  max-width: 720px;
+}
+
+.activities-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.activities-lead {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 0;
+}
+
+/* 3-Card Magazine Grid */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.activity-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(5, 150, 105, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+              border-color var(--motion-timing-normal) var(--motion-ease-out);
+  /* LTV Motion v2.0: Invariant Visible-by-default */
+  opacity: 1;
+}
+
+.activity-card--azure {
+  background: var(--surface-card-ice, linear-gradient(145deg, #FFFFFF 0%, #EFF6FF 100%));
+  border: 1px solid #BAE6FD;
+}
+
+.activity-card--crimson {
+  background: var(--surface-card-rose, linear-gradient(145deg, #FFFFFF 0%, #FFE4E6 100%));
+  border: 1px solid #FECDD3;
+}
+
+.activity-card--amber {
+  background: var(--surface-card-gold, linear-gradient(145deg, #FFFFFF 0%, #FEF3C7 100%));
+  border: 1px solid #FDE68A;
+}
+
+/* LTV Editorial Premium Motion v2.0: Opacity-Only Reveal & Spatial Stagger */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .activity-card {
+      animation: ltvOpacityReveal var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      will-change: opacity;
+    }
+
+    .activity-card:nth-child(1) {
+      animation-range: entry 0% cover 25%;
+    }
+
+    .activity-card:nth-child(2) {
+      animation-range: entry 5% cover 30%;
+    }
+
+    .activity-card:nth-child(3) {
+      animation-range: entry 10% cover 35%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .activity-card {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+@media print {
+  .activity-card {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-primary-blue-light);
+}
+
+.activity-image-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-bg-muted);
+  overflow: hidden;
+}
+
+.activity-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s var(--motion-ease-out);
+}
+
+.activity-card:hover .activity-img {
+  transform: scale(1.045);
+}
+
+.activity-content {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.activity-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--spacing-xs);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  width: fit-content;
+}
+
+/* Azure / Blue Chip — Clubs & Academic Ecosystem */
+.activity-category--azure {
+  color: var(--color-primary-blue);
+  background-color: var(--color-primary-blue-wash);
+  border: 1px solid rgba(12, 59, 110, 0.22);
+}
+
+.activity-category--azure::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary-blue);
+}
+
+.activity-card--azure:hover {
+  border-color: rgba(12, 59, 110, 0.45);
+  box-shadow: 0 16px 36px rgba(12, 59, 110, 0.16), 0 0 24px rgba(2, 132, 199, 0.16);
+}
+
+/* Crimson / Red Chip — Athletics, Sports & Discipline */
+.activity-category--crimson {
+  color: var(--color-accent-red);
+  background-color: var(--color-accent-red-wash);
+  border: 1px solid rgba(192, 57, 43, 0.22);
+}
+
+.activity-category--crimson::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent-red);
+}
+
+.activity-card--crimson:hover {
+  border-color: rgba(192, 57, 43, 0.45);
+  box-shadow: 0 16px 36px rgba(192, 57, 43, 0.16), 0 0 24px rgba(192, 57, 43, 0.16);
+}
+
+/* Warm Amber / Gold Chip — School Festivals & Tradition */
+.activity-category--amber {
+  color: #B45309;
+  background-color: #FEF3C7;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.activity-category--amber::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #F59E0B;
+}
+
+.activity-card--amber:hover {
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 16px 36px rgba(212, 175, 55, 0.16), 0 0 24px rgba(245, 158, 11, 0.16);
+}
+
+.activity-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-heading);
+}
+
+.activity-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+/* Actions footer */
+.activities-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.activities-actions .btn-primary {
+  padding: var(--spacing-sm) var(--spacing-xl);
+  box-shadow: 0 4px 14px rgba(12, 59, 110, 0.2);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+              background-color var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.activities-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(12, 59, 110, 0.28);
+}
+
+.activities-actions .btn-outline {
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-width: 1.5px;
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              background-color var(--motion-timing-fast) var(--motion-ease-out),
+              color var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.activities-actions .btn-outline:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-primary-blue-wash);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .activities-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .activity-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .activities-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .activities-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .activity-card:last-child {
+    grid-column: span 1;
+  }
+
+  .activity-content {
+    padding: var(--spacing-lg);
+  }
+
+  .activities-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .activities-actions .btn {
+    width: 100%;
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,118 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - BASE RESET
+ * File: css/base/reset.css
+ * Spec: LTV Homepage Design Specification v1.0
+ *
+ * Normalize browser defaults, establish sensible resets.
+ * Preserve accessibility and browser usability.
+ */
+
+/* 1. Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Prevent font size inflation & smooth scrolling */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+/* 3. Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 4. Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+/* 5. Make images and media easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 7. Button resets */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 8. Textarea defaults */
+textarea {
+  resize: vertical;
+}
+
+/* 9. Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 10. Remove text decoration and color reset on links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 11. Focus — visible keyboard focus ring for accessibility */
+:focus-visible {
+  outline: var(--focus-ring-width, 2px) solid var(--focus-ring-color, #0C3B6E);
+  outline-offset: var(--focus-ring-offset, 2px);
+}
+
+/* Remove default outline for mouse/touch, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 12. Table defaults */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 13. Prevent horizontal overflow on root containers */
+html,
+body {
+  overflow-x: clip;
+}

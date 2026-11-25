@@ -1,0 +1,362 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - HOMEPAGE ACHIEVEMENTS SECTION
+ * File: css/sections/achievements.css
+ * Spec: Editorial Premium Enhancement v3.0
+ * Direction: Academic Distinction, Scientific Research Spotlight & Elevated Cards
+ */
+
+.achievements-section {
+  padding: var(--spacing-4xl) 0;
+  background:
+    radial-gradient(ellipse 65% 50% at 92% 8%, rgba(212, 175, 55, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 8% 92%, rgba(79, 70, 229, 0.10) 0%, transparent 60%),
+    var(--bg-band-indigo, linear-gradient(180deg, #E0E7FF 0%, #EEF2FF 100%));
+  border-top: 1px solid #C7D2FE;
+  border-bottom: 1px solid #C7D2FE;
+  position: relative;
+}
+
+.achievements-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto var(--spacing-3xl) auto;
+}
+
+.achievements-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.achievements-lead {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Spotlight Card: Nghiên cứu Khoa học Kỹ thuật Quốc gia with Tinted Ice Surface */
+.research-spotlight {
+  background: var(--surface-card-ice, linear-gradient(145deg, #FFFFFF 0%, #EFF6FF 100%));
+  border: 1px solid #C7D2FE;
+  border-left: 5px solid var(--color-accent-red);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out);
+}
+
+.research-spotlight:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.research-spotlight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.research-spotlight-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  line-height: var(--line-height-heading);
+  margin-top: var(--spacing-2xs);
+}
+
+.research-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.research-project-card {
+  background: linear-gradient(135deg, var(--color-bg-alt) 0%, rgba(248, 250, 252, 0.6) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              border-color var(--motion-timing-fast) var(--motion-ease-out),
+              box-shadow var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.research-project-card:hover {
+  border-color: var(--color-primary-blue-light);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Radiant Gold Spotlight Variant (National 1st Prize) with Tinted Gold Card */
+.research-project-card--gold {
+  background: var(--surface-card-gold, linear-gradient(145deg, #FFFFFF 0%, #FEF3C7 100%));
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-left: 4px solid var(--color-accent-gold, #D4AF37);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.15);
+}
+
+.research-project-card--gold:hover {
+  border-color: rgba(212, 175, 55, 0.75);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.28);
+  transform: translateY(-2px);
+}
+
+.research-project-card--gold .research-project-award {
+  color: #B45309;
+  background: var(--color-accent-gold-wash, #FEF3C7);
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  box-shadow: 0 1px 4px rgba(212, 175, 55, 0.15);
+}
+
+.research-project-card--gold .research-project-award::before {
+  content: "★";
+  color: #D4AF37;
+  font-size: 0.95em;
+}
+
+/* Brilliant Cobalt Spotlight Variant (National 3rd Prize) with Tinted Indigo Card */
+.research-project-card--cobalt {
+  background: var(--surface-card-indigo, linear-gradient(145deg, #FFFFFF 0%, #EEF2FF 100%));
+  border: 1px solid rgba(79, 70, 229, 0.45);
+  border-left: 4px solid var(--color-accent-indigo, #4F46E5);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.15);
+}
+
+.research-project-card--cobalt:hover {
+  border-color: rgba(79, 70, 229, 0.75);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.28);
+  transform: translateY(-2px);
+}
+
+.research-project-card--cobalt .research-project-award {
+  color: #0369A1;
+  background: var(--color-accent-cyan-wash, #E0F2FE);
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(2, 132, 199, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  box-shadow: 0 1px 4px rgba(2, 132, 199, 0.15);
+}
+
+.research-project-card--cobalt .research-project-award::before {
+  content: "✦";
+  color: #0284C7;
+  font-size: 0.95em;
+}
+
+.research-project-award {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-accent-red);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-2xs);
+}
+
+.research-project-name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-heading);
+}
+
+.research-project-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+  margin-bottom: 0;
+}
+
+/* Academic Distinction Cards Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.achievement-card {
+  background: var(--surface-card-ice, linear-gradient(145deg, #FFFFFF 0%, #EFF6FF 100%));
+  border: 1px solid #C7D2FE;
+  border-top: 3px solid var(--color-primary-blue);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+              border-top-color var(--motion-timing-fast) var(--motion-ease-out);
+  /* LTV Motion v2.0: Invariant Visible-by-default */
+  opacity: 1;
+}
+
+/* LTV Editorial Premium Motion v2.0: Opacity-Only Reveal & Spatial Stagger */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .achievement-card {
+      animation: ltvOpacityReveal var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      will-change: opacity;
+    }
+
+    .achievement-card:nth-child(1) {
+      animation-range: entry 0% cover 25%;
+    }
+
+    .achievement-card:nth-child(2) {
+      animation-range: entry 5% cover 30%;
+    }
+
+    .achievement-card:nth-child(3) {
+      animation-range: entry 10% cover 35%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achievement-card {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+@media print {
+  .achievement-card {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(12, 59, 110, 0.16), 0 0 24px rgba(212, 175, 55, 0.12);
+  border-top-color: var(--color-accent-gold, #D4AF37);
+}
+
+.achievement-badge {
+  margin-bottom: var(--spacing-md);
+  align-self: flex-start;
+}
+
+.achievement-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-heading);
+}
+
+.achievement-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+  flex-grow: 1;
+  margin-bottom: var(--spacing-md);
+}
+
+.achievement-stats-pill {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  background-color: var(--color-primary-blue-wash);
+  border: 1px solid rgba(12, 59, 110, 0.18);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
+}
+
+/* Editorial CTA Action */
+.achievements-actions {
+  text-align: center;
+}
+
+.achievements-actions .btn-primary {
+  padding: var(--spacing-sm) var(--spacing-2xl);
+  box-shadow: 0 4px 14px rgba(12, 59, 110, 0.2);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+              background-color var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.achievements-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(12, 59, 110, 0.28);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .achievements-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-card:last-child {
+    grid-column: span 2;
+  }
+
+  .research-projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .research-spotlight {
+    padding: var(--spacing-lg);
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .achievement-card:last-child {
+    grid-column: span 1;
+  }
+
+  .achievements-actions .btn {
+    width: 100%;
+    min-height: 44px;
+  }
+}

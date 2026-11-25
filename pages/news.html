@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Tin tức, sự kiện và các dấu ấn hoạt động tiêu biểu của Trường THPT Chuyên Lương Thế Vinh - Tỉnh Đồng Nai.">
+  <title>Tin Tức & Sự Kiện - THPT Chuyên Lương Thế Vinh</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo.jpg">
+
+  <!-- Master Stylesheet & News Page Stylesheet -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/news-page.css">
+</head>
+
+<body class="news-page">
+  <!-- Pure CSS Scroll Progress Bar -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Skip Link for Accessibility (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-masthead">
+        <div class="site-branding">
+          <a href="../index.html" class="site-brand-link">
+            <img src="../assets/images/logo.jpg" alt="Logo Trường THPT Chuyên Lương Thế Vinh" class="site-logo"
+              width="58" height="58">
+            <span class="site-title">THPT Chuyên Lương Thế Vinh</span>
+          </a>
+        </div>
+        <nav class="site-nav" aria-label="Điều hướng chính">
+          <!-- Desktop Navigation -->
+          <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+            <li><a href="about.html" class="nav-link">Giới thiệu</a></li>
+            <li><a href="news.html" class="nav-link active" aria-current="page">Tin tức</a></li>
+            <li><a href="academics.html" class="nav-link">Học tập</a></li>
+            <li><a href="student-life.html" class="nav-link">Hoạt động</a></li>
+            <li><a href="achievements.html" class="nav-link">Thành tích</a></li>
+          </ul>
+
+          <!-- Mobile Navigation Toggle -->
+          <details class="nav-mobile-toggle">
+            <summary class="nav-toggle-btn" aria-label="Mở menu điều hướng">
+              <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="nav-mobile-list">
+              <li><a href="../index.html" class="nav-mobile-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-mobile-link">Giới thiệu</a></li>
+              <li><a href="news.html" class="nav-mobile-link active" aria-current="page">Tin tức</a></li>
+              <li><a href="academics.html" class="nav-mobile-link">Học tập</a></li>
+              <li><a href="student-life.html" class="nav-mobile-link">Hoạt động</a></li>
+              <li><a href="achievements.html" class="nav-mobile-link">Thành tích</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-nav" aria-label="Đường dẫn trang">
+    <div class="page-container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Trang chủ</a></li>
+        <li class="breadcrumb-item" aria-current="page">Tin tức & Sự kiện</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Hero Banner (High-Contrast Immersive Crimson) -->
+  <header class="page-hero page-hero--crimson">
+    <div class="page-container">
+      <div class="page-hero__inner">
+        <span class="page-hero__eyebrow"><span class="status-pulse-dot status-pulse-dot--crimson" aria-hidden="true"></span> Dòng chảy học đường & Sự kiện</span>
+        <h1 class="page-hero__title motion-stagger-title">
+          Tin Tức & Sự Kiện
+        </h1>
+        <p class="page-hero__lead motion-stagger-lead">
+          Trung tâm thông tin tổng hợp các sự kiện truyền thống, dấu ấn học thuật, phong trào tự quản của học sinh
+          và hoạt động tiêu biểu của Trường THPT Chuyên Lương Thế Vinh — Đồng Nai.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Horizontal Subnav Bar for Fast Anchor Navigation -->
+  <nav class="page-subnav" aria-label="Điều hướng nhanh trang Tin tức & Sự kiện">
+    <div class="page-subnav__inner">
+      <span class="page-subnav__label" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+        Mục lục
+      </span>
+      <ul class="page-subnav__list">
+        <li><a href="#tin-tieu-diem" class="page-subnav__link">1. Tin tiêu điểm</a></li>
+        <li><a href="#su-kien-noi-bat" class="page-subnav__link">2. Sự kiện nổi bật</a></li>
+        <li><a href="#cot-moc-tieu-bieu" class="page-subnav__link">3. Cột mốc tiêu biểu</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Area: Balanced Full-Width Layout -->
+  <main id="main-content" class="page-content-wrapper">
+    <div class="page-container page-content--fullwidth">
+
+      <!-- Section 1: Featured News Highlight -->
+      <section id="tin-tieu-diem" class="news-page__featured section-band--warm motion-stagger-1" aria-label="Tin tiêu điểm trường học">
+        <div class="news-page__featured-media motion-stagger-img">
+          <img src="../assets/images/the-campus-during-monday-morning-school-assembly.jpg"
+            alt="Sân trường THPT Chuyên Lương Thế Vinh trong giờ chào cờ đầu tuần, ảnh tư liệu minh họa cho bài viết kỷ niệm 30 năm thành lập trường."
+            width="2048" height="622">
+        </div>
+        <div class="news-page__featured-content">
+          <div class="news-page__meta-row">
+            <span class="news-page__badge news-page__badge--gold"><span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span> Đại lễ 30 năm</span>
+            <span class="news-page__date">📅 Tháng 11/2024</span>
+          </div>
+          <h2 class="news-page__featured-title">
+            Đại Lễ Kỷ Niệm 30 Năm Ngày Thành Lập Trường THPT Chuyên Lương Thế Vinh (1994 – 2024)
+          </h2>
+          <p class="news-page__featured-lead">
+            Dấu mốc lịch sử ba thập kỷ ươm mầm tài năng của tỉnh Đồng Nai; dịp hội ngộ các thế hệ thầy cô giáo và cựu
+            học sinh;
+            tổng kết chặng đường phát triển rực rỡ và phát hành ấn phẩm Kỷ yếu 30 năm.
+          </p>
+          <ul class="news-page__featured-points">
+            <li class="news-page__featured-point">Ôn lại truyền thống vẻ vang từ lớp chuyên Toán thí điểm năm học
+              1982–1983 tại Trường PTTH Ngô Quyền.</li>
+            <li class="news-page__featured-point">Tri ân sâu sắc các Nhà giáo Ưu tú, cán bộ quản lý và giáo viên qua các
+              thế hệ đặt nền móng xây dựng trường.</li>
+            <li class="news-page__featured-point">Khẳng định vị thế trường THPT chuyên trọng điểm với thành tích xuất
+              sắc trong đào tạo nhân tài cho đất nước.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section Divider Prism Bar -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 2: Categories Bar (Static Labels) -->
+      <div class="news-page__categories-bar motion-stagger-2" aria-label="Danh mục chuyên đề">
+        <span class="news-page__categories-label">Chuyên đề:</span>
+        <span class="news-page__cat-pill news-page__cat-pill--active">Tất cả dấu ấn</span>
+        <span class="news-page__cat-pill">Thành tích học thuật</span>
+        <span class="news-page__cat-pill">Nghiên cứu KHKT</span>
+        <span class="news-page__cat-pill">Dấu ấn 30 năm</span>
+        <span class="news-page__cat-pill">Phong trào học sinh</span>
+      </div>
+
+      <!-- Section 3: News & Events Grid -->
+      <section id="su-kien-noi-bat" class="page-section section-band--cool">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--crimson">Bản tin học đường</span>
+          <h2 class="page-section__title motion-stagger-title">Sự Kiện & Dấu Ấn Hoạt Động Tiêu Biểu</h2>
+        </header>
+
+        <div class="news-page__grid">
+
+          <!-- News Card 1: 31 HSG Quốc gia (Academic - Full Row Flagship) -->
+          <article class="news-page__card news-page__card--blue motion-stagger-1">
+            <div class="news-page__card-media motion-stagger-img">
+              <img src="../assets/images/teachers-group.jpg"
+                alt="Tập thể thầy cô giáo bồi dưỡng các đội tuyển học sinh giỏi trường"
+                width="2048" height="1160"
+                loading="lazy">
+            </div>
+            <div class="news-page__card-body">
+              <div class="news-page__meta-row">
+                <span class="news-page__badge news-page__badge--blue"><span class="status-pulse-dot" style="background-color: var(--color-primary-blue-light);" aria-hidden="true"></span> Học thuật</span>
+                <span class="news-page__date">Năm học 2025–2026</span>
+              </div>
+              <h3 class="news-page__card-title">
+                THPT Chuyên Lương Thế Vinh Xuất Sắc Giành 31 Giải Kỳ Thi Học Sinh Giỏi Quốc Gia
+              </h3>
+              <p class="news-page__card-excerpt">
+                Đội tuyển học sinh giỏi tỉnh Đồng Nai do nhà trường bồi dưỡng ghi dấu ấn với 31 giải quốc gia
+                (gồm 8 giải Nhì, 9 giải Ba và 14 giải Khuyến khích) trên các bộ môn Toán, Tin học, Vật lý, Hóa học,
+                Sinh học, Ngữ văn và Tiếng Anh.
+              </p>
+              <div class="news-page__card-footer">
+                <span class="news-page__card-tag news-page__card-tag--blue">Học sinh giỏi Quốc gia</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Card 2: KHKT Quốc gia (Major Event - Red) -->
+          <article class="news-page__card news-page__card--red motion-stagger-2">
+            <div class="news-page__card-media motion-stagger-img">
+              <img src="../assets/images/school-hall.jpg"
+                alt="Hội trường sư phạm nơi diễn ra các lễ vinh danh thành tích học sinh" width="2048" height="1365"
+                loading="lazy">
+            </div>
+            <div class="news-page__card-body">
+              <div class="news-page__meta-row">
+                <span class="news-page__badge news-page__badge--red"><span class="status-pulse-dot status-pulse-dot--crimson" aria-hidden="true"></span> Khoa học kỹ thuật</span>
+                <span class="news-page__date">Năm học 2025–2026</span>
+              </div>
+              <h3 class="news-page__card-title">
+                Ghi Dấu Ấn Tại Cuộc Thi Khoa Học Kỹ Thuật Quốc Gia Với 2 Dự Án Đạt Giải
+              </h3>
+              <p class="news-page__card-excerpt">
+                Học sinh nhà trường khẳng định năng lực nghiên cứu ứng dụng thực tiễn với
+                Giải Nhất toàn quốc của Dự án Thiết Kế AcuIRpen và Giải Ba toàn quốc của Dự án Bloomind tại Cuộc thi
+                KHKT cấp Quốc gia.
+              </p>
+              <div class="news-page__card-footer">
+                <span class="news-page__card-tag news-page__card-tag--red">Bộ GD&ĐT khen thưởng</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Card 3: Trại hè Phương Nam (Major Event - Red) -->
+          <article class="news-page__card news-page__card--red motion-stagger-3">
+            <div class="news-page__card-media motion-stagger-img">
+              <img src="../assets/images/activity-school-field-aerial-01.jpg"
+                alt="Toàn cảnh sân trường và các hoạt động hội thao của học sinh" width="2048" height="1536"
+                loading="lazy">
+            </div>
+            <div class="news-page__card-body">
+              <div class="news-page__meta-row">
+                <span class="news-page__badge news-page__badge--red"><span class="status-pulse-dot status-pulse-dot--crimson" aria-hidden="true"></span> Đấu trường khu vực</span>
+                <span class="news-page__date">Năm 2026</span>
+              </div>
+              <h3 class="news-page__card-title">
+                Đoàn Học Sinh Chuyên Lương Thế Vinh Giành Giải Nhất Toàn Đoàn Trại Hè Phương Nam IX
+              </h3>
+              <p class="news-page__card-excerpt">
+                Tranh tài cùng các trường THPT chuyên hàng đầu khu vực phía Nam tại Trại hè Phương Nam lần thứ IX
+                năm 2026,
+                đội tuyển nhà trường xuất sắc dẫn đầu bảng xếp hạng huy chương, nối dài truyền thống học tập xuất
+                sắc.
+              </p>
+              <div class="news-page__card-footer">
+                <span class="news-page__card-tag news-page__card-tag--red">Olympic chuyên Phương Nam</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Card 4: Giải bóng đá 2024 (Youth/Culture - Emerald) -->
+          <article class="news-page__card news-page__card--emerald motion-stagger-4">
+            <div class="news-page__card-media motion-stagger-img">
+              <img src="../assets/images/football-tournament-2024.jpg"
+                alt="Pha tranh bóng quyết liệt tại Giải bóng đá học sinh LTV năm 2024" width="1080" height="1080"
+                loading="lazy">
+            </div>
+            <div class="news-page__card-body">
+              <div class="news-page__meta-row">
+                <span class="news-page__badge news-page__badge--emerald"><span class="status-pulse-dot" aria-hidden="true"></span> Phong trào thể thao</span>
+                <span class="news-page__date">Năm 2024</span>
+              </div>
+              <h3 class="news-page__card-title">
+                Sôi Nổi Giải Bóng Đá Học Sinh LTV Football Tournament Niên Khóa 2024
+              </h3>
+              <p class="news-page__card-excerpt">
+                Giải đấu bóng đá thường niên thu hút sự tham gia tranh tài của các khối chuyên trên sân cỏ nhà
+                trường,
+                tạo sân chơi rèn luyện sức khỏe, tinh thần bền bỉ và sự gắn kết đồng đội cho học sinh.
+              </p>
+              <div class="news-page__card-footer">
+                <span class="news-page__card-tag news-page__card-tag--emerald">Đoàn trường tổ chức</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Card 5: Văn nghệ & Hội xuân (Youth/Culture - Emerald) -->
+          <article class="news-page__card news-page__card--emerald motion-stagger-5">
+            <div class="news-page__card-media motion-stagger-img">
+              <img src="../assets/images/activity-30th-anniversary-student-group-01.jpg"
+                alt="Học sinh Chuyên Lương Thế Vinh rạng rỡ trong sự kiện học đường" width="2048" height="1340"
+                loading="lazy">
+            </div>
+            <div class="news-page__card-body">
+              <div class="news-page__meta-row">
+                <span class="news-page__badge news-page__badge--emerald"><span class="status-pulse-dot" aria-hidden="true"></span> Văn hóa học đường</span>
+                <span class="news-page__date">Thường niên</span>
+              </div>
+              <h3 class="news-page__card-title">
+                Đêm Văn Nghệ "Lương Thế Vinh Tôi Yêu" & Không Khí Rộn Ràng Của Hội Xuân Đón Tết
+              </h3>
+              <p class="news-page__card-excerpt">
+                Chuỗi hoạt động văn hóa học đường truyền thống do Đoàn trường tổ chức với các gian hàng ẩm thực dân
+                gian,
+                trò chơi tập thể và sân khấu biểu diễn âm nhạc đặc sắc, gắn kết các thế hệ học sinh chuyên.
+              </p>
+              <div class="news-page__card-footer">
+                <span class="news-page__card-tag news-page__card-tag--emerald">Hoạt động tự quản</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Card 6: Kỷ yếu 30 năm (Anniversary - Gold Feature Card) -->
+          <article class="news-page__card news-page__card--gold news-page__card--span2 motion-stagger-6">
+            <div class="news-page__card-media motion-stagger-img">
+              <img src="../assets/images/history-yearbook-2024-cover.jpg"
+                alt="Bìa cuốn Kỷ yếu 30 năm THPT Chuyên Lương Thế Vinh (1994 - 2024)" width="1464" height="2048"
+                loading="lazy">
+            </div>
+            <div class="news-page__card-body">
+              <div class="news-page__meta-row">
+                <span class="news-page__badge news-page__badge--gold"><span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span> ✦ Ấn phẩm truyền thống</span>
+                <span class="news-page__date">Tháng 11/2024</span>
+              </div>
+              <h3 class="news-page__card-title">
+                Xuất Bản Ấn Phẩm Kỷ Yếu 30 Năm "THPT Chuyên Lương Thế Vinh: Khát Vọng & Tự Hào"
+              </h3>
+              <p class="news-page__card-excerpt">
+                Cuốn sách lưu giữ những tư liệu lịch sử, bài viết tâm huyết và hình ảnh hoạt động suốt 30 năm xây
+                dựng,
+                phát triển của ngôi trường chuyên đầu tiên và duy nhất của tỉnh Đồng Nai.
+              </p>
+              <div class="news-page__card-footer">
+                <span class="news-page__card-tag news-page__card-tag--gold">Ban biên soạn Kỷ yếu</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Section Divider Prism Bar -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 4: Milestones Timeline (Dark Feature Band: Navy) -->
+      <section id="cot-moc-tieu-bieu" class="page-section section-band--navy">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--gold">Biên niên hoạt động</span>
+          <h2 class="page-section__title motion-stagger-title">Cột Mốc Tiêu Biểu & Dấu Ấn Lịch Sử</h2>
+        </header>
+
+        <div class="news-page__milestones">
+
+          <div class="news-page__milestone-item news-page__milestone-item--red motion-stagger-1">
+            <div class="news-page__milestone-date-col">
+              <div class="news-page__milestone-year">2026</div>
+              <div class="news-page__milestone-phase news-page__milestone-phase--red">Olympic & KHKT</div>
+            </div>
+            <div class="news-page__milestone-info">
+              <h3 class="news-page__milestone-title">Giải Nhất Toàn Đoàn Trại Hè Phương Nam IX & 2 Dự Án KHKT Quốc Gia</h3>
+              <p class="news-page__milestone-desc">
+                Tiếp tục dẫn đầu các trường chuyên khu vực phía Nam về thành tích Olympic và sáng tạo khoa học kỹ
+                thuật ứng dụng.
+              </p>
+            </div>
+          </div>
+
+          <div class="news-page__milestone-item news-page__milestone-item--blue motion-stagger-2">
+            <div class="news-page__milestone-date-col">
+              <div class="news-page__milestone-year">2025–2026</div>
+              <div class="news-page__milestone-phase news-page__milestone-phase--blue">HSG Quốc Gia</div>
+            </div>
+            <div class="news-page__milestone-info">
+              <h3 class="news-page__milestone-title">31 Giải Học Sinh Giỏi Quốc Gia & 442 Giải Học Sinh Giỏi Cấp Tỉnh</h3>
+              <p class="news-page__milestone-desc">
+                Khẳng định chất lượng bồi dưỡng mũi nhọn bền vững trên toàn bộ 7 khối môn chuyên truyền thống của
+                nhà trường.
+              </p>
+            </div>
+          </div>
+
+          <div class="news-page__milestone-item news-page__milestone-item--gold motion-stagger-3">
+            <div class="news-page__milestone-date-col">
+              <div class="news-page__milestone-year">11/2024</div>
+              <div class="news-page__milestone-phase news-page__milestone-phase--gold">Đại Lễ 30 Năm</div>
+            </div>
+            <div class="news-page__milestone-info">
+              <h3 class="news-page__milestone-title">Kỷ Niệm 30 Năm Ngày Thành Lập Trường (1994 – 2024)</h3>
+              <p class="news-page__milestone-desc">
+                Hội ngộ các thế hệ thầy trò qua 30 năm, tổng kết chặng đường ươm mầm tài năng và định hướng phát
+                triển giai đoạn mới.
+              </p>
+            </div>
+          </div>
+
+          <div class="news-page__milestone-item news-page__milestone-item--blue motion-stagger-4">
+            <div class="news-page__milestone-date-col">
+              <div class="news-page__milestone-year">1997–1998</div>
+              <div class="news-page__milestone-phase news-page__milestone-phase--blue">Khuôn Viên Riêng</div>
+            </div>
+            <div class="news-page__milestone-info">
+              <h3 class="news-page__milestone-title">Khánh Thành Cơ Sở Độc Lập 2,7 Hécta Tại Biên Hòa</h3>
+              <p class="news-page__milestone-desc">
+                Chuyển từ cơ sở mượn ban đầu tại Trường PTTH Ngô Quyền về khuôn viên sư phạm riêng biệt, tạo tiền đề
+                bứt phá toàn diện.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section Divider Prism Bar -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 5: Institutional Notice & Communication Channels -->
+      <section class="news-page__notice-block section-band--rose motion-stagger-1" aria-label="Thông báo và kênh tiếp nhận thông tin">
+        <div class="callout-box motion-stagger-1">
+          <div class="callout-box__header">
+            <h3 class="callout-box__title">Ghi chú về nguồn thông tin & Thông báo học đường</h3>
+          </div>
+          <p class="callout-box__content">
+            Chuyên trang Tin tức & Sự kiện này đóng vai trò lưu trữ và giới thiệu các cột mốc, sự kiện tiêu biểu và
+            thành tựu vàng son của Trường THPT Chuyên Lương Thế Vinh. Các thông báo hành chính định kỳ của Ban Giám hiệu,
+            thông tin thời khóa biểu và hoạt động tuần được nhà trường công bố chính thức qua hệ thống bảng tin và các văn
+            bản điều hành nội bộ.
+          </p>
+        </div>
+
+        <div class="news-page__channels-card motion-stagger-2">
+          <h3 class="news-page__channels-title">Kênh Tiếp Nhận & Điều Hành Thông Tin</h3>
+          <ul class="news-page__channels-list">
+            <li class="news-page__channel-item">
+              <span class="news-page__badge news-page__badge--blue"><span class="status-pulse-dot" style="background-color: var(--color-primary-blue-light);" aria-hidden="true"></span> Hành chính</span>
+              <div class="news-page__channel-desc">
+                <strong>Văn phòng trường:</strong> Tiếp nhận thông tin hành chính & văn bản chính thức
+              </div>
+            </li>
+            <li class="news-page__channel-item">
+              <span class="news-page__badge news-page__badge--emerald"><span class="status-pulse-dot" aria-hidden="true"></span> Phong trào</span>
+              <div class="news-page__channel-desc">
+                <strong>Đoàn trường:</strong> Tổ chức hoạt động thanh niên, phong trào tự quản & CLB
+              </div>
+            </li>
+            <li class="news-page__channel-item">
+              <span class="news-page__badge news-page__badge--gold"><span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span> Nội bộ</span>
+              <div class="news-page__channel-desc">
+                <strong>Bảng tin sư phạm:</strong> Lịch học tập, phân công chuyên môn & kế hoạch tuần
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Pathway CTA: Next Steps -->
+  <section class="page-pathway" aria-label="Khám phá tiếp theo">
+    <div class="page-container">
+      <div class="page-pathway__header">
+        <span class="page-pathway__eyebrow">Khám phá toàn diện</span>
+        <h2 class="page-pathway__title motion-stagger-title">Đồng Hành Cùng Nhịp Sống Chuyên Lương Thế Vinh</h2>
+      </div>
+      <div class="page-pathway__grid">
+        <a href="achievements.html" class="pathway-card motion-stagger-1">
+          <span class="pathway-card__tag">Thành tích học thuật</span>
+          <h3 class="pathway-card__title">Bảng Vàng Thành Tích</h3>
+          <p class="pathway-card__desc">Khám phá bề dày 31 giải HSG Quốc gia, 2 dự án KHKT xuất sắc và truyền thống
+            Olympic.</p>
+          <span class="pathway-card__link-text">Xem bảng vàng thành tích &rarr;</span>
+        </a>
+        <a href="student-life.html" class="pathway-card motion-stagger-2">
+          <span class="pathway-card__tag">Văn hóa học đường</span>
+          <h3 class="pathway-card__title">Đời Sống Học Sinh</h3>
+          <p class="pathway-card__desc">Tìm hiểu không gian sinh hoạt, ngày hội Hội Xuân và các hoạt động phong trào
+            thanh niên.</p>
+          <span class="pathway-card__link-text">Xem đời sống học sinh &rarr;</span>
+        </a>
+        <a href="academics.html" class="pathway-card motion-stagger-3">
+          <span class="pathway-card__tag">Đào tạo chuyên sâu</span>
+          <h3 class="pathway-card__title">Chương Trình Đào Tạo</h3>
+          <p class="pathway-card__desc">Tìm hiểu mô hình 7 khối chuyên mũi nhọn và đội ngũ các tổ bộ môn giàu tâm huyết.
+          </p>
+          <span class="pathway-card__link-text">Xem chương trình học &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">Trường THPT Chuyên Lương Thế Vinh</h3>
+          <p class="footer-desc">
+            Cơ sở giáo dục trung học phổ thông chuyên duy nhất của tỉnh Đồng Nai. Nơi ươm mầm tài năng, nuôi dưỡng trí
+            tuệ và khơi nguồn sáng tạo từ năm 1994.
+          </p>
+          <p class="footer-meta">
+            <strong>Địa chỉ:</strong> Số 2, đường Lê Quý Đôn, phường Tam Hiệp, thành phố Đồng Nai
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Khám phá Nhanh</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Giới thiệu & Lịch sử</a></li>
+            <li><a href="achievements.html">Bảng vàng Thành tích</a></li>
+            <li><a href="academics.html">Chương trình Đào tạo</a></li>
+            <li><a href="facilities.html">Cơ sở Vật chất</a></li>
+            <li><a href="admissions.html">Chỉ dẫn Tuyển sinh</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Kết nối & Hoạt động</h3>
+          <ul class="footer-links">
+            <li><a href="news.html">Tin tức & Sự kiện</a></li>
+            <li><a href="student-life.html">Đời sống Học đường</a></li>
+            <li><a href="activities.html">Câu lạc bộ & Phong trào</a></li>
+            <li><a href="contact.html">Liên hệ & Chỉ dẫn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Trường THPT Chuyên Lương Thế Vinh - Đồng Nai. Tất cả quyền được bảo lưu.</p>
+        <p class="footer-source-note">Website biên tập từ tư liệu lịch sử chính thức của nhà trường.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - HOMEPAGE STATS SECTION
+ * File: css/sections/stats.css
+ * Spec: Editorial Premium Enhancement v3.0
+ * Direction: Deep Navy Feature Section with Monumental Typography & Verified Figures
+ */
+
+.stats-section {
+  position: relative;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 55% at 85% 100%, rgba(192, 57, 43, 0.16) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(26, 91, 156, 0.35) 0%, transparent 70%),
+    linear-gradient(155deg, #072140 0%, #0C3B6E 55%, #08284C 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: var(--spacing-4xl) 0;
+  color: var(--color-text-inverse);
+  overflow: hidden;
+}
+
+/* Subtle decorative radial glow */
+.stats-section::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(79, 70, 229, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.stats-header {
+  position: relative;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto var(--spacing-3xl) auto;
+  z-index: 1;
+}
+
+.stats-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-inverse);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.stats-subtitle {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: var(--line-height-body);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+  z-index: 1;
+}
+
+.stat-item {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 3px solid var(--color-accent-red);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+              background-color var(--motion-timing-normal) var(--motion-ease-out),
+              border-color var(--motion-timing-normal) var(--motion-ease-out);
+  /* LTV Motion v2.0: Invariant Visible-by-default */
+  opacity: 1;
+}
+
+/* Chromatic Glowing Variants */
+.stat-item--gold {
+  border-top: 3px solid var(--color-accent-gold, #D4AF37);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), 0 0 24px rgba(212, 175, 55, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.stat-item--gold:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 32px rgba(212, 175, 55, 0.25);
+}
+
+.stat-item--red {
+  border-top: 3px solid var(--color-accent-red, #C0392B);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), 0 0 24px rgba(192, 57, 43, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.stat-item--red:hover {
+  border-color: rgba(231, 76, 60, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 32px rgba(192, 57, 43, 0.28);
+}
+
+.stat-item--cyan {
+  border-top: 3px solid var(--color-accent-cyan, #0284C7);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), 0 0 24px rgba(2, 132, 199, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.stat-item--cyan:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 32px rgba(2, 132, 199, 0.28);
+}
+
+.stat-item--emerald {
+  border-top: 3px solid var(--color-accent-emerald, #059669);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), 0 0 24px rgba(5, 150, 105, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.stat-item--emerald:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 32px rgba(5, 150, 105, 0.28);
+}
+
+/* Stat Badge Chips */
+.stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-badge--gold {
+  color: #FEF3C7;
+  background: rgba(212, 175, 55, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.stat-badge--red {
+  color: #FEE2E2;
+  background: rgba(192, 57, 43, 0.24);
+  border: 1px solid rgba(192, 57, 43, 0.45);
+}
+
+.stat-badge--cyan {
+  color: #E0F2FE;
+  background: rgba(2, 132, 199, 0.24);
+  border: 1px solid rgba(2, 132, 199, 0.45);
+}
+
+.stat-badge--emerald {
+  color: #D1FAE5;
+  background: rgba(5, 150, 105, 0.24);
+  border: 1px solid rgba(5, 150, 105, 0.45);
+}
+
+/* LTV Editorial Premium Motion v2.0: Opacity-Only Reveal & Spatial Stagger */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .stat-item {
+      animation: ltvOpacityReveal var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      will-change: opacity;
+    }
+
+    .stat-item:nth-child(1) {
+      animation-range: entry 0% cover 25%;
+    }
+
+    .stat-item:nth-child(2) {
+      animation-range: entry 5% cover 30%;
+    }
+
+    .stat-item:nth-child(3) {
+      animation-range: entry 10% cover 35%;
+    }
+
+    .stat-item:nth-child(4) {
+      animation-range: entry 15% cover 40%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-item {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+@media print {
+  .stat-item {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+.stat-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38);
+}
+
+/* Monumental Typography for verified statistics */
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 3.75rem;
+  font-weight: var(--font-weight-extrabold);
+  color: #FFFFFF;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin-bottom: var(--spacing-xs);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: #E2E8F0;
+  margin-bottom: var(--spacing-2xs);
+  letter-spacing: 0.01em;
+}
+
+.stat-note {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: var(--line-height-body);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .stat-number {
+    font-size: 3.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .stats-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .stats-subtitle {
+    font-size: var(--font-size-sm);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .stat-item {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+}

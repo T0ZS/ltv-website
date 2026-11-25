@@ -1,0 +1,5 @@
+# Robots.txt for THPT Chuyen Luong The Vinh - Dong Nai
+User-agent: *
+Allow: /
+
+Sitemap: https://chuyenluongthevinh.edu.vn/sitemap.xml

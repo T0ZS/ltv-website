@@ -1,0 +1,1052 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - ACHIEVEMENTS PAGE STYLESHEET
+ * File: css/pages/achievements-page.css
+ * Architecture: Modular Page-Specific Stylesheet
+ * Direction: Phase 23 Deep Chromatic Overhaul | Golden Hall of Fame | Anti-White Architecture
+ * Invariant: Strictly 0 JavaScript, Pure CSS3
+ */
+
+/* =====================================================
+   0. GOLDEN HALL OF FAME CHROMATIC VARIABLES & TOKENS
+   ===================================================== */
+:root {
+  --color-accent-gold: #D4AF37;
+  --color-accent-gold-light: #F59E0B;
+  --color-accent-gold-dark: #B45309;
+  --color-accent-gold-wash: #FFFBEB;
+  --color-accent-gold-subtle: #FEF3C7;
+  --color-accent-gold-border: #FCD34D;
+  --color-accent-gold-glow: rgba(212, 175, 55, 0.35);
+  --color-accent-silver: #64748B;
+  --color-accent-silver-wash: #F8FAFC;
+  --color-accent-silver-border: #CBD5E1;
+  --color-accent-bronze: #C2410C;
+  --color-accent-bronze-wash: #FFF7ED;
+  --color-accent-bronze-border: #FDBA74;
+
+  --color-bg-hall-mesh: radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.12) 0px, transparent 50%),
+                        radial-gradient(at 100% 5%, rgba(12, 59, 110, 0.10) 0px, transparent 50%),
+                        radial-gradient(at 50% 50%, rgba(245, 158, 11, 0.08) 0px, transparent 60%),
+                        radial-gradient(at 20% 95%, rgba(192, 57, 43, 0.06) 0px, transparent 50%);
+  --gradient-gold-badge: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  --gradient-gold-card: linear-gradient(180deg, #FFFFFF 0%, #FFFDF5 60%, #FEF9E7 100%);
+  --gradient-navy-gold: linear-gradient(135deg, #072140 0%, #0C3B6E 70%, #153E75 100%);
+}
+
+/* Page Canvas Background: Anti-White Rich Atmosphere */
+.achievement-page .page-content-wrapper {
+  background-color: var(--color-bg-canvas, #E6EDF6);
+  background-image: var(--color-bg-hall-mesh);
+  background-attachment: local;
+}
+
+/* Section Band Architecture in Achievements */
+.achievement-page .page-section {
+  scroll-margin-top: 140px;
+  border-radius: var(--radius-lg, 16px);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  box-shadow: 0 6px 24px rgba(12, 59, 110, 0.08);
+  position: relative;
+}
+
+/* =====================================================
+   1. STATS BANNER / METRICS STRIP (GOLDEN HALL OF FAME)
+   ===================================================== */
+.achievement-page__metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  background: var(--gradient-gold-card);
+  border: 2px solid var(--color-accent-gold-border);
+  border-radius: var(--radius-lg, 16px);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.22),
+              0 4px 12px -2px rgba(12, 59, 110, 0.08),
+              var(--glow-gold, 0 0 25px rgba(212, 175, 55, 0.2));
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-page__metrics-strip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0C3B6E 0%, #D4AF37 35%, #F59E0B 70%, #C0392B 100%);
+}
+
+.achievement-page__metric-item {
+  text-align: center;
+  border-right: 1px solid rgba(212, 175, 55, 0.35);
+  padding: var(--spacing-xs) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
+}
+
+.achievement-page__metric-item:hover {
+  transform: translateY(-3px);
+}
+
+.achievement-page__metric-item:last-child {
+  border-right: none;
+}
+
+.achievement-page__metric-item--gold {
+  background: rgba(254, 243, 199, 0.65);
+  border-radius: var(--radius-md, 10px);
+  border: 1.5px solid rgba(245, 158, 11, 0.55);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.28);
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
+.achievement-page__metric-item--gold:hover {
+  box-shadow: var(--shadow-card-hover-gold, 0 16px 36px -6px rgba(212, 175, 55, 0.35));
+}
+
+.achievement-page__metric-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background-color: #FDE68A !important;
+  background-image: var(--gradient-gold-badge) !important;
+  color: #78350F !important;
+  border: 1px solid #F59E0B;
+  margin-bottom: var(--spacing-2xs);
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.25);
+}
+
+.achievement-page__metric-icon {
+  color: var(--color-primary-blue);
+  margin-bottom: var(--spacing-2xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.achievement-page__metric-item:hover .achievement-page__metric-icon {
+  transform: scale(1.12);
+}
+
+.achievement-page__metric-icon--gold {
+  color: var(--color-accent-gold-dark);
+}
+
+.achievement-page__metric-number {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-2xs);
+  letter-spacing: -0.03em;
+}
+
+.achievement-page__metric-number--gold {
+  color: #B45309;
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.5);
+}
+
+.achievement-page__metric-number--provincial {
+  color: var(--color-accent-red);
+}
+
+.achievement-page__metric-number--accent {
+  color: var(--color-accent-gold-dark);
+}
+
+.achievement-page__metric-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--spacing-2xs);
+}
+
+.achievement-page__metric-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   2. DATA TABLES & HONOR ROLLS
+   ===================================================== */
+.achievement-page__table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--spacing-xl) 0 var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg, 12px);
+  background-color: #FFFFFF;
+  box-shadow: 0 6px 24px rgba(12, 59, 110, 0.08);
+}
+
+.achievement-page__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+
+.achievement-page__table th {
+  background: var(--gradient-navy-gold);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 3px solid var(--color-accent-gold);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.achievement-page__table td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text-secondary);
+  vertical-align: middle;
+}
+
+.achievement-page__table tr:last-child td {
+  border-bottom: none;
+}
+
+.achievement-page__table tr:hover td {
+  background-color: rgba(254, 243, 199, 0.4);
+}
+
+.achievement-page__row--spotlight td {
+  background: linear-gradient(90deg, rgba(254, 243, 199, 0.7) 0%, rgba(255, 251, 235, 0.4) 100%);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-accent-gold-border);
+}
+
+.achievement-page__row--spotlight:hover td {
+  background: linear-gradient(90deg, rgba(254, 243, 199, 0.85) 0%, rgba(255, 251, 235, 0.55) 100%);
+}
+
+.achievement-page__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.achievement-page__badge--gold {
+  background-color: #FDE68A !important;
+  background-image: var(--gradient-gold-badge) !important;
+  color: #78350F !important;
+  border: 1px solid #F59E0B;
+  box-shadow: 0 2px 6px rgba(212, 175, 55, 0.2);
+}
+
+.achievement-page__badge--gold-shine {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FCD34D 60%, #F59E0B 100%);
+  color: #78350F;
+  border: 1.5px solid #D4AF37;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.45);
+  font-size: 0.875rem;
+  padding: 5px 14px;
+}
+
+.achievement-page__badge--gold-shine svg {
+  color: #B45309;
+}
+
+.achievement-page__chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.achievement-page__chip--gold {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+}
+
+/* =====================================================
+   3. RESEARCH SPOTLIGHT (Khoa học Kỹ thuật)
+   ===================================================== */
+.achievement-page__spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+.achievement-page__spotlight-card {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg, 14px);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(12, 59, 110, 0.08);
+  transition: transform var(--transition-normal, 0.25s ease),
+              box-shadow var(--transition-normal, 0.25s ease);
+}
+
+.achievement-page__spotlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-page__spotlight-card--gold {
+  border-top: 5px solid var(--color-accent-gold);
+  border-color: var(--color-accent-gold-border);
+  background: var(--surface-card-gold, linear-gradient(145deg, #FFFFFF 0%, #FEF3C7 100%));
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+}
+
+.achievement-page__spotlight-card--gold:hover {
+  box-shadow: var(--shadow-card-hover-gold, 0 16px 36px -6px rgba(212, 175, 55, 0.35));
+}
+
+.achievement-page__spotlight-card--azure {
+  border-top: 5px solid #0284C7;
+  border-color: #BAE6FD;
+  background: var(--surface-card-ice, linear-gradient(145deg, #FFFFFF 0%, #EFF6FF 100%));
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.16);
+}
+
+.achievement-page__spotlight-card--azure:hover {
+  box-shadow: var(--shadow-card-hover-cyan, 0 16px 36px -6px rgba(2, 132, 199, 0.3));
+}
+
+.achievement-page__spotlight-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.achievement-page__spotlight-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.achievement-page__spotlight-award--gold {
+  background-color: #FDE68A !important;
+  background-image: var(--gradient-gold-badge) !important;
+  color: #78350F !important;
+  border: 1px solid #F59E0B;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+}
+
+.achievement-page__spotlight-award--azure {
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #7DD3FC;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2);
+}
+
+.achievement-page__spotlight-category {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+}
+
+.achievement-page__spotlight-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-heading);
+}
+
+.achievement-page__spotlight-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+  margin: 0 0 var(--spacing-md);
+  flex-grow: 1;
+}
+
+.achievement-page__spotlight-footer {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--spacing-sm);
+  margin-top: auto;
+}
+
+.achievement-page__spotlight-meta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* =====================================================
+   4. OLYMPIC ARENA (DARK FEATURE BAND: .section-band--navy)
+   ===================================================== */
+.achievement-page__arena-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+/* High-Contrast Frosted Dark-Glass Cards in Navy Band */
+.section-band--navy .achievement-page__arena-card {
+  background: var(--surface-card-dark-glass, rgba(7, 33, 64, 0.88)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: var(--radius-lg, 14px);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal, 0.25s ease),
+              box-shadow var(--transition-normal, 0.25s ease);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.section-band--navy .achievement-page__arena-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.section-band--navy .achievement-page__arena-card--featured {
+  border-left: 5px solid var(--color-accent-gold) !important;
+  border-color: rgba(253, 230, 138, 0.45) !important;
+}
+
+.section-band--navy .achievement-page__arena-title {
+  color: #FFFFFF !important;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.section-band--navy .achievement-page__arena-desc {
+  color: #E2E8F0 !important;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  margin: 0 0 var(--spacing-md);
+  flex-grow: 1;
+}
+
+.section-band--navy .achievement-page__arena-desc strong {
+  color: #FDE68A !important;
+}
+
+.section-band--navy .achievement-page__arena-year {
+  color: #FDE68A !important;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.achievement-page__arena-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.achievement-page__arena-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.achievement-page__arena-tag--gold {
+  background-color: #FDE68A !important;
+  background-image: var(--gradient-gold-badge) !important;
+  color: #78350F !important;
+  border: 1px solid #F59E0B;
+}
+
+.achievement-page__arena-tag--blue {
+  background: rgba(12, 59, 110, 0.6);
+  color: #93C5FD;
+  border: 1px solid rgba(147, 197, 253, 0.4);
+}
+
+.achievement-page__medals-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: auto;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.achievement-page__medal-chip {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #F1F5F9;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievement-page__medal-chip--gold {
+  background: #FEF3C7;
+  color: #78350F;
+  border: 1px solid #F59E0B;
+}
+
+.achievement-page__medal-chip--silver {
+  background: #F1F5F9;
+  color: #334155;
+  border: 1px solid #CBD5E1;
+}
+
+.achievement-page__medal-chip--bronze {
+  background: #FFEDD5;
+  color: #9A3412;
+  border: 1px solid #FDBA74;
+}
+
+/* =====================================================
+   5. PROVINCIAL PODIUM GRID (HSG TỈNH - 442 GIẢI)
+   ===================================================== */
+.achievement-page__podium-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.achievement-page__podium-card {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg, 14px);
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(12, 59, 110, 0.08);
+  transition: transform var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
+}
+
+.achievement-page__podium-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-page__podium-card--gold {
+  background: var(--surface-card-gold, linear-gradient(145deg, #FFFFFF 0%, #FEF3C7 100%));
+  border: 2px solid var(--color-accent-gold-border);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
+}
+
+.achievement-page__podium-card--gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #F59E0B 0%, #D4AF37 100%);
+}
+
+.achievement-page__podium-card--gold:hover {
+  box-shadow: var(--shadow-card-hover-gold, 0 16px 36px -6px rgba(212, 175, 55, 0.4));
+}
+
+.achievement-page__podium-card--silver {
+  background: var(--surface-card-ice, linear-gradient(145deg, #FFFFFF 0%, #EFF6FF 100%));
+  border-top: 5px solid var(--color-accent-silver);
+  border-color: #CBD5E1;
+}
+
+.achievement-page__podium-card--silver:hover {
+  box-shadow: 0 14px 30px -4px rgba(100, 116, 139, 0.25);
+}
+
+.achievement-page__podium-card--bronze {
+  background: var(--surface-card-rose, linear-gradient(145deg, #FFFFFF 0%, #FFE4E6 100%));
+  border-top: 5px solid var(--color-accent-bronze);
+  border-color: #FDBA74;
+}
+
+.achievement-page__podium-card--bronze:hover {
+  box-shadow: 0 14px 30px -4px rgba(194, 65, 12, 0.25);
+}
+
+.achievement-page__podium-card--distinction {
+  background: var(--surface-card-emerald, linear-gradient(145deg, #FFFFFF 0%, #D1FAE5 100%));
+  border-top: 5px solid var(--color-primary-blue);
+  border-color: #A7F3D0;
+}
+
+.achievement-page__podium-card--distinction:hover {
+  box-shadow: var(--shadow-card-hover-cyan, 0 14px 30px -4px rgba(2, 132, 199, 0.25));
+}
+
+.achievement-page__podium-number {
+  font-family: var(--font-heading);
+  font-size: 2.85rem;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
+  margin-bottom: var(--spacing-2xs);
+  letter-spacing: -0.03em;
+}
+
+.achievement-page__podium-number--gold {
+  color: #B45309;
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.45);
+}
+
+.achievement-page__podium-number--silver {
+  color: #334155;
+}
+
+.achievement-page__podium-number--bronze {
+  color: #C2410C;
+}
+
+.achievement-page__podium-number--distinction {
+  color: var(--color-primary-blue-dark);
+}
+
+.achievement-page__podium-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.achievement-page__podium-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =====================================================
+   6. STATE ORDERS & ACCOLADES (DARK FEATURE BAND: .section-band--crimson)
+   ===================================================== */
+.achievement-page__order-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.section-band--crimson .achievement-page__order-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(69, 10, 10, 0.85) !important;
+  border: 1px solid rgba(254, 226, 226, 0.25) !important;
+  border-radius: var(--radius-md, 10px);
+  align-items: center;
+  transition: transform var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
+}
+
+.section-band--crimson .achievement-page__order-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.section-band--crimson .achievement-page__order-item--gold {
+  border-left: 5px solid var(--color-accent-gold) !important;
+  border-color: rgba(253, 230, 138, 0.5) !important;
+  background: rgba(85, 12, 12, 0.95) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+}
+
+.section-band--crimson .achievement-page__order-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-extrabold);
+  font-size: 0.875rem;
+  background: rgba(254, 226, 226, 0.2) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(254, 226, 226, 0.4) !important;
+  text-align: center;
+}
+
+.section-band--crimson .achievement-page__order-badge--gold {
+  background-color: #FDE68A !important;
+  background-image: var(--gradient-gold-badge) !important;
+  color: #78350F !important;
+  border: 1px solid #F59E0B !important;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.35);
+}
+
+.section-band--crimson .achievement-page__order-title {
+  font-size: var(--font-size-sm);
+  color: #FEE2E2 !important;
+  margin: 0;
+  line-height: var(--line-height-body);
+}
+
+.section-band--crimson .achievement-page__order-title strong {
+  color: #FFFFFF !important;
+}
+
+.section-band--crimson .achievement-page__order-item--gold .achievement-page__order-title strong {
+  color: #FDE68A !important;
+}
+
+/* Historic Visit Box inside Crimson Band */
+.section-band--crimson .achievement-page__historic-box {
+  background: linear-gradient(135deg, #071A2F 0%, #0C3B6E 100%) !important;
+  border-left: 5px solid var(--color-accent-gold) !important;
+  border: 1px solid rgba(253, 230, 138, 0.5) !important;
+  border-left-width: 5px !important;
+  border-radius: var(--radius-lg, 14px);
+  padding: var(--spacing-xl);
+  color: #FFFFFF !important;
+  margin: var(--spacing-xl) 0 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45),
+              var(--glow-gold, 0 0 25px rgba(212, 175, 55, 0.25));
+}
+
+.achievement-page__historic-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.achievement-page__historic-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background-color: #FDE68A !important;
+  background-image: var(--gradient-gold-badge) !important;
+  color: #78350F !important;
+  border: 1px solid #F59E0B;
+}
+
+.achievement-page__historic-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: #FCD34D !important;
+  margin: 0;
+}
+
+.achievement-page__historic-content {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.95) !important;
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.achievement-page__historic-content strong {
+  color: #FFFFFF !important;
+}
+
+/* =====================================================
+   7. DISTINGUISHED EDUCATORS & NOTABLE ALUMNI GRID
+   ===================================================== */
+.achievement-page__figure-wrapper {
+  margin: var(--spacing-xl) 0;
+  border: 2px solid var(--color-accent-gold-border);
+  border-radius: var(--radius-lg, 14px);
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(12, 59, 110, 0.12),
+              0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.achievement-page__figure-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.achievement-page__figure-caption {
+  background: #FFFFFF;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.achievement-page__people-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.achievement-page__person-card {
+  background-color: var(--surface-card-ice, linear-gradient(145deg, #FFFFFF 0%, #EFF6FF 100%));
+  border: 1.5px solid #BFDBFE;
+  border-top: 4px solid var(--color-primary-blue);
+  border-radius: var(--radius-md, 10px);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(12, 59, 110, 0.06);
+  transition: transform var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
+}
+
+.achievement-page__person-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px -2px rgba(12, 59, 110, 0.16);
+}
+
+.achievement-page__person-card--gold {
+  border-top-color: var(--color-accent-gold);
+  background: var(--surface-card-gold, linear-gradient(145deg, #FFFFFF 0%, #FEF3C7 100%));
+  border-color: var(--color-accent-gold-border);
+}
+
+.achievement-page__person-card--gold:hover {
+  box-shadow: var(--shadow-card-hover-gold, 0 14px 30px -4px rgba(212, 175, 55, 0.3));
+}
+
+.achievement-page__person-name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-2xs);
+  line-height: 1.3;
+}
+
+.achievement-page__person-role {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-red);
+  margin-bottom: var(--spacing-xs);
+}
+
+.achievement-page__person-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.achievement-page__alumni-intro {
+  margin-top: var(--spacing-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.achievement-page__alumni-heading {
+  font-family: var(--font-heading);
+  color: var(--color-primary-blue-dark);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2xs);
+}
+
+/* Heritage Scholarship Banner */
+.achievement-page__scholarship-banner {
+  background: var(--surface-card-gold, linear-gradient(135deg, #FFFDF5 0%, #FEF9E7 50%, #FFFBEB 100%));
+  border: 1.5px solid var(--color-accent-gold-border);
+  border-left: 6px solid var(--color-accent-gold);
+  border-radius: var(--radius-lg, 14px);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) 0 0;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2),
+              var(--glow-gold, 0 0 25px rgba(212, 175, 55, 0.15));
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.achievement-page__scholarship-icon {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-full, 9999px);
+  background: var(--gradient-gold-badge);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #78350F;
+  border: 2px solid #F59E0B;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+.achievement-page__scholarship-content {
+  flex-grow: 1;
+}
+
+.achievement-page__scholarship-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+  margin-bottom: var(--spacing-2xs);
+}
+
+.achievement-page__scholarship-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin: 0 0 var(--spacing-2xs);
+}
+
+.achievement-page__scholarship-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+/* =====================================================
+   8. RESPONSIVE ADAPTATIONS & OVERFLOW PREVENTION
+   ===================================================== */
+@media (max-width: 1200px) {
+  .achievement-page__people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .achievement-page .page-section {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .achievement-page__metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .achievement-page__metric-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .achievement-page__podium-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-page__spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-page__arena-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievement-page .page-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .achievement-page__metrics-strip {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .achievement-page__metric-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .achievement-page__metric-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .section-band--crimson .achievement-page__order-item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+  }
+
+  .section-band--crimson .achievement-page__order-badge {
+    align-self: flex-start;
+  }
+
+  .achievement-page__scholarship-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .achievement-page__people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-page__podium-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievement-page__metric-number {
+    font-size: 2.1rem;
+  }
+
+  .achievement-page__podium-number {
+    font-size: 2.3rem;
+  }
+}

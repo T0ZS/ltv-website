@@ -1,0 +1,51 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - BADGES & LABELS
+ * File: css/components/badges.css
+ * Spec: LTV Homepage Design Specification v1.0
+ * Direction: Academic Badges, Year Tags & Achievement Labels
+ */
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: var(--line-height-tight);
+}
+
+/* Primary Blue Badge */
+.badge-primary {
+  background-color: var(--color-primary-blue-wash);
+  color: var(--color-primary-blue);
+  border: 1px solid var(--color-border);
+}
+
+/* Accent Red Badge */
+.badge-accent {
+  background-color: var(--color-accent-red-wash);
+  color: var(--color-accent-red);
+  border: 1px solid var(--color-border);
+}
+
+/* Neutral / Muted Badge */
+.badge-muted {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+/* Year Pill (for statistics and timeline accuracy) */
+.badge-year {
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  border-radius: var(--radius-pill);
+}

@@ -1,0 +1,530 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - SHARED MOTION INFRASTRUCTURE
+ * File: css/base/motion.css
+ * Spec: LTV Editorial Premium Motion Design System v2.0 (Phase 22 Immersive Motion)
+ * Architecture: Pure Modular CSS3 without preprocessors or build tools
+ * Mode: Shared Infrastructure (Reusable Tokens, Keyframes, Utility Classes)
+ *
+ * Principles:
+ * 1. Visible-by-default Invariant: Base CSS guarantees 100% visibility.
+ * 2. Progressive Enhancement: Scroll timelines activate ONLY inside @supports (animation-timeline: view()).
+ * 3. Safe Fill-Mode: No 'backwards' or 'both' fill-mode that conceals content prior to timeline entry.
+ * 4. Strictly Zero-JavaScript: 100% pure CSS3 with no script dependencies.
+ * 5. Full Accessibility: Total reset on prefers-reduced-motion and print media.
+ */
+
+/* ==========================================================================
+   0. PURE CSS SCROLL PROGRESS BAR (STRICT ZERO-JS)
+   ========================================================================== */
+
+@keyframes ltvScrollProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background: linear-gradient(90deg, #0C3B6E 0%, #D4AF37 50%, #C0392B 100%);
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+  opacity: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-progress-bar {
+      opacity: 1;
+      animation: ltvScrollProgress auto linear forwards;
+      animation-timeline: scroll();
+    }
+  }
+}
+
+
+/* ==========================================================================
+   1. REUSABLE KEYFRAMES (LTV EDITORIAL MOTION V2.0)
+   ========================================================================== */
+
+/* Category A: Image Reveal (Editorial Photography) */
+@keyframes ltvImageReveal {
+  from {
+    opacity: 0.2;
+    transform: translateY(var(--motion-dist-image-y, 32px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Category B: Mask Reveal (Curtain Inset on Strategic Hero Photos) */
+@keyframes ltvMaskReveal {
+  from {
+    opacity: 0.85;
+    clip-path: inset(0 0 100% 0);
+    transform: scale(var(--motion-scale-mask-initial, 1.04));
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0% 0);
+    transform: scale(1);
+  }
+}
+
+/* Category C: Text Reveal (Headings & Introductions Below The Fold) */
+@keyframes ltvTextReveal {
+  from {
+    opacity: 0.3;
+    transform: translateY(var(--motion-dist-text-y, 18px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Category D: Opacity-Only Reveal (Single Cards Without Safe Outer Wrapper) */
+@keyframes ltvOpacityReveal {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Category E: Slide-In Left (Asymmetric Left-Aligned Editorial Features) */
+@keyframes ltvSlideInLeft {
+  from {
+    opacity: 0.2;
+    transform: translateX(calc(-1 * var(--motion-dist-image-y, 36px)));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Category F: Slide-In Right (Right-Aligned Media Features) */
+@keyframes ltvSlideInRight {
+  from {
+    opacity: 0.2;
+    transform: translateX(var(--motion-dist-image-y, 36px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Category G: Horizontal Curtain Reveal (Panoramic Gate & Gallery Showcase) */
+@keyframes ltvCurtainHorizontal {
+  from {
+    opacity: 0.85;
+    clip-path: inset(0 100% 0 0);
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0% 0 0);
+    transform: scale(1);
+  }
+}
+
+/* Category H: Blur-to-Sharp Transition (Monumental Pull Quotes & Titles) */
+@keyframes ltvBlurToSharp {
+  from {
+    opacity: 0.3;
+    filter: blur(5px);
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+/* Category I: Subtle Scale Entrance (Bento Hero Tiles & Medallions) */
+@keyframes ltvScaleSubtle {
+  from {
+    opacity: 0.25;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Category J: Staggered Slide Up (Headings, Leads & Sequential Content) */
+@keyframes ltvStaggerSlideUp {
+  from {
+    opacity: 0.15;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Category K: Staggered Image Entrance (Zoom & Rise) */
+@keyframes ltvStaggerImg {
+  from {
+    opacity: 0.2;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Category L: Glowing Status Pulse Dot */
+@keyframes pulseDot {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes pulseDotGold {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}
+
+@keyframes pulseDotCrimson {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+
+/* ==========================================================================
+   2. VISIBLE-BY-DEFAULT BASELINE (ALL BROWSERS & FALLBACKS)
+   ========================================================================== */
+
+/* Invariant: Content is 100% visible and un-transformed by default.
+   If scroll timelines fail, disconnect, or are unsupported, the complete static page displays. */
+.motion-image-reveal,
+.motion-mask-reveal,
+.motion-text-reveal,
+.motion-opacity-reveal,
+.motion-slide-left,
+.motion-slide-right,
+.motion-curtain-h,
+.motion-blur-sharp,
+.motion-scale-subtle,
+.motion-stagger-title,
+.motion-stagger-lead,
+.motion-stagger-img,
+.motion-stagger-1,
+.motion-stagger-2,
+.motion-stagger-3,
+.motion-stagger-4,
+.motion-stagger-5,
+.motion-stagger-6 {
+  opacity: 1;
+  transform: none;
+  clip-path: none;
+  filter: none;
+}
+
+
+/* ==========================================================================
+   3. PROGRESSIVE ENHANCEMENT: CSS SCROLL-DRIVEN TIMELINE UTILITIES
+   ========================================================================== */
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+
+    /* Category A: Image Reveal Utility */
+    .motion-image-reveal {
+      animation: ltvImageReveal var(--motion-duration-image-reveal, 750ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 30%;
+      will-change: opacity, transform;
+    }
+
+    /* Category B: Mask Reveal Utility (Restricted to strategic landmarks) */
+    .motion-mask-reveal {
+      animation: ltvMaskReveal var(--motion-duration-mask-reveal, 800ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 5% cover 35%;
+      will-change: clip-path, transform, opacity;
+    }
+
+    /* Category C: Text Reveal Utility */
+    .motion-text-reveal {
+      animation: ltvTextReveal var(--motion-duration-text-reveal, 650ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 25%;
+      will-change: opacity, transform;
+    }
+
+    /* Category D: Opacity-Only Reveal Utility (Protects hover transform on single cards) */
+    .motion-opacity-reveal {
+      animation: ltvOpacityReveal var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 25%;
+      will-change: opacity;
+    }
+
+    /* Category J & K: Complete Staggered Scroll-Driven Suite (Phase 22) */
+    .motion-stagger-title {
+      animation: ltvStaggerSlideUp var(--motion-duration-text-reveal, 650ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 22%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-lead {
+      animation: ltvStaggerSlideUp var(--motion-duration-text-reveal, 650ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 4% cover 26%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-img {
+      animation: ltvStaggerImg var(--motion-duration-image-reveal, 750ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 6% cover 32%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-1 {
+      animation: ltvStaggerSlideUp var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 8% cover 30%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-2 {
+      animation: ltvStaggerSlideUp var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 14% cover 36%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-3 {
+      animation: ltvStaggerSlideUp var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 20% cover 42%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-4 {
+      animation: ltvStaggerSlideUp var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 26% cover 48%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-5 {
+      animation: ltvStaggerSlideUp var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 32% cover 54%;
+      will-change: opacity, transform;
+    }
+
+    .motion-stagger-6 {
+      animation: ltvStaggerSlideUp var(--motion-duration-opacity-reveal, 600ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 38% cover 60%;
+      will-change: opacity, transform;
+    }
+
+    /* Directional & Editorial Motion Utilities */
+    .motion-slide-left {
+      animation: ltvSlideInLeft var(--motion-duration-image-reveal, 750ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 30%;
+      will-change: transform, opacity;
+    }
+
+    .motion-slide-right {
+      animation: ltvSlideInRight var(--motion-duration-image-reveal, 750ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 30%;
+      will-change: transform, opacity;
+    }
+
+    .motion-curtain-h {
+      animation: ltvCurtainHorizontal var(--motion-duration-mask-reveal, 800ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 32%;
+      will-change: clip-path, transform, opacity;
+    }
+
+    .motion-blur-sharp {
+      animation: ltvBlurToSharp var(--motion-duration-text-reveal, 650ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 5% cover 35%;
+      will-change: filter, opacity, transform;
+    }
+
+    .motion-scale-subtle {
+      animation: ltvScaleSubtle var(--motion-duration-image-reveal, 700ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 28%;
+      will-change: transform, opacity;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   3.5. MICRO-INTERACTIONS: GLOWING STATUS PULSE DOT
+   ========================================================================== */
+
+.status-pulse-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+  animation: pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  vertical-align: middle;
+}
+
+.status-pulse-dot--gold {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #F59E0B;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
+  animation: pulseDotGold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  vertical-align: middle;
+}
+
+.status-pulse-dot--crimson {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #EF4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  animation: pulseDotCrimson 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  vertical-align: middle;
+}
+
+
+/* ==========================================================================
+   4. PRINT MEDIA SAFEGUARD
+   ========================================================================== */
+
+@media print {
+  .scroll-progress-bar {
+    display: none !important;
+  }
+
+  .status-pulse-dot,
+  .status-pulse-dot--gold,
+  .status-pulse-dot--crimson,
+  .motion-image-reveal,
+  .motion-mask-reveal,
+  .motion-text-reveal,
+  .motion-opacity-reveal,
+  .motion-slide-left,
+  .motion-slide-right,
+  .motion-curtain-h,
+  .motion-blur-sharp,
+  .motion-scale-subtle,
+  .motion-stagger-title,
+  .motion-stagger-lead,
+  .motion-stagger-img,
+  .motion-stagger-1,
+  .motion-stagger-2,
+  .motion-stagger-3,
+  .motion-stagger-4,
+  .motion-stagger-5,
+  .motion-stagger-6 {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    filter: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   5. STRICT REDUCED MOTION SAFEGUARD (WCAG 2.2 SC 2.3.3 & SC 2.2.2)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-bar {
+    display: none !important;
+  }
+
+  .status-pulse-dot,
+  .status-pulse-dot--gold,
+  .status-pulse-dot--crimson,
+  .motion-image-reveal,
+  .motion-mask-reveal,
+  .motion-text-reveal,
+  .motion-opacity-reveal,
+  .motion-slide-left,
+  .motion-slide-right,
+  .motion-curtain-h,
+  .motion-blur-sharp,
+  .motion-scale-subtle,
+  .motion-stagger-title,
+  .motion-stagger-lead,
+  .motion-stagger-img,
+  .motion-stagger-1,
+  .motion-stagger-2,
+  .motion-stagger-3,
+  .motion-stagger-4,
+  .motion-stagger-5,
+  .motion-stagger-6 {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}

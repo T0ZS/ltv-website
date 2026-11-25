@@ -1,0 +1,383 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - SITE HEADER & NAVIGATION
+ * File: css/layout/header.css
+ * Spec: LTV Homepage Design Specification v1.0
+ * Direction: Editorial School Masthead & Primary Navigation
+ *
+ * Structure:
+ *   .site-header
+ *     .container
+ *       .site-masthead          — flex row: branding (left) + nav (right)
+ *         .site-branding
+ *           .site-brand-link    — logo + school name
+ *             .site-logo
+ *             .site-title
+ *         .site-nav
+ *           ul.nav-list         — desktop navigation (> 768px)
+ *             li > a.nav-link
+ *           details.nav-mobile-toggle — mobile navigation (<= 768px)
+ *             summary.nav-toggle-btn
+ *               span.nav-toggle-icon
+ *             ul.nav-mobile-list
+ *               li > a.nav-mobile-link
+ */
+
+
+/* =====================================================
+   0. ACCESSIBILITY SKIP LINK (WCAG 2.4.1)
+   ===================================================== */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: var(--spacing-md, 16px);
+  z-index: 9999;
+  padding: var(--spacing-sm, 8px) var(--spacing-md, 16px);
+  background-color: var(--color-primary-blue-dark, #072140);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-sm, 4px) var(--radius-sm, 4px);
+  box-shadow: var(--shadow-md);
+  transition: top var(--transition-fast, 150ms ease);
+}
+
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid var(--color-accent-red, #C0392B);
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   1. HEADER CONTAINER
+   ===================================================== */
+
+.site-header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 3px rgba(12, 59, 110, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color var(--transition-normal);
+}
+
+.site-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+}
+
+
+/* =====================================================
+   2. BRANDING — Logo + School Name
+   ===================================================== */
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-brand-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-fast);
+}
+
+.site-brand-link:hover {
+  opacity: 0.85;
+  color: inherit;
+}
+
+.site-logo {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  line-height: var(--line-height-tight);
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   3. DESKTOP NAVIGATION (> 768px)
+   ===================================================== */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Hide mobile toggle on desktop */
+.nav-mobile-toggle {
+  display: none;
+}
+
+/* Desktop nav list — visible by default */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  letter-spacing: var(--letter-spacing-nav);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: color var(--transition-fast),
+              background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--color-primary-blue);
+  background-color: var(--color-primary-blue-wash);
+}
+
+/* Active state — underline accent */
+.nav-link.active {
+  color: var(--color-primary-blue);
+  font-weight: var(--font-weight-semibold);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
+  height: 2px;
+  background-color: var(--color-accent-red);
+  border-radius: var(--radius-pill);
+}
+
+/* Focus ring for keyboard navigation */
+.nav-link:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Tablet & Compact Desktop Navigation Adaptation (769px - 1140px) */
+@media (max-width: 1140px) and (min-width: 769px) {
+  .site-title {
+    font-size: var(--font-size-md);
+  }
+
+  .nav-list {
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-size: var(--font-size-sm);
+    padding: 6px 10px;
+  }
+}
+
+
+/* =====================================================
+   4. MOBILE NAVIGATION — Tablet & below (<= 768px)
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .site-masthead {
+    height: 72px;
+    position: relative;
+  }
+
+  .site-title {
+    font-size: var(--font-size-base);
+  }
+
+  .site-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Hide desktop navigation on mobile */
+  .nav-list {
+    display: none;
+  }
+
+  /* Show the mobile hamburger toggle */
+  .nav-mobile-toggle {
+    display: block;
+    position: static;
+  }
+
+  .nav-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast);
+    list-style: none; /* remove default <summary> marker */
+  }
+
+  .nav-toggle-btn:hover {
+    background-color: var(--color-bg-muted);
+  }
+
+  .nav-toggle-btn:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  /* Remove default <summary> triangle marker */
+  .nav-toggle-btn::-webkit-details-marker {
+    display: none;
+  }
+
+  .nav-toggle-btn::marker {
+    display: none;
+    content: '';
+  }
+
+  /* Hamburger icon — three bars via box-shadow technique */
+  .nav-toggle-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-text-primary);
+    border-radius: var(--radius-pill);
+    position: relative;
+    transition: background-color var(--transition-fast);
+  }
+
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text-primary);
+    border-radius: var(--radius-pill);
+    transition: transform var(--transition-fast);
+  }
+
+  .nav-toggle-icon::before {
+    top: -6px;
+  }
+
+  .nav-toggle-icon::after {
+    bottom: -6px;
+  }
+
+  /* When menu is open — X icon */
+  .nav-mobile-toggle[open] .nav-toggle-icon {
+    background-color: transparent;
+  }
+
+  .nav-mobile-toggle[open] .nav-toggle-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .nav-mobile-toggle[open] .nav-toggle-icon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* Mobile nav list — dropdown panel */
+  .nav-mobile-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: var(--spacing-xs) 0;
+    background-color: var(--color-bg-base);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    z-index: 90;
+  }
+
+  .nav-mobile-link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: var(--spacing-sm) var(--container-padding);
+    border-radius: 0;
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    letter-spacing: var(--letter-spacing-nav);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast),
+                background-color var(--transition-fast);
+  }
+
+  .nav-mobile-link:hover {
+    color: var(--color-primary-blue);
+    background-color: var(--color-primary-blue-wash);
+  }
+
+  .nav-mobile-link.active {
+    color: var(--color-primary-blue);
+    background-color: var(--color-primary-blue-wash);
+    border-left: 3px solid var(--color-accent-red);
+  }
+
+  .nav-mobile-link:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+}
+
+
+/* =====================================================
+   5. SMALL MOBILE — Compact branding (< 480px)
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .site-masthead {
+    height: 64px;
+  }
+
+  .site-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .site-title {
+    font-size: var(--font-size-sm);
+  }
+}

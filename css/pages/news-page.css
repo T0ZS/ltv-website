@@ -1,0 +1,977 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - NEWS & EVENTS PAGE STYLESHEET
+ * File: css/pages/news-page.css
+ * Architecture: Modular Page-Specific Stylesheet (Phase 23 Deep Chromatic & Anti-White Redesign)
+ * Namespace: .news-page
+ * Design System: LTV Editorial Premium Design System v2.3
+ * Benchmark: Homepage & About Page
+ *
+ * Sections:
+ *   1. Page Hero Banner (High-Contrast Immersive Crimson)
+ *   2. Subnav Anchor Scroll Offsets & Glass Surface
+ *   3. Main Content Canvas & Anti-White Section Bands
+ *   4. Section 1: Featured Story (Warm Golden Commemorative Surface)
+ *   5. Section 2: Categories Filter Bar (Tinted Ice Glass)
+ *   6. Section 3: News Grid with Tinted Card Surfaces (Zero White Void)
+ *   7. Section 4: Milestones Timeline (Dark Feature Band: Royal Navy)
+ *   8. Section 5: Institutional Notice & Channels Grid (Rose Band)
+ *   9. Section Transition Dividers & Prisms
+ *  10. Pathway CTA Block (Dark Indigo Companion Surface)
+ *  11. Responsive Breakpoints (1024px, 768px, 480px)
+ *  12. Accessibility & Prefers-Reduced-Motion
+ */
+
+/* =====================================================
+   1. PAGE HERO BANNER (HIGH-CONTRAST IMMERSIVE CRIMSON)
+   ===================================================== */
+
+.news-page .page-hero.page-hero--crimson {
+  position: relative;
+  background: linear-gradient(135deg, #240505 0%, #5C0B0B 45%, #0C3B6E 100%) !important;
+  color: #FFFFFF !important;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.35);
+  padding: var(--spacing-3xl) 0 var(--spacing-2xl) 0;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.news-page .page-hero.page-hero--crimson::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5px;
+  background: linear-gradient(90deg, #D4AF37 0%, #EF4444 40%, #0C3B6E 80%, #0284C7 100%);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.5);
+  z-index: 2;
+}
+
+.news-page .page-hero.page-hero--crimson::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(239, 68, 68, 0.32) 0%, transparent 50%),
+              radial-gradient(circle at 15% 80%, rgba(212, 175, 55, 0.22) 0%, transparent 45%),
+              radial-gradient(circle at 50% 90%, rgba(12, 59, 110, 0.25) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.news-page .page-hero.page-hero--crimson .page-hero__inner {
+  position: relative;
+  z-index: 3;
+  max-width: 860px;
+}
+
+.news-page .page-hero.page-hero--crimson .page-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #FDE68A !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(253, 230, 138, 0.5) !important;
+  border-radius: var(--radius-pill);
+  padding: 4px 14px;
+  margin-bottom: var(--spacing-sm);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.news-page .page-hero.page-hero--crimson .page-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: #FFFFFF !important;
+  letter-spacing: var(--letter-spacing-heading);
+  margin-bottom: var(--spacing-md);
+  text-wrap: balance;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.news-page .page-hero.page-hero--crimson .page-hero__title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: var(--spacing-sm);
+  border-radius: 2px;
+  background: linear-gradient(90deg, #D4AF37 0%, #C0392B 100%);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.55);
+}
+
+.news-page .page-hero.page-hero--crimson .page-hero__lead {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: #E2E8F0 !important;
+  max-width: 860px;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   2. SUBNAV ANCHOR SCROLL OFFSETS & GLASS SURFACE
+   ===================================================== */
+
+.news-page .news-page__featured,
+.news-page .page-section {
+  scroll-margin-top: 140px;
+}
+
+
+/* =====================================================
+   3. MAIN CONTENT CANVAS & ANTI-WHITE SECTION BANDS
+   ===================================================== */
+
+.news-page .page-content-wrapper {
+  background-color: var(--color-bg-canvas, #E6EDF6) !important;
+  background-image: var(--color-bg-vibrant-mesh);
+  background-attachment: fixed;
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-4xl);
+}
+
+/* Custom fullwidth section band cards styling */
+.news-page .section-band--warm,
+.news-page .section-band--cool,
+.news-page .section-band--navy,
+.news-page .section-band--rose {
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   4. SECTION 1: FEATURED STORY (WARM GOLDEN COMMEMORATIVE SURFACE)
+   ===================================================== */
+
+.news-page .news-page__featured {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: var(--spacing-2xl);
+  background: var(--surface-card-gold) !important;
+  border: 2px solid #FDE68A !important;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.16), 0 2px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  margin-bottom: var(--spacing-2xl);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease;
+  position: relative;
+}
+
+.news-page .news-page__featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(180deg, #D4AF37 0%, #C0392B 55%, #0C3B6E 100%);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+  z-index: 2;
+}
+
+.news-page .news-page__featured:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover-gold), 0 0 35px rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.65) !important;
+}
+
+.news-page .news-page__featured-media {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  background-color: var(--color-primary-blue-dark);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+.news-page .news-page__featured-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--motion-timing-slow) var(--motion-ease-out);
+}
+
+.news-page .news-page__featured:hover .news-page__featured-media img {
+  transform: scale(1.035);
+}
+
+.news-page .news-page__featured-content {
+  padding: var(--spacing-xl) var(--spacing-2xl) var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-page .news-page__meta-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.news-page .news-page__date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-semibold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.news-page .news-page__featured-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+  text-wrap: balance;
+}
+
+.news-page .news-page__featured-lead {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: #1E293B;
+  margin-bottom: var(--spacing-lg);
+}
+
+.news-page .news-page__featured-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.35);
+  padding-top: var(--spacing-md);
+}
+
+.news-page .news-page__featured-point {
+  font-size: var(--font-size-sm);
+  color: #334155;
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.55;
+}
+
+.news-page .news-page__featured-point:last-child {
+  margin-bottom: 0;
+}
+
+.news-page .news-page__featured-point::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #D97706;
+  font-size: 0.85rem;
+  top: 0;
+}
+
+
+/* =====================================================
+   5. SECTION 2: CATEGORIES FILTER BAR (TINTED ICE GLASS)
+   ===================================================== */
+
+.news-page .news-page__categories-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--surface-card-ice);
+  border: 1.5px solid #BFDBFE;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(12, 59, 110, 0.08);
+  flex-wrap: wrap;
+}
+
+.news-page .news-page__categories-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-right: var(--spacing-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.news-page .news-page__cat-pill {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: #FFFFFF;
+  color: #334155;
+  border: 1px solid #CBD5E1;
+  transition: all var(--motion-timing-fast) ease;
+  user-select: none;
+}
+
+.news-page .news-page__cat-pill:hover {
+  color: var(--color-primary-blue);
+  border-color: var(--color-primary-blue-light);
+  transform: translateY(-1px);
+}
+
+.news-page .news-page__cat-pill--active {
+  background: linear-gradient(135deg, var(--color-primary-blue) 0%, #1E40AF 100%) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-primary-blue) !important;
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 3px 12px rgba(12, 59, 110, 0.35);
+}
+
+
+/* =====================================================
+   6. SECTION 3: NEWS GRID WITH TINTED CARD SURFACES
+   Zero flat white boxes — every card has an authentic chromatic identity
+   ===================================================== */
+
+.news-page .news-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
+}
+
+.news-page .news-page__card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 12px rgba(12, 59, 110, 0.08);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease;
+  position: relative;
+}
+
+/* Base Card Hover Elevation */
+.news-page .news-page__card:hover {
+  transform: translateY(-6px);
+}
+
+/* Card 1: 31 HSG National Flagship Spans Full Width Row */
+.news-page .news-page__card:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: stretch;
+}
+
+.news-page .news-page__card:first-child .news-page__card-media {
+  height: 100%;
+  min-height: 290px;
+}
+
+/* Card 6: Commemorative 30th Anniversary Yearbook Spans 2 Columns */
+.news-page .news-page__card--span2 {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: stretch;
+}
+
+.news-page .news-page__card--span2 .news-page__card-media {
+  height: 100%;
+  min-height: 260px;
+  background: radial-gradient(circle at center, #FFFBEB 0%, #FEF3C7 100%);
+}
+
+.news-page .news-page__card--span2 .news-page__card-media img {
+  object-fit: contain;
+  padding: var(--spacing-sm);
+}
+
+/* Tinted Card Surfaces (Anti-White Directives) */
+.news-page .news-page__card--blue {
+  background: var(--surface-card-ice) !important;
+  border: 1.5px solid #93C5FD !important;
+}
+
+.news-page .news-page__card--blue:hover {
+  box-shadow: var(--shadow-card-hover-indigo), var(--glow-cyan);
+  border-color: #2563EB !important;
+}
+
+.news-page .news-page__card--red {
+  background: var(--surface-card-rose) !important;
+  border: 1.5px solid #FCA5A5 !important;
+}
+
+.news-page .news-page__card--red:hover {
+  box-shadow: var(--shadow-card-hover-crimson), var(--glow-crimson);
+  border-color: #DC2626 !important;
+}
+
+.news-page .news-page__card--emerald {
+  background: var(--surface-card-emerald) !important;
+  border: 1.5px solid #6EE7B7 !important;
+}
+
+.news-page .news-page__card--emerald:hover {
+  box-shadow: var(--shadow-card-hover-emerald), var(--glow-emerald);
+  border-color: #059669 !important;
+}
+
+.news-page .news-page__card--gold {
+  background: var(--surface-card-gold) !important;
+  border: 1.5px solid #FCD34D !important;
+}
+
+.news-page .news-page__card--gold:hover {
+  box-shadow: var(--shadow-card-hover-gold), var(--glow-gold);
+  border-color: #D97706 !important;
+}
+
+/* Dynamic Top Hairlines on Hover */
+.news-page .news-page__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  opacity: 0;
+  transition: opacity var(--motion-timing-fast) ease;
+  z-index: 2;
+}
+
+.news-page .news-page__card:hover::before {
+  opacity: 1;
+}
+
+.news-page .news-page__card--blue::before {
+  background: linear-gradient(90deg, #1E40AF 0%, #0284C7 100%);
+}
+
+.news-page .news-page__card--red::before {
+  background: linear-gradient(90deg, #B91C1C 0%, #E74C3C 100%);
+}
+
+.news-page .news-page__card--emerald::before {
+  background: linear-gradient(90deg, #047857 0%, #10B981 100%);
+}
+
+.news-page .news-page__card--gold::before {
+  background: linear-gradient(90deg, #B45309 0%, #F59E0B 100%);
+}
+
+.news-page .news-page__card-media {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  background-color: var(--color-bg-alt);
+}
+
+.news-page .news-page__card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--motion-timing-slow) var(--motion-ease-out);
+}
+
+.news-page .news-page__card:hover .news-page__card-media img {
+  transform: scale(1.038);
+}
+
+.news-page .news-page__card-body {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.news-page .news-page__card-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--spacing-xs);
+  transition: color var(--motion-timing-fast) ease;
+}
+
+.news-page .news-page__card:hover .news-page__card-title {
+  color: #1E3A8A;
+}
+
+.news-page .news-page__card-excerpt {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: #334155;
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.news-page .news-page__card-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Card Tag Badges in Footer */
+.news-page .news-page__card-tag {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.news-page .news-page__card-tag--blue {
+  color: #0369A1;
+  background: #E0F2FE;
+  border: 1px solid #7DD3FC;
+}
+
+.news-page .news-page__card-tag--red {
+  color: #B91C1C;
+  background: #FEE2E2;
+  border: 1px solid #FCA5A5;
+}
+
+.news-page .news-page__card-tag--emerald {
+  color: #047857;
+  background: #D1FAE5;
+  border: 1px solid #6EE7B7;
+}
+
+.news-page .news-page__card-tag--gold {
+  color: #92400E;
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+}
+
+
+/* =====================================================
+   7. SECTION 4: MILESTONES TIMELINE (DARK FEATURE BAND: ROYAL NAVY)
+   ===================================================== */
+
+.news-page .section-band--navy {
+  background: linear-gradient(135deg, #061830 0%, #0C3B6E 55%, #172554 100%) !important;
+  color: #FFFFFF !important;
+  border-top: 2px solid rgba(255, 255, 255, 0.18) !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 10px 30px rgba(7, 26, 47, 0.45);
+}
+
+.news-page .section-band--navy .page-section__title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.news-page .section-band--navy strong,
+.news-page .section-band--navy b {
+  color: #FDE68A !important;
+}
+
+.news-page .section-band--navy a {
+  color: #93C5FD !important;
+}
+
+.news-page .section-band--navy a:hover {
+  color: #FDE68A !important;
+}
+
+.news-page .news-page__milestones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+  position: relative;
+}
+
+/* Connecting vertical guide */
+.news-page .section-band--navy .news-page__milestones::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 70px;
+  width: 3px;
+  background: linear-gradient(180deg, #EF4444 0%, #F59E0B 45%, #0284C7 100%) !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+  z-index: 0;
+}
+
+/* Frosted Dark-Glass Milestone Cards */
+.news-page .section-band--navy .news-page__milestone-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--spacing-xl);
+  background: rgba(10, 31, 60, 0.82) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.28s var(--motion-ease-out),
+    box-shadow 0.28s var(--motion-ease-out),
+    border-color 0.25s var(--motion-ease-out);
+}
+
+.news-page .section-band--navy .news-page__milestone-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 25px rgba(245, 158, 11, 0.25) !important;
+  border-color: rgba(253, 230, 138, 0.6) !important;
+}
+
+.news-page .section-band--navy .news-page__milestone-date-col {
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.16) !important;
+  padding-right: var(--spacing-lg);
+  background-color: transparent;
+}
+
+.news-page .section-band--navy .news-page__milestone-year {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: #FDE68A !important;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 16px rgba(245, 158, 11, 0.45);
+}
+
+.news-page .section-band--navy .news-page__milestone-phase {
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 6px;
+}
+
+.news-page .section-band--navy .news-page__milestone-phase--red {
+  color: #FCA5A5 !important;
+}
+
+.news-page .section-band--navy .news-page__milestone-phase--blue {
+  color: #93C5FD !important;
+}
+
+.news-page .section-band--navy .news-page__milestone-phase--gold {
+  color: #FDE68A !important;
+}
+
+.news-page .section-band--navy .news-page__milestone-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: #FFFFFF !important;
+  margin-bottom: var(--spacing-2xs);
+  line-height: var(--line-height-heading);
+}
+
+.news-page .section-band--navy .news-page__milestone-desc {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: #E2E8F0 !important;
+  margin: 0;
+}
+
+
+/* =====================================================
+   8. SECTION 5: INSTITUTIONAL NOTICE & CHANNELS GRID (ROSE BAND)
+   ===================================================== */
+
+.news-page .news-page__notice-block {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+.news-page .callout-box {
+  background: var(--surface-card-rose) !important;
+  border: 1px solid #FECDD3 !important;
+  border-left: 5px solid var(--color-accent-red) !important;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: 0 4px 16px rgba(192, 57, 43, 0.08);
+}
+
+.news-page .callout-box__header {
+  margin-bottom: var(--spacing-xs);
+}
+
+.news-page .callout-box__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: #991B1B !important;
+  margin: 0;
+}
+
+.news-page .callout-box__content {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: #334155 !important;
+  margin: 0;
+}
+
+.news-page .news-page__channels-card {
+  background: var(--surface-card-ice) !important;
+  border: 1px solid #BFDBFE !important;
+  border-top: 4px solid var(--color-accent-gold) !important;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(12, 59, 110, 0.08);
+  padding: var(--spacing-xl);
+}
+
+.news-page .news-page__channels-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid #BFDBFE;
+}
+
+.news-page .news-page__channels-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.news-page .news-page__channel-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: 6px 0;
+}
+
+.news-page .news-page__channel-desc {
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+  color: #334155;
+}
+
+.news-page .news-page__channel-desc strong {
+  color: #0F172A;
+}
+
+
+/* =====================================================
+   9. SECTION TRANSITION DIVIDERS & PRISMS
+   ===================================================== */
+
+.news-page .section-divider-prism {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #0C3B6E 0%, #0284C7 25%, #059669 50%, #D4AF37 75%, #C0392B 100%);
+  margin: var(--spacing-xl) 0;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.35);
+}
+
+
+/* =====================================================
+   10. PATHWAY CTA BLOCK (DARK NAVY & FROSTED GLASS CARDS)
+   ===================================================== */
+
+.news-page .page-pathway {
+  background: linear-gradient(135deg, #061830 0%, #0C3B6E 50%, #1E1B4B 100%) !important;
+  border-top: 2px solid rgba(212, 175, 55, 0.45) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+  padding: var(--spacing-3xl) 0;
+  margin-top: var(--spacing-3xl);
+}
+
+.news-page .page-pathway__eyebrow {
+  color: #FDE68A !important;
+}
+
+.news-page .page-pathway__title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.news-page .pathway-card {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-top: 3px solid #D4AF37 !important;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+    box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+    border-color var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.news-page .pathway-card__tag {
+  color: #FDE68A !important;
+}
+
+.news-page .pathway-card__title {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.news-page .pathway-card__desc {
+  color: #E2E8F0 !important;
+}
+
+.news-page .pathway-card__link-text {
+  color: #93C5FD !important;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.news-page .pathway-card:hover,
+.news-page .pathway-card:focus-visible {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.25);
+  border-color: #FDE68A !important;
+}
+
+.news-page .pathway-card:hover .pathway-card__link-text {
+  color: #FDE68A !important;
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   11. RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .news-page .news-page__featured {
+    grid-template-columns: 1fr;
+  }
+
+  .news-page .news-page__featured-media {
+    min-height: 280px;
+    max-height: 360px;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  .news-page .news-page__featured-content {
+    padding: var(--spacing-xl);
+  }
+
+  .news-page .news-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-page .news-page__card:first-child {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+  }
+
+  .news-page .news-page__card--span2 {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+  }
+
+  .news-page .news-page__notice-block {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-page .page-hero.page-hero--crimson {
+    padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+  }
+
+  .news-page .page-hero.page-hero--crimson .page-hero__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .news-page .news-page__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .news-page .section-band--navy .news-page__milestones::before {
+    display: none;
+  }
+
+  .news-page .section-band--navy .news-page__milestone-item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .news-page .section-band--navy .news-page__milestone-date-col {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+    padding-right: 0;
+    padding-bottom: var(--spacing-sm);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .news-page .section-band--navy .news-page__milestone-phase {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-page .page-hero.page-hero--crimson .page-hero__title {
+    font-size: 1.75rem;
+  }
+
+  .news-page .news-page__categories-bar {
+    padding: var(--spacing-sm);
+  }
+
+  .news-page .news-page__featured-content {
+    padding: var(--spacing-lg);
+  }
+
+  .news-page .news-page__card-body {
+    padding: var(--spacing-lg);
+  }
+}
+
+
+/* =====================================================
+   12. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .news-page *,
+  .news-page *::before,
+  .news-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+
+  .news-page .news-page__featured:hover .news-page__featured-media img,
+  .news-page .news-page__card:hover .news-page__card-media img {
+    transform: none !important;
+  }
+}

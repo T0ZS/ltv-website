@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Chương trình đào tạo mũi nhọn, 7 môn chuyên truyền thống và đội ngũ tổ bộ môn Trường THPT Chuyên Lương Thế Vinh - Đồng Nai.">
+  <title>Học Tập & Đào Tạo - THPT Chuyên Lương Thế Vinh</title>
+
+  <!-- Master Stylesheet & Academics Page Stylesheet -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/academics-page.css">
+</head>
+
+<body class="academics-page">
+  <!-- Pure CSS Scroll Progress Bar -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-masthead">
+        <div class="site-branding">
+          <a href="../index.html" class="site-brand-link">
+            <img src="../assets/images/logo.jpg" alt="Logo Trường THPT Chuyên Lương Thế Vinh" class="site-logo"
+              width="58" height="58">
+            <span class="site-title">THPT Chuyên Lương Thế Vinh</span>
+          </a>
+        </div>
+        <nav class="site-nav" aria-label="Điều hướng chính">
+          <!-- Desktop Navigation -->
+          <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+            <li><a href="about.html" class="nav-link">Giới thiệu</a></li>
+            <li><a href="news.html" class="nav-link">Tin tức</a></li>
+            <li><a href="academics.html" class="nav-link active">Học tập</a></li>
+            <li><a href="student-life.html" class="nav-link">Hoạt động</a></li>
+            <li><a href="achievements.html" class="nav-link">Thành tích</a></li>
+          </ul>
+
+          <!-- Mobile Navigation Toggle -->
+          <details class="nav-mobile-toggle">
+            <summary class="nav-toggle-btn" aria-label="Mở menu điều hướng">
+              <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="nav-mobile-list">
+              <li><a href="../index.html" class="nav-mobile-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-mobile-link">Giới thiệu</a></li>
+              <li><a href="news.html" class="nav-mobile-link">Tin tức</a></li>
+              <li><a href="academics.html" class="nav-mobile-link active">Học tập</a></li>
+              <li><a href="student-life.html" class="nav-mobile-link">Hoạt động</a></li>
+              <li><a href="achievements.html" class="nav-mobile-link">Thành tích</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation (Dark Navy Companion Strip) -->
+  <nav class="breadcrumb-nav" aria-label="Đường dẫn trang">
+    <div class="page-container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Trang chủ</a></li>
+        <li class="breadcrumb-item" aria-current="page">Học tập & Đào tạo</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Hero Banner (High-Contrast Immersive Indigo Signature) -->
+  <header class="page-hero page-hero--indigo">
+    <div class="page-container">
+      <div class="page-hero__badge">
+        <span class="page-hero__badge-tag">
+          <span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span>
+          Học thuật & Đào tạo chuyên sâu
+        </span>
+      </div>
+      <h1 class="page-hero__title">
+        Chương Trình Đào Tạo Mũi Nhọn & <span class="page-brand-nowrap">Phát Triển Năng Khiếu</span>
+      </h1>
+      <p class="page-hero__lead">
+        Cái nôi ươm mầm tài năng của tỉnh Đồng Nai với 7 môn chuyên truyền thống, đội ngũ nhà giáo ưu tú tận tâm
+        và triết lý giáo dục khai phóng — khơi dậy tiềm năng tư duy độc lập và năng lực sáng tạo của từng học sinh.
+      </p>
+    </div>
+  </header>
+
+  <!-- Sticky Horizontal Subnav Bar for Fast Anchor Navigation -->
+  <nav class="page-subnav" aria-label="Điều hướng nhanh trang Học tập">
+    <div class="page-subnav__inner">
+      <span class="page-subnav__label" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        Mục lục
+      </span>
+      <ul class="page-subnav__list">
+        <li><a href="#tong-quan-dao-tao" class="page-subnav__link">1. Mô hình đào tạo</a></li>
+        <li><a href="#cac-mon-chuyen" class="page-subnav__link">2. Hệ thống 7 môn chuyên</a></li>
+        <li><a href="#to-chuyen-mon" class="page-subnav__link">3. Tổ chuyên môn & Giáo viên</a></li>
+        <li><a href="#phuong-phap-nghien-cuu" class="page-subnav__link">4. Phương pháp & KHKT</a></li>
+        <li><a href="#hoc-bong-tai-tro" class="page-subnav__link">5. Quỹ học bổng LTV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Area: Anti-White Alternating Section Bands -->
+  <main id="main-content" class="page-content-wrapper">
+    <div class="page-container page-content--fullwidth">
+
+      <!-- Key Metrics Strip: Luminous Multi-Color Badges on Cool Ice Surface -->
+      <section class="academics-page__metrics-strip" aria-label="Chỉ số hệ thống đào tạo">
+        <div class="academics-page__metric-item academics-page__metric-item--gold motion-stagger-1">
+          <div class="academics-page__metric-number academics-page__metric-number--gold">07</div>
+          <div class="academics-page__metric-label">Khối Chuyên Truyền Thống</div>
+          <p class="academics-page__metric-sub">Toán, Tin, Lý, Hóa, Sinh, Văn, Anh</p>
+        </div>
+        <div class="academics-page__metric-item academics-page__metric-item--red motion-stagger-2">
+          <div class="academics-page__metric-number academics-page__metric-number--red">72%</div>
+          <div class="academics-page__metric-label">Trình Độ Sau Đại Học</div>
+          <p class="academics-page__metric-sub">Thạc sĩ, Tiến sĩ (thống kê 22 năm)</p>
+        </div>
+        <div class="academics-page__metric-item academics-page__metric-item--emerald motion-stagger-3">
+          <div class="academics-page__metric-number academics-page__metric-number--emerald">35+</div>
+          <div class="academics-page__metric-label">Cựu Học Sinh Trở Về Dạy</div>
+          <p class="academics-page__metric-sub">Tiếp nối mạch nguồn tri thức</p>
+        </div>
+        <div class="academics-page__metric-item academics-page__metric-item--cyan motion-stagger-4">
+          <div class="academics-page__metric-number academics-page__metric-number--cyan">39 & 11</div>
+          <div class="academics-page__metric-label">Phòng Học & Lab Chuyên Dụng</div>
+          <p class="academics-page__metric-sub">Hệ thống giảng dạy và thực hành</p>
+        </div>
+      </section>
+
+      <!-- Section 1: Academic Overview & Philosophy (Cool Atmospheric Band) -->
+      <section id="tong-quan-dao-tao" class="page-section section-band--cool">
+        <header class="page-section__header">
+          <span class="section-kicker-pill">Triết lý sư phạm</span>
+          <h2 class="page-section__title motion-stagger-title">Mô Hình Đào Tạo Năng Khiếu & Khai Phóng Trí Tuệ</h2>
+        </header>
+        <div class="page-prose">
+          <p class="editorial-lead motion-stagger-lead">
+            Trường THPT Chuyên Lương Thế Vinh đảm nhiệm sứ mệnh phát hiện, tuyển chọn và bồi dưỡng những học sinh có
+            năng khiếu xuất sắc,
+            tạo nguồn nhân lực chất lượng cao cho tỉnh Đồng Nai và đất nước.
+            Triết lý giáo dục của nhà trường đặt trọng tâm vào việc kết hợp giữa kiến thức học thuật chuyên sâu với
+            phương pháp tự học và tư duy nghiên cứu khoa học.
+          </p>
+          <p>
+            Chương trình giảng dạy được thiết kế cân bằng giữa việc nâng cao năng lực môn chuyên và đảm bảo kiến thức
+            toàn diện
+            ở các môn văn hóa phổ thông, giáo dục đạo đức, kỹ năng mềm và rèn luyện thể chất.
+            Học sinh được tạo mọi điều kiện để tham gia các kỳ thi Học sinh giỏi các cấp, các cuộc thi Nghiên cứu Khoa
+            học Kỹ thuật (KHKT),
+            và các sân chơi học thuật uy tín trong nước và quốc tế.
+          </p>
+        </div>
+
+        <!-- Editorial Academic Theater Feature: Thầy cô chia sẻ trải nghiệm giảng dạy -->
+        <figure class="academics-page__theater-feature motion-stagger-img">
+          <div class="academics-page__theater-marquee">
+            <div class="academics-page__theater-marquee-left">
+              <span class="status-pulse-dot" aria-hidden="true"></span>
+              <span class="academics-page__theater-badge">Không Gian Tư Liệu Điện Ảnh Học Thuật</span>
+            </div>
+            <div class="academics-page__theater-marquee-right">
+              <span class="academics-page__theater-time">Tư liệu lưu trữ 02-Assets • Thước phim Sư phạm</span>
+            </div>
+          </div>
+          <div class="academics-page__theater-stage">
+            <div class="academics-page__video-container">
+              <video class="academics-page__video-player" controls preload="metadata" playsinline
+                poster="../assets/images/teachers-group.jpg">
+                <source src="../assets/videos/teachers-sharing-their-teaching-experiences.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ phát định dạng video HTML5 này.
+              </video>
+            </div>
+          </div>
+          <figcaption class="academics-page__theater-caption">
+            <div class="academics-page__theater-caption-header">
+              <div class="academics-page__video-caption-badge">
+                <span class="academics-page__video-badge-icon" aria-hidden="true">✦</span>
+                <span class="academics-page__video-badge-text">Thước phim tư liệu chuyên môn</span>
+              </div>
+              <span class="academics-page__theater-tagline">Lương Thế Vinh — Nơi Ươm Mầm Trí Tuệ</span>
+            </div>
+            <h3 class="academics-page__video-caption-title">Tâm Huyết Nghề Giáo & Trải Nghiệm Giảng Dạy Các Khối Chuyên
+            </h3>
+            <p class="academics-page__video-caption-desc">
+              Thầy cô giáo THPT Chuyên Lương Thế Vinh chia sẻ về tâm huyết bồi dưỡng năng khiếu, phương pháp khơi nguồn
+              sáng tạo
+              và hành trình đồng hành cùng các thế hệ học sinh chuyên trên con đường chinh phục đỉnh cao tri thức. Thước
+              phim ghi lại những khoảnh khắc chân thực trong công tác giảng dạy và nghiên cứu học thuật của tập thể sư
+              phạm nhà trường.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Section Divider: Prism Bar -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 2: The 7 Specialized Disciplines (Warm Golden Band) -->
+      <section id="cac-mon-chuyen" class="page-section section-band--warm">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--gold">Khối môn chuyên</span>
+          <h2 class="page-section__title motion-stagger-title">Hệ Thống 7 Khối Chuyên Mũi Nhọn Truyền Thống</h2>
+        </header>
+        <div class="page-prose">
+          <p class="motion-stagger-lead">
+            Từ nền móng lớp chuyên Toán thí điểm đầu tiên năm 1982 tại Trường PTTH Ngô Quyền, nhà trường đã từng bước mở
+            rộng
+            và hoàn thiện hệ thống <strong>07 khối chuyên truyền thống</strong>, bao quát các lĩnh vực Khoa học Tự
+            nhiên,
+            Khoa học Xã hội và Ngoại ngữ:
+          </p>
+        </div>
+
+        <!-- Specialized Subjects Grid: 7 Chromatic Identities -->
+        <div class="academics-page__subjects-grid">
+
+          <!-- Subject 1: Chuyên Toán (Royal Blue) -->
+          <article class="academics-page__subject-card academics-page__subject-card--math motion-stagger-1">
+            <div class="academics-page__subject-header">
+              <span class="academics-page__subject-badge academics-page__subject-badge--math">Khoa học tự nhiên • Nền
+                tảng</span>
+            </div>
+            <h3 class="academics-page__subject-title">Chuyên Toán Học</h3>
+            <p class="academics-page__subject-desc">
+              Khối chuyên có bề dày truyền thống lâu đời nhất, kế thừa trực tiếp từ lớp chuyên Toán thí điểm năm học
+              1982–1983.
+              Rèn luyện tư duy logic trừu tượng, phương pháp chứng minh chặt chẽ và năng lực giải quyết vấn đề phức tạp.
+            </p>
+            <div class="academics-page__subject-features">
+              <div class="academics-page__subject-features-label">Định hướng trọng tâm</div>
+              <ul class="academics-page__subject-features-list">
+                <li class="academics-page__subject-features-item">Bồi dưỡng thi HSG Quốc gia, Khu vực và Olympic 30/4
+                </li>
+                <li class="academics-page__subject-features-item">Hình thành tư duy toán ứng dụng và mô hình hóa toán
+                  học</li>
+                <li class="academics-page__subject-features-item">Cái nôi đào tạo nhiều tiến sĩ toán học và chuyên gia
+                  công nghệ</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Subject 2: Chuyên Tin học (Indigo/Tech) -->
+          <article class="academics-page__subject-card academics-page__subject-card--cs motion-stagger-2">
+            <div class="academics-page__subject-header">
+              <span class="academics-page__subject-badge academics-page__subject-badge--cs">Công nghệ & Thuật
+                toán</span>
+            </div>
+            <h3 class="academics-page__subject-title">Chuyên Tin Học</h3>
+            <p class="academics-page__subject-desc">
+              Môi trường nuôi dưỡng niềm đam mê thuật toán và công nghệ số. Học sinh được trang bị kiến thức chuyên sâu
+              về
+              cấu trúc dữ liệu, giải thuật lập trình thi đấu và tiếp cận sớm các công nghệ phần mềm hiện đại.
+            </p>
+            <div class="academics-page__subject-features">
+              <div class="academics-page__subject-features-label">Định hướng trọng tâm</div>
+              <ul class="academics-page__subject-features-list">
+                <li class="academics-page__subject-features-item">Thực hành trên hệ thống 3 phòng máy tính cấu hình cao
+                </li>
+                <li class="academics-page__subject-features-item">Tham gia giải thi lập trình học sinh giỏi quốc gia và
+                  tin học trẻ</li>
+                <li class="academics-page__subject-features-item">Nền tảng vững chắc cho các ngành kỹ sư phần mềm và AI
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Subject 3: Chuyên Vật lý (Cyan) -->
+          <article class="academics-page__subject-card academics-page__subject-card--physics motion-stagger-3">
+            <div class="academics-page__subject-header">
+              <span class="academics-page__subject-badge academics-page__subject-badge--physics">Khoa học thực
+                nghiệm</span>
+            </div>
+            <h3 class="academics-page__subject-title">Chuyên Vật Lý</h3>
+            <p class="academics-page__subject-desc">
+              Kết hợp hài hòa giữa lý thuyết cơ học, điện từ, quang học, lượng tử với các bài thực hành thực nghiệm
+              chính xác.
+              Rèn luyện tư duy quan sát, phân tích hiện tượng tự nhiên và ứng dụng kỹ thuật.
+            </p>
+            <div class="academics-page__subject-features">
+              <div class="academics-page__subject-features-label">Định hướng trọng tâm</div>
+              <ul class="academics-page__subject-features-list">
+                <li class="academics-page__subject-features-item">Thực hành tại 02 phòng thực nghiệm Vật lý chuyên dụng
+                </li>
+                <li class="academics-page__subject-features-item">Nghiên cứu ứng dụng các định luật vật lý vào dự án
+                  KHKT</li>
+                <li class="academics-page__subject-features-item">Đạt nhiều thành tích cao tại các kỳ thi HSG quốc gia
+                  và tỉnh</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Subject 4: Chuyên Hóa học (Amber/Orange) -->
+          <article class="academics-page__subject-card academics-page__subject-card--chemistry motion-stagger-4">
+            <div class="academics-page__subject-header">
+              <span class="academics-page__subject-badge academics-page__subject-badge--chemistry">Khoa học vật chất &
+                Ứng dụng</span>
+            </div>
+            <h3 class="academics-page__subject-title">Chuyên Hóa Học</h3>
+            <p class="academics-page__subject-desc">
+              Đi sâu vào thế giới cấu tạo phân tử, động học phản ứng, hóa học vô cơ và hữu cơ chuyên khảo.
+              Khối chuyên gắn liền với truyền thống đạt nhiều giải Nhất, Nhì học sinh giỏi quốc gia và nghiên cứu sáng
+              tạo.
+            </p>
+            <div class="academics-page__subject-features">
+              <div class="academics-page__subject-features-label">Định hướng trọng tâm</div>
+              <ul class="academics-page__subject-features-list">
+                <li class="academics-page__subject-features-item">Thực hành tại 02 phòng thí nghiệm Hóa học đạt chuẩn an
+                  toàn</li>
+                <li class="academics-page__subject-features-item">Rèn luyện kỹ năng thao tác phòng thí nghiệm và phân
+                  tích định tính, định lượng</li>
+                <li class="academics-page__subject-features-item">Phát triển các đề tài khoa học vật liệu và hóa sinh
+                  ứng dụng</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Subject 5: Chuyên Sinh học (Emerald) -->
+          <article class="academics-page__subject-card academics-page__subject-card--biology motion-stagger-5">
+            <div class="academics-page__subject-header">
+              <span class="academics-page__subject-badge academics-page__subject-badge--biology">Khoa học sự sống & Y
+                sinh</span>
+            </div>
+            <h3 class="academics-page__subject-title">Chuyên Sinh Học</h3>
+            <p class="academics-page__subject-desc">
+              Khám phá bản chất sự sống từ cấp độ phân tử, tế bào đến sinh thái học và tiến hóa.
+              Học sinh chuyên Sinh được định hướng bồi dưỡng niềm say mê nghiên cứu y sinh học và bảo tồn đa dạng sinh
+              học.
+            </p>
+            <div class="academics-page__subject-features">
+              <div class="academics-page__subject-features-label">Định hướng trọng tâm</div>
+              <ul class="academics-page__subject-features-list">
+                <li class="academics-page__subject-features-item">Thực nghiệm vi sinh, tế bào và di truyền học tại phòng
+                  Lab Sinh</li>
+                <li class="academics-page__subject-features-item">Đóng góp tích cực vào các đề tài y sinh trong cuộc thi
+                  KHKT</li>
+                <li class="academics-page__subject-features-item">Tạo nền tảng xuất sắc để học tiếp các ngành Y - Dược
+                  và Công nghệ sinh học</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Subject 6: Chuyên Ngữ văn (Crimson Red) -->
+          <article class="academics-page__subject-card academics-page__subject-card--literature motion-stagger-6">
+            <div class="academics-page__subject-header">
+              <span class="academics-page__subject-badge academics-page__subject-badge--literature">Khoa học xã hội &
+                Nhân văn</span>
+            </div>
+            <h3 class="academics-page__subject-title">Chuyên Ngữ Văn</h3>
+            <p class="academics-page__subject-desc">
+              Không gian nuôi dưỡng tâm hồn nhân văn, năng lực cảm thụ văn chương sâu sắc và tư duy phản biện ngôn từ
+              sắc bén.
+              Học sinh chuyên Văn được rèn luyện nghệ thuật diễn đạt tư tưởng và thấu hiểu các giá trị văn hóa - lịch
+              sử.
+            </p>
+            <div class="academics-page__subject-features">
+              <div class="academics-page__subject-features-label">Định hướng trọng tâm</div>
+              <ul class="academics-page__subject-features-list">
+                <li class="academics-page__subject-features-item">Nghiên cứu văn học trung đại, hiện đại Việt Nam và
+                  tinh hoa văn học thế giới</li>
+                <li class="academics-page__subject-features-item">Rèn luyện kỹ năng nghị luận xã hội, sáng tác và viết
+                  tiểu luận chuyên khảo</li>
+                <li class="academics-page__subject-features-item">Bồi dưỡng học sinh giỏi quốc gia với tỷ lệ đạt giải
+                  cao qua các năm</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Subject 7: Chuyên Tiếng Anh (Gold/Azure - Grand Showcase Card) -->
+          <article class="academics-page__subject-card academics-page__subject-card--english motion-stagger-img">
+            <div class="academics-page__subject-body-left">
+              <div class="academics-page__subject-header">
+                <span class="academics-page__subject-badge academics-page__subject-badge--english">Ngôn ngữ & Hội nhập
+                  toàn cầu</span>
+              </div>
+              <h3 class="academics-page__subject-title">Chuyên Tiếng Anh</h3>
+              <p class="academics-page__subject-desc">
+                Cửa ngõ hội nhập quốc tế của nhà trường. Khối chuyên chú trọng rèn luyện toàn diện 4 kỹ năng ngôn ngữ
+                chuẩn quốc tế,
+                phát triển phản xạ học thuật, thuyết trình và kỹ năng làm việc trong môi trường đa văn hóa.
+              </p>
+            </div>
+            <div class="academics-page__subject-features">
+              <div class="academics-page__subject-features-label">Định hướng trọng tâm</div>
+              <ul class="academics-page__subject-features-list">
+                <li class="academics-page__subject-features-item">Thực hành thường nhật tại hệ thống 3 phòng Lab ngoại
+                  ngữ đa phương tiện</li>
+                <li class="academics-page__subject-features-item">Chuẩn hóa các chứng chỉ quốc tế (IELTS, TOEFL) và thi
+                  HSG Quốc gia</li>
+                <li class="academics-page__subject-features-item">Học sinh tự tin giành học bổng du học tại các trường
+                  đại học hàng đầu thế giới</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Section Divider: Prism Bar -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 3: Faculty & Academic Departments (Majestic Dark Navy Feature Band) -->
+      <section id="to-chuyen-mon" class="page-section section-band--navy">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--gold">Đội ngũ sư phạm</span>
+          <h2 class="page-section__title motion-stagger-title">Tổ Chuyên Môn & Đội Ngũ Nhà Giáo Ưu Tú</h2>
+        </header>
+        <div class="page-prose">
+          <p class="editorial-lead motion-stagger-lead">
+            Sức mạnh cốt lõi làm nên thương hiệu Trường THPT Chuyên Lương Thế Vinh chính là đội ngũ thầy cô giáo tận
+            tâm,
+            vững vàng chuyên môn và giàu lòng nhiệt huyết vì học sinh thân yêu.
+          </p>
+          <p>
+            Theo số liệu thống kê tổng kết giai đoạn 22 năm, từ khoảng 30 cán bộ, giáo viên buổi đầu thành lập,
+            đội ngũ nhà trường đã lớn mạnh lên <strong>92 cán bộ quản lý và giáo viên</strong>, trong đó có
+            <strong>66 thầy cô đạt trình độ Thạc sĩ, Tiến sĩ (chiếm tỷ lệ khoảng 72%)</strong>.
+            Đặc biệt, trường tự hào có <strong>hơn 35 thầy cô giáo từng là cựu học sinh của trường</strong>,
+            sau khi tốt nghiệp xuất sắc tại các trường đại học sư phạm hàng đầu đã quyết định trở về mái trường xưa tiếp
+            tục cống hiến.
+          </p>
+        </div>
+
+        <!-- Faculty Feature Image & Caption -->
+        <div class="academics-page__faculty-feature motion-stagger-img">
+          <div class="academics-page__faculty-media">
+            <img src="../assets/images/teachers-group.jpg"
+              alt="Tập thể cán bộ giáo viên Trường THPT Chuyên Lương Thế Vinh" width="2048" height="1160"
+              loading="lazy">
+          </div>
+          <div class="academics-page__faculty-caption">
+            Tập thể sư phạm Trường THPT Chuyên Lương Thế Vinh — Nơi hội tụ các Nhà giáo Ưu tú và đội ngũ giáo viên giàu
+            tâm huyết. (Tư liệu: 02-Assets)
+          </div>
+
+          <!-- Departments Grid: 6 Faculty Units in Frosted Dark-Glass Cards -->
+          <div class="academics-page__departments-grid">
+
+            <div class="academics-page__department-card motion-stagger-1">
+              <h3 class="academics-page__department-name">Tổ Toán – Tin</h3>
+              <div class="academics-page__department-lead">Gắn liền với Nhà giáo Ưu tú Lê Tự Rô</div>
+              <p class="academics-page__department-text">
+                Nòng cốt trong công tác bồi dưỡng học sinh giỏi quốc gia môn Toán và Tin học qua nhiều thế hệ; đặt nền
+                móng vững chắc cho tư duy giải tích và thuật toán.
+              </p>
+            </div>
+
+            <div class="academics-page__department-card motion-stagger-2">
+              <h3 class="academics-page__department-name">Tổ Hóa học – Sinh học</h3>
+              <div class="academics-page__department-lead">Gắn liền với Nhà giáo Ưu tú Hà Huy Quang</div>
+              <p class="academics-page__department-text">
+                Phụ trách giảng dạy chuyên sâu hai bộ môn khoa học sự sống và vật chất; lực lượng chủ lực hướng dẫn các
+                đề tài nghiên cứu khoa học kỹ thuật cấp quốc gia.
+              </p>
+            </div>
+
+            <div class="academics-page__department-card motion-stagger-3">
+              <h3 class="academics-page__department-name">Tổ Ngữ Văn</h3>
+              <div class="academics-page__department-lead">Tổ trưởng: Cô Phan Thị Thái Hòa</div>
+              <p class="academics-page__department-text">
+                Khơi nguồn cảm xúc văn học, bồi đắp giá trị đạo đức nhân văn và năng lực diễn đạt chuẩn mực cho học sinh
+                toàn trường và khối chuyên Văn.
+              </p>
+            </div>
+
+            <div class="academics-page__department-card motion-stagger-4">
+              <h3 class="academics-page__department-name">Tổ Tiếng Anh</h3>
+              <div class="academics-page__department-lead">Tổ trưởng: Thầy Trương Quốc Hùng</div>
+              <p class="academics-page__department-text">
+                Tiên phong đổi mới phương pháp giảng dạy ngoại ngữ theo chuẩn quốc tế; trang bị hành trang giao tiếp và
+                nghiên cứu tài liệu toàn cầu cho học sinh.
+              </p>
+            </div>
+
+            <div class="academics-page__department-card motion-stagger-5">
+              <h3 class="academics-page__department-name">Tổ Sử – Địa – GDCD</h3>
+              <div class="academics-page__department-lead">Tổ trưởng: Thầy Trịnh Hồng Hiệp</div>
+              <p class="academics-page__department-text">
+                Giáo dục lòng yêu nước, hiểu biết sâu sắc về lịch sử, địa lý địa phương Đồng Nai và bồi dưỡng ý thức
+                trách nhiệm công dân thời kỳ mới.
+              </p>
+            </div>
+
+            <div class="academics-page__department-card motion-stagger-6">
+              <h3 class="academics-page__department-name">Tổ Hành chính – Thể dục</h3>
+              <div class="academics-page__department-lead">Tổ trưởng: Cô Phạm Thị Dịu Hiền</div>
+              <p class="academics-page__department-text">
+                Rèn luyện thể lực, kỷ luật học đường, đảm bảo công tác vận hành hậu cần và phục vụ tốt nhất cho các hoạt
+                động giảng dạy, học tập.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Callout Note on Source Data (Frosted Golden Glass) -->
+        <div class="callout-box motion-stagger-lead">
+          <h4 class="callout-box__title">Ghi chú về nguồn số liệu tổ chuyên môn</h4>
+          <p class="callout-box__content">
+            Thông tin về tỷ lệ cán bộ giáo viên có trình độ Thạc sĩ, Tiến sĩ (khoảng 72%), số lượng cựu học sinh trở về
+            giảng dạy (hơn 35 thầy cô)
+            và danh sách các thầy cô tổ trưởng chuyên môn tiêu biểu được trích xuất từ tài liệu tổng kết giai đoạn 22
+            năm và tư liệu lịch sử 30 năm thành lập trường.
+            Cơ cấu nhân sự và danh sách phân công chuyên môn cụ thể của từng năm học sẽ được nhà trường cập nhật theo
+            quyết định biên chế mới nhất.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section Divider: Prism Bar -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 4: Teaching Methodology & Scientific Research (Emerald Science Band) -->
+      <section id="phuong-phap-nghien-cuu" class="page-section section-band--emerald">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--emerald">Nghiên cứu & Thực hành</span>
+          <h2 class="page-section__title motion-stagger-title">Phương Pháp Sư Phạm & Văn Hóa Nghiên Cứu Khoa Học</h2>
+        </header>
+        <div class="page-prose">
+          <p class="editorial-lead motion-stagger-lead">
+            Dạy học tại trường chuyên không chỉ là truyền thụ kiến thức nâng cao mà là quá trình hướng dẫn học sinh
+            phương pháp tự học,
+            tư duy phản biện và khả năng biến ý tưởng học thuật thành các công trình nghiên cứu cụ thể.
+          </p>
+        </div>
+
+        <!-- Pedagogy & Research Highlights Block: Vibrant Dual Cards -->
+        <div class="academics-page__pedagogy-block">
+          <div class="academics-page__pedagogy-item academics-page__pedagogy-item--self-learning motion-stagger-1">
+            <div class="academics-page__pedagogy-icon" aria-hidden="true">💡</div>
+            <h3 class="academics-page__pedagogy-title">Tự Học & Tinh Thần Độc Lập</h3>
+            <p class="academics-page__pedagogy-text">
+              Học sinh được khuyến khích tự nghiên cứu tài liệu chuyên khảo, thảo luận nhóm và trình bày chuyên đề trước
+              lớp.
+              Thầy cô giữ vai trò người định hướng, gợi mở vấn đề và giải đáp các khúc mắc học thuật phức tạp.
+            </p>
+          </div>
+
+          <div class="academics-page__pedagogy-item academics-page__pedagogy-item--science motion-stagger-2">
+            <div class="academics-page__pedagogy-icon" aria-hidden="true">🔬</div>
+            <h3 class="academics-page__pedagogy-title">Nghiên Cứu Khoa Học Thực Chiến</h3>
+            <p class="academics-page__pedagogy-text">
+              Học sinh THPT Chuyên Lương Thế Vinh sớm tiếp cận các phương pháp nghiên cứu khoa học chuẩn mực.
+              Minh chứng tiêu biểu là thành tích xuất sắc tại Cuộc thi KHKT cấp Quốc gia năm học 2025–2026 với
+              <strong>Giải Nhất toàn quốc của Dự án AcuIRpen</strong> và <strong>Giải Ba toàn quốc của Dự án
+                Bloomind</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Divider: Prism Bar -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 5: Scholarships & Educational Continuity (Indigo Heritage Band) -->
+      <section id="hoc-bong-tai-tro" class="page-section section-band--indigo">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--gold">Học bổng & Truyền thống</span>
+          <h2 class="page-section__title motion-stagger-title">Quỹ Học Bổng Lương Thế Vinh & Sự Tiếp Nối Tri Thức</h2>
+        </header>
+        <div class="page-prose">
+          <p class="motion-stagger-lead">
+            Bên cạnh chính sách học bổng khuyến khích tài năng của tỉnh Đồng Nai dành cho học sinh trường chuyên,
+            nhà trường có truyền thống gắn bó sâu sắc với các thế hệ cựu học sinh qua các chương trình học bổng tiếp sức
+            tài năng:
+          </p>
+        </div>
+
+        <!-- Scholarship Box: Heritage Gold Surface -->
+        <div class="academics-page__scholarship-box motion-stagger-img">
+          <h3 class="academics-page__scholarship-title">
+            <span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span>
+            Học Bổng Lương Thế Vinh & Học Bổng Matsuda
+          </h3>
+          <p class="academics-page__scholarship-text">
+            Theo tư liệu lịch sử, trong lễ tổng kết năm học 1994–1995, các cựu học sinh lớp chuyên Toán thí điểm đầu
+            tiên tại Trường Ngô Quyền
+            đã tự nguyện đóng góp hình thành <strong>Quỹ học bổng Lương Thế Vinh</strong>.
+            Quỹ hỗ trợ tài chính cho những học sinh đạt giải quốc gia và tiếp tục chọn học tại các trường Đại học Sư
+            phạm trong suốt 4 năm đại học.
+            Về sau, truyền thống nâng bước tài năng này tiếp tục được duy trì và mở rộng qua Học bổng Matsuda cùng nhiều
+            chương trình tài trợ của các thế hệ cựu học sinh thành đạt.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Pathway CTA: Next Steps -->
+  <section class="page-pathway" aria-label="Khám phá tiếp theo">
+    <div class="page-container">
+      <div class="page-pathway__header">
+        <span class="page-pathway__eyebrow">Khám phá toàn diện</span>
+        <h2 class="page-pathway__title motion-stagger-title">Đồng Hành Cùng Chất Lượng Giáo Dục LTV</h2>
+      </div>
+      <div class="page-pathway__grid">
+        <a href="achievements.html" class="pathway-card motion-stagger-1">
+          <span class="pathway-card__tag">Thành tích học thuật</span>
+          <h3 class="pathway-card__title">Bảng Vàng Thành Tích</h3>
+          <p class="pathway-card__desc">Khám phá kết quả 31 giải HSG Quốc gia, 2 dự án KHKT xuất sắc và truyền thống
+            Olympic.</p>
+          <span class="pathway-card__link-text">Xem bảng vàng thành tích &rarr;</span>
+        </a>
+        <a href="student-life.html" class="pathway-card motion-stagger-2">
+          <span class="pathway-card__tag">Môi trường toàn diện</span>
+          <h3 class="pathway-card__title">Đời Sống Học Sinh</h3>
+          <p class="pathway-card__desc">Khám phá chuỗi sự kiện truyền thống 30 năm, các câu lạc bộ và phong trào rèn
+            luyện thể chất.</p>
+          <span class="pathway-card__link-text">Xem đời sống học sinh &rarr;</span>
+        </a>
+        <a href="facilities.html" class="pathway-card motion-stagger-3">
+          <span class="pathway-card__tag">Môi trường thực hành</span>
+          <h3 class="pathway-card__title">Cơ Sở Vật Chất</h3>
+          <p class="pathway-card__desc">Khám phá hệ thống 39 phòng học tiêu chuẩn và 11 phòng thực nghiệm, thí nghiệm
+            chuyên sâu.</p>
+          <span class="pathway-card__link-text">Xem cơ sở vật chất &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">Trường THPT Chuyên Lương Thế Vinh</h3>
+          <p class="footer-desc">
+            Cơ sở giáo dục trung học phổ thông chuyên duy nhất của tỉnh Đồng Nai. Nơi ươm mầm tài năng, nuôi dưỡng trí
+            tuệ và khơi nguồn sáng tạo từ năm 1994.
+          </p>
+          <p class="footer-meta">
+            <strong>Địa chỉ:</strong> Số 2, đường Lê Quý Đôn, phường Tam Hiệp, thành phố Đồng Nai
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Khám phá Nhanh</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Giới thiệu & Lịch sử</a></li>
+            <li><a href="achievements.html">Bảng vàng Thành tích</a></li>
+            <li><a href="academics.html">Chương trình Đào tạo</a></li>
+            <li><a href="facilities.html">Cơ sở Vật chất</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Kết nối & Hoạt động</h3>
+          <ul class="footer-links">
+            <li><a href="news.html">Tin tức & Sự kiện</a></li>
+            <li><a href="student-life.html">Đời sống Học đường</a></li>
+            <li><a href="activities.html">Câu lạc bộ & Phong trào</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Trường THPT Chuyên Lương Thế Vinh - Đồng Nai. Tất cả quyền được bảo lưu.</p>
+        <p class="footer-source-note">Website biên tập từ tư liệu lịch sử chính thức của nhà trường.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

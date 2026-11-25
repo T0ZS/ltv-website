@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hệ sinh thái câu lạc bộ học sinh và phong trào ngoại khóa, thể thao, văn hóa nghệ thuật tại Trường THPT Chuyên Lương Thế Vinh - Đồng Nai.">
+  <title>Câu Lạc Bộ & Phong Trào - THPT Chuyên Lương Thế Vinh</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo.jpg">
+
+  <!-- Master Stylesheet & Activities Page Stylesheet -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/activities-page.css">
+</head>
+<body class="activities-page">
+  <!-- Pure CSS Scroll Progress Bar -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Skip Link for Accessibility (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-masthead">
+        <div class="site-branding">
+          <a href="../index.html" class="site-brand-link">
+            <img src="../assets/images/logo.jpg"
+                 alt="Logo Trường THPT Chuyên Lương Thế Vinh"
+                 class="site-logo"
+                 width="58" height="58">
+            <span class="site-title">THPT Chuyên Lương Thế Vinh</span>
+          </a>
+        </div>
+        <nav class="site-nav" aria-label="Điều hướng chính">
+          <!-- Desktop Navigation -->
+          <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+            <li><a href="about.html" class="nav-link">Giới thiệu</a></li>
+            <li><a href="news.html" class="nav-link">Tin tức</a></li>
+            <li><a href="academics.html" class="nav-link">Học tập</a></li>
+            <li><a href="student-life.html" class="nav-link active" aria-current="page">Hoạt động</a></li>
+            <li><a href="achievements.html" class="nav-link">Thành tích</a></li>
+          </ul>
+
+          <!-- Mobile Navigation Toggle -->
+          <details class="nav-mobile-toggle">
+            <summary class="nav-toggle-btn" aria-label="Mở menu điều hướng">
+              <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="nav-mobile-list">
+              <li><a href="../index.html" class="nav-mobile-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-mobile-link">Giới thiệu</a></li>
+              <li><a href="news.html" class="nav-mobile-link">Tin tức</a></li>
+              <li><a href="academics.html" class="nav-mobile-link">Học tập</a></li>
+              <li><a href="student-life.html" class="nav-mobile-link active" aria-current="page">Hoạt động</a></li>
+              <li><a href="achievements.html" class="nav-mobile-link">Thành tích</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-nav" aria-label="Đường dẫn trang">
+    <div class="page-container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="student-life.html" class="breadcrumb-link">Hoạt động</a></li>
+        <li class="breadcrumb-item" aria-current="page">Câu lạc bộ & Phong trào</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Hero Banner -->
+  <header class="page-hero page-hero--violet">
+    <div class="page-container">
+      <div class="page-hero__badge">
+        <span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span>
+        <span class="page-hero__badge-tag">Hệ sinh thái ngoại khóa & phong trào LTV</span>
+      </div>
+      <h1 class="page-hero__title motion-stagger-title">
+        Hệ Sinh Thái Câu Lạc Bộ & <span class="page-brand-nowrap">Phong Trào Tự Quản Học Sinh</span>
+      </h1>
+      <p class="page-hero__lead motion-stagger-lead">
+        Mạng lưới hơn 14 câu lạc bộ học thuật, tranh biện, nghệ thuật và thiện nguyện dưới sự bảo trợ của Đoàn trường — 
+        nơi học sinh THPT Chuyên Lương Thế Vinh chủ động xây dựng đề án, rèn luyện kỹ năng lãnh đạo và định hình bản sắc cá nhân.
+      </p>
+    </div>
+  </header>
+
+  <!-- Sticky Horizontal Subnav Bar for Fast Anchor Navigation -->
+  <nav class="page-subnav" aria-label="Điều hướng nhanh trang Câu lạc bộ & Phong trào">
+    <div class="page-subnav__inner">
+      <span class="page-subnav__label" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+        Mục lục
+      </span>
+      <ul class="page-subnav__list">
+        <li><a href="#tong-quan-clb" class="page-subnav__link">1. Tổng quan tự quản</a></li>
+        <li><a href="#danh-muc-clb" class="page-subnav__link">2. Hệ thống 14+ CLB</a></li>
+        <li><a href="#the-thao-phong-trao" class="page-subnav__link">3. Giải bóng đá & Thể thao</a></li>
+        <li><a href="#doan-truong-phong-trao" class="page-subnav__link">4. Dấu ấn Đoàn trường</a></li>
+        <li><a href="#huong-dan-tham-gia" class="page-subnav__link">5. Hướng dẫn gia nhập</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content" class="page-content-wrapper">
+    <div class="page-container page-content--fullwidth">
+
+      <!-- Key Metrics Strip -->
+      <section class="activities-page__metrics-strip" aria-label="Chỉ số hệ thống câu lạc bộ">
+        <div class="activities-page__metric-item motion-stagger-1">
+          <div class="activities-page__metric-number">14+</div>
+          <div class="activities-page__metric-label">Câu Lạc Bộ Học Sinh</div>
+          <p class="activities-page__metric-sub">Mạng lưới tổ chức tự quản</p>
+        </div>
+        <div class="activities-page__metric-item motion-stagger-2">
+          <div class="activities-page__metric-number activities-page__metric-number--accent">04</div>
+          <div class="activities-page__metric-label">Mảng Hoạt Động Cốt Lõi</div>
+          <p class="activities-page__metric-sub">Học thuật, Tranh biện, Nghệ thuật, Xã hội</p>
+        </div>
+        <div class="activities-page__metric-item motion-stagger-3">
+          <div class="activities-page__metric-number">100%</div>
+          <div class="activities-page__metric-label">Học Sinh Chủ Trì Đề Án</div>
+          <p class="activities-page__metric-sub">Định hướng từ Đoàn trường</p>
+        </div>
+        <div class="activities-page__metric-item motion-stagger-4">
+          <div class="activities-page__metric-number">Thường niên</div>
+          <div class="activities-page__metric-label">Giải Đấu & Phong Trào</div>
+          <p class="activities-page__metric-sub">Bóng đá LTV & Hội khỏe Phù Đổng</p>
+        </div>
+      </section>
+
+      <!-- Section 1: Overview of Student Clubs -->
+      <section id="tong-quan-clb" class="page-section section-band--cool">
+        <header class="page-section__header motion-stagger-title">
+          <span class="section-kicker-pill">Định hướng toàn diện</span>
+          <h2 class="page-section__title">Hệ Sinh Thái Hoạt Động Ngoại Khóa & Tự Quản Học Đường</h2>
+        </header>
+        <div class="page-prose motion-stagger-lead">
+              <p class="editorial-lead">
+                Tại Trường THPT Chuyên Lương Thế Vinh, hoạt động ngoại khóa không đơn thuần là giải trí sau giờ học 
+                mà được định vị như một cấu phần giáo dục thiết yếu trong chiến lược đào tạo con người toàn diện — 
+                vững vàng tri thức học thuật, sắc bén về kỹ năng xã hội và giàu tinh thần trách nhiệm cộng đồng.
+              </p>
+              <p>
+                Mô hình hoạt động của các câu lạc bộ (CLB) được tổ chức theo phương thức <strong>học sinh làm chủ nhiệm và tự quản đề án</strong>, 
+                dưới sự hướng dẫn nghiệp vụ và định hướng chính trị từ Ban Chấp hành Đoàn trường. 
+                Từ việc xây dựng kế hoạch niên khóa, phân bổ ngân sách, vận động truyền thông đến thực hiện sự kiện, 
+                các bạn học sinh được trao quyền tự chủ tối đa, tạo nền tảng vững chắc cho năng lực hội nhập đại học và môi trường quốc tế.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section Transition Divider -->
+          <div class="section-divider-prism" aria-hidden="true"></div>
+
+          <!-- Section 2: Verified Club Showcase -->
+          <section id="danh-muc-clb" class="page-section section-band--warm">
+            <header class="page-section__header motion-stagger-title">
+              <span class="section-kicker-pill section-kicker-pill--gold">Hệ thống 14+ CLB & Đội nhóm</span>
+              <h2 class="page-section__title">Hệ Thống 6 Câu Lạc Bộ Tiêu Biểu Được Ghi Nhận</h2>
+            </header>
+            <div class="page-prose motion-stagger-lead">
+              <p>
+                Hồ sơ tài liệu của nhà trường ghi nhận mạng lưới khoảng 14–15 câu lạc bộ học sinh. Dưới đây là 
+                <strong>06 câu lạc bộ tiêu biểu đã được xác minh</strong>, đại diện cho các lĩnh vực học thuật, 
+                ngoại ngữ, kỹ năng tư duy, sáng tạo nghệ thuật và phục vụ xã hội:
+              </p>
+            </div>
+
+            <!-- Club Cards Grid -->
+            <div class="activities-page__club-grid">
+
+              <!-- Club 1: ICIS (Academic / Cobalt) -->
+              <article class="activities-page__club-card activities-page__club-card--cobalt motion-stagger-1">
+                <div class="activities-page__club-header">
+                  <span class="activities-page__club-badge activities-page__club-badge--cobalt">
+                    <span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span>
+                    Học thuật & Ngoại ngữ
+                  </span>
+                </div>
+                <h3 class="activities-page__club-title">ICIS</h3>
+                <div class="activities-page__club-full-name">International Communication & Intercultural Studies</div>
+                <p class="activities-page__club-desc">
+                  Câu lạc bộ chuyên môn định hướng giao tiếp quốc tế và nghiên cứu liên văn hóa. ICIS quy tụ những học sinh yêu thích ngoại ngữ, 
+                  tạo diễn đàn trao đổi học thuật, kỹ năng giao lưu quốc tế và nâng cao năng lực hội nhập toàn cầu.
+                </p>
+                <div class="activities-page__club-activities">
+                  <div class="activities-page__club-activities-label">Hoạt động trọng tâm</div>
+                  <ul class="activities-page__club-activities-list">
+                    <li class="activities-page__club-activities-item">Tổ chức các buổi tọa đàm học thuật và diễn đàn ngôn ngữ</li>
+                    <li class="activities-page__club-activities-item">Phát triển dự án tìm hiểu các nền văn hóa thế giới</li>
+                    <li class="activities-page__club-activities-item">Giao lưu liên trường và chuẩn bị năng lực du học</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Club 2: LTV English Speaking Club (Languages / Cyan) -->
+              <article class="activities-page__club-card activities-page__club-card--cyan motion-stagger-2">
+                <div class="activities-page__club-header">
+                  <span class="activities-page__club-badge activities-page__club-badge--cyan">
+                    <span class="status-pulse-dot" aria-hidden="true"></span>
+                    Ngoại ngữ & Giao tiếp
+                  </span>
+                </div>
+                <h3 class="activities-page__club-title">LTV English Speaking Club</h3>
+                <div class="activities-page__club-full-name">Rèn luyện phản xạ & giao tiếp tiếng Anh (ESC)</div>
+                <p class="activities-page__club-desc">
+                  Môi trường thực hành tiếng Anh thường nhật sinh động và cởi mở. Câu lạc bộ giúp học sinh phá vỡ rào cản tâm lý e ngại, 
+                  xây dựng phản xạ tự nhiên trong giao tiếp và phát triển kỹ năng thuyết trình trước đám đông bằng tiếng Anh.
+                </p>
+                <div class="activities-page__club-activities">
+                  <div class="activities-page__club-activities-label">Hoạt động trọng tâm</div>
+                  <ul class="activities-page__club-activities-list">
+                    <li class="activities-page__club-activities-item">Sinh hoạt thảo luận theo chủ đề thời sự định kỳ hàng tuần</li>
+                    <li class="activities-page__club-activities-item">Tổ chức các mini game tương tác và tranh luận tiếng Anh</li>
+                    <li class="activities-page__club-activities-item">Chia sẻ kinh nghiệm luyện thi các chứng chỉ quốc tế</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Club 3: ISDC (Debate / Indigo) -->
+              <article class="activities-page__club-card activities-page__club-card--indigo motion-stagger-3">
+                <div class="activities-page__club-header">
+                  <span class="activities-page__club-badge activities-page__club-badge--indigo">
+                    <span class="status-pulse-dot status-pulse-dot--gold" aria-hidden="true"></span>
+                    Tranh biện & Kỹ năng tư duy
+                  </span>
+                </div>
+                <h3 class="activities-page__club-title">ISDC</h3>
+                <div class="activities-page__club-full-name">Luong The Vinh Debate Club</div>
+                <p class="activities-page__club-desc">
+                  Sân chơi học thuật chuyên sâu về tranh biện theo các luật quốc tế (WSDC, BP). ISDC tôi luyện tư duy phản biện sắc bén, 
+                  năng lực tổng hợp thông tin đa chiều, nghệ thuật diễn đạt logic và phong thái đĩnh đạc của một diễn giả.
+                </p>
+                <div class="activities-page__club-activities">
+                  <div class="activities-page__club-activities-label">Hoạt động trọng tâm</div>
+                  <ul class="activities-page__club-activities-list">
+                    <li class="activities-page__club-activities-item">Tập huấn kỹ năng lập luận, phản biện và nghiên cứu dẫn chứng</li>
+                    <li class="activities-page__club-activities-item">Tham gia thi đấu tại các giải tranh biện học sinh toàn quốc</li>
+                    <li class="activities-page__club-activities-item">Tổ chức các trận đấu tranh biện nội bộ và mở rộng</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Club 4: LTV Orpheus (Arts / Crimson) -->
+              <article class="activities-page__club-card activities-page__club-card--crimson motion-stagger-4">
+                <div class="activities-page__club-header">
+                  <span class="activities-page__club-badge activities-page__club-badge--crimson">
+                    <span class="status-pulse-dot status-pulse-dot--crimson" aria-hidden="true"></span>
+                    Nghệ thuật & Âm nhạc
+                  </span>
+                </div>
+                <h3 class="activities-page__club-title">LTV Orpheus</h3>
+                <div class="activities-page__club-full-name">Câu lạc bộ Âm nhạc & Biểu diễn</div>
+                <p class="activities-page__club-desc">
+                  Điểm hẹn của những tâm hồn say mê giai điệu và nhạc cụ. LTV Orpheus là nòng cốt trong các chương trình văn nghệ lớn, 
+                  kết nối các thế hệ học sinh qua âm nhạc và tạo không gian thư giãn tinh thần sau những giờ học tập căng thẳng.
+                </p>
+                <div class="activities-page__club-activities">
+                  <div class="activities-page__club-activities-label">Hoạt động trọng tâm</div>
+                  <ul class="activities-page__club-activities-list">
+                    <li class="activities-page__club-activities-item">Dàn dựng tiết mục cho Đêm văn nghệ "Lương Thế Vinh tôi yêu"</li>
+                    <li class="activities-page__club-activities-item">Hòa tấu thanh nhạc, ban nhạc acoustic và nhạc cụ truyền thống</li>
+                    <li class="activities-page__club-activities-item">Giao lưu nghệ thuật tại các lễ kỷ niệm và sự kiện trường</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Club 5: Lumination (Visual Media / Coral) -->
+              <article class="activities-page__club-card activities-page__club-card--coral motion-stagger-5">
+                <div class="activities-page__club-header">
+                  <span class="activities-page__club-badge activities-page__club-badge--coral">
+                    <span class="status-pulse-dot status-pulse-dot--crimson" aria-hidden="true"></span>
+                    Sáng tạo & Thị giác
+                  </span>
+                </div>
+                <h3 class="activities-page__club-title">Lumination</h3>
+                <div class="activities-page__club-full-name">Câu lạc bộ Nghệ thuật & Sáng tạo nội dung</div>
+                <p class="activities-page__club-desc">
+                  Nơi hội tụ những nhà sáng tạo trẻ tuổi với niềm đam mê nhiếp ảnh, quay dựng video, thiết kế đồ họa và nghệ thuật thị giác. 
+                  Lumination chịu trách nhiệm ghi lại những khoảnh khắc đẹp nhất của thanh xuân LTV và truyền tải hình ảnh trường học năng động.
+                </p>
+                <div class="activities-page__club-activities">
+                  <div class="activities-page__club-activities-label">Hoạt động trọng tâm</div>
+                  <ul class="activities-page__club-activities-list">
+                    <li class="activities-page__club-activities-item">Ghi nhận tư liệu hình ảnh và video cho các sự kiện trường</li>
+                    <li class="activities-page__club-activities-item">Thực hiện các bộ ảnh kỷ niệm và ấn phẩm truyền thông học sinh</li>
+                    <li class="activities-page__club-activities-item">Tập huấn kỹ năng quay chụp, chỉnh sửa hậu kỳ và đồ họa</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Club 6: Sẻ Chia Yêu Thương (Community / Emerald) -->
+              <article class="activities-page__club-card activities-page__club-card--emerald motion-stagger-6">
+                <div class="activities-page__club-header">
+                  <span class="activities-page__club-badge activities-page__club-badge--emerald">
+                    <span class="status-pulse-dot" aria-hidden="true"></span>
+                    Thiện nguyện & Xã hội
+                  </span>
+                </div>
+                <h3 class="activities-page__club-title">Sẻ Chia Yêu Thương</h3>
+                <div class="activities-page__club-full-name">Câu lạc bộ Tình nguyện vì cộng đồng</div>
+                <p class="activities-page__club-desc">
+                  Đại diện cho trái tim nhân ái và tinh thần trách nhiệm xã hội của học sinh LTV. Câu lạc bộ chủ động phát động các chiến dịch thiện nguyện, 
+                  gây quỹ giúp đỡ trẻ em cơ nhỡ, người cao tuổi neo đơn và các hoàn cảnh khó khăn trên địa bàn tỉnh Đồng Nai.
+                </p>
+                <div class="activities-page__club-activities">
+                  <div class="activities-page__club-activities-label">Hoạt động trọng tâm</div>
+                  <ul class="activities-page__club-activities-list">
+                    <li class="activities-page__club-activities-item">Tổ chức các chuyến đi thăm và trao quà tại mái ấm tình thương</li>
+                    <li class="activities-page__club-activities-item">Dự án gây quỹ thiện nguyện nhân dịp Tết và Trung thu</li>
+                    <li class="activities-page__club-activities-item">Lan tỏa tinh thần tương thân tương ái và giá trị cộng đồng</li>
+                  </ul>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- Full 14+ Clubs Ecosystem Directory Table -->
+            <div class="activities-page__directory-container motion-stagger-2">
+              <h3 class="activities-page__directory-heading">Danh Mục Tổng Hợp 14+ Câu Lạc Bộ & Đội Nhóm Học Sinh</h3>
+              <p class="activities-page__directory-sub">
+                Phân loại theo 4 mảng hoạt động chiến lược dưới sự định hướng và bảo trợ của Ban Chấp hành Đoàn trường:
+              </p>
+              <div class="activities-page__table-wrapper">
+                <table class="activities-page__table">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 25%;">Lĩnh vực hoạt động</th>
+                      <th scope="col" style="width: 25%;">Tên câu lạc bộ / Đội nhóm</th>
+                      <th scope="col" style="width: 35%;">Định hướng chuyên môn & Mục tiêu</th>
+                      <th scope="col" style="width: 15%;">Tình trạng hồ sơ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Domain 1: Học thuật & Ngoại ngữ -->
+                    <tr>
+                      <td rowspan="4" class="activities-page__table-group activities-page__table-group--cobalt"><strong>Học thuật, Ngoại ngữ & Nghiên cứu</strong></td>
+                      <td><strong>ICIS</strong></td>
+                      <td>Nghiên cứu liên văn hóa, giao tiếp quốc tế và kỹ năng hội nhập toàn cầu</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--verified">Đã thẩm định</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>LTV English Speaking Club</strong></td>
+                      <td>Thực hành phản xạ giao tiếp tiếng Anh, thuyết trình và tranh biện ngoại ngữ</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--verified">Đã thẩm định</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CLB STEM & Robotics LTV</strong></td>
+                      <td>Sáng chế khoa học công nghệ, lập trình điều khiển tự động và chế tạo robot</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Đang sinh hoạt</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Nhóm Nghiên cứu KHKT Trẻ</strong></td>
+                      <td>Nghiên cứu khoa học kỹ thuật học sinh, dự án dự thi cấp tỉnh và quốc gia</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Đang sinh hoạt</span></td>
+                    </tr>
+
+                    <!-- Domain 2: Tranh biện & Kỹ năng tư duy -->
+                    <tr>
+                      <td rowspan="3" class="activities-page__table-group activities-page__table-group--indigo"><strong>Tranh biện & Tư duy phản biện</strong></td>
+                      <td><strong>ISDC (Debate Club)</strong></td>
+                      <td>Nghiên cứu luật tranh biện quốc tế WSDC/BP, rèn luyện tư duy logic và lập luận</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--verified">Đã thẩm định</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CLB Lãnh đạo Trẻ LTV</strong></td>
+                      <td>Kỹ năng lãnh đạo, quản lý đề án, đàm phán và thuyết phục công chúng</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Đang sinh hoạt</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CLB Sách & Văn hóa Đọc</strong></td>
+                      <td>Tọa đàm văn học, phát triển văn hóa đọc và kỹ năng tư duy cảm thụ</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Đang sinh hoạt</span></td>
+                    </tr>
+
+                    <!-- Domain 3: Nghệ thuật & Sáng tạo -->
+                    <tr>
+                      <td rowspan="4" class="activities-page__table-group activities-page__table-group--crimson"><strong>Nghệ thuật & Sáng tạo nội dung</strong></td>
+                      <td><strong>LTV Orpheus</strong></td>
+                      <td>Âm nhạc, hòa tấu acoustic, thanh nhạc và biểu diễn nghệ thuật học đường</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--verified">Đã thẩm định</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Lumination</strong></td>
+                      <td>Nhiếp ảnh nghệ thuật, quay dựng video, thiết kế đồ họa và truyền thông học sinh</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--verified">Đã thẩm định</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Đội Văn nghệ Xung kích</strong></td>
+                      <td>Dàn dựng ca múa nhạc kịch phục vụ các ngày lễ truyền thống và kỷ niệm trường</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Đoàn trường</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CLB Mỹ thuật & Hội họa LTV</strong></td>
+                      <td>Hội họa, trưng bày triển lãm mỹ thuật và thiết kế không gian học đường</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Đang sinh hoạt</span></td>
+                    </tr>
+
+                    <!-- Domain 4: Thể thao & Thiện nguyện xã hội -->
+                    <tr>
+                      <td rowspan="4" class="activities-page__table-group activities-page__table-group--emerald"><strong>Thể thao & Thiện nguyện xã hội</strong></td>
+                      <td><strong>Sẻ Chia Yêu Thương</strong></td>
+                      <td>Tình nguyện vì cộng đồng, gây quỹ xã hội và thăm hỏi các mái ấm nhân ái</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--verified">Đã thẩm định</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CLB Bóng đá Học sinh LTV</strong></td>
+                      <td>Huấn luyện thể lực, rèn luyện chiến thuật và nòng cốt giải Football Tournament</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Ban Thể thao</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CLB Bóng rổ & Điền kinh LTV</strong></td>
+                      <td>Rèn luyện thể lực bền bỉ, thi đấu giao hữu các trường THPT trọng điểm</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Ban Thể thao</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CLB Cờ vua & Cờ tướng LTV</strong></td>
+                      <td>Tập luyện tư duy chiến lược, tuyển chọn VĐV thi đấu Hội khỏe Phù Đổng</td>
+                      <td><span class="activities-page__status-badge activities-page__status-badge--active">Ban Thể thao</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Callout on Missing/Pending Club Records -->
+            <div class="callout-box motion-stagger-3">
+              <h4 class="callout-box__title">Ghi chú về nguồn số liệu danh mục câu lạc bộ</h4>
+              <p class="callout-box__content">
+                Hệ sinh thái ngoại khóa của Trường THPT Chuyên Lương Thế Vinh duy trì từ 14 đến 15 câu lạc bộ học sinh theo từng niên khóa 
+                (bao gồm các nhóm nghiên cứu khoa học, STEM/Robotics, cờ vua và câu lạc bộ thể thao). 
+                Danh sách 6 câu lạc bộ trên đây là các đơn vị tiêu biểu đã được xác minh thông tin từ tư liệu chính thức. 
+                Thông tin bổ sung về các câu lạc bộ còn lại cùng ban chủ nhiệm từng niên khóa sẽ tiếp tục được cập nhật theo thông báo của Đoàn trường.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section Transition Divider -->
+          <div class="section-divider-prism" aria-hidden="true"></div>
+
+          <!-- Section 3: Sports Movement & Football Tournament -->
+          <section id="the-thao-phong-trao" class="page-section section-band--crimson">
+            <header class="page-section__header motion-stagger-title">
+              <span class="section-kicker-pill section-kicker-pill--gold">Rèn luyện thể chất</span>
+              <h2 class="page-section__title">Giải Bóng Đá Học Sinh LTV & Phong Trào Thể Dục Thể Thao</h2>
+            </header>
+            <div class="page-prose motion-stagger-lead">
+              <p class="editorial-lead">
+                Cùng với trí tuệ chuyên môn, sức khỏe thể chất và tinh thần bền bỉ là bệ phóng vững vàng cho sự trưởng thành. 
+                Phong trào thể thao tại LTV được tổ chức sôi nổi thường niên, tạo cơ hội cho học sinh rèn luyện tính kỷ luật và sự gắn kết đồng đội.
+              </p>
+              <p>
+                Sự kiện thể thao được mong đợi nhất mỗi năm là <strong>Giải bóng đá học sinh LTV (Football Tournament)</strong>, 
+                quy tụ các đội tuyển đại diện cho các khối chuyên tranh tài nảy lửa trên sân bóng đá cỏ nhân tạo của trường. 
+                Bên cạnh đó, nhà trường thường xuyên tham gia và đạt thành tích cao tại Hội khỏe Phù Đổng các cấp, 
+                phát triển các bộ môn bóng rổ, cầu lông, điền kinh và cờ vua.
+              </p>
+            </div>
+
+            <!-- Sports Dual Photo Showcase -->
+            <div class="activities-page__dual-gallery">
+              <figure class="activities-page__dual-card motion-stagger-1 motion-stagger-img">
+                <img src="../assets/images/football-tournament-2024.jpg"
+                     alt="Trận đấu quyết liệt tại Giải bóng đá học sinh LTV năm 2024"
+                     width="1080" height="1080"
+                     loading="lazy">
+                <figcaption class="activities-page__dual-caption">
+                  Pha tranh bóng quyết liệt tại Giải bóng đá LTV Football Tournament 2024.
+                </figcaption>
+              </figure>
+              <figure class="activities-page__dual-card motion-stagger-2 motion-stagger-img">
+                <img src="../assets/images/a-certain-football-team-2024.jpg"
+                     alt="Đội hình thi đấu bóng đá học sinh LTV lưu niệm niên khóa 2024"
+                     width="2048" height="1365"
+                     loading="lazy">
+                <figcaption class="activities-page__dual-caption">
+                  Đội tuyển bóng đá học sinh đại diện các khối chuyên niên khóa 2024.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Section Transition Divider -->
+          <div class="section-divider-prism" aria-hidden="true"></div>
+
+          <!-- Section 4: Youth Union & School Traditions -->
+          <section id="doan-truong-phong-trao" class="page-section section-band--navy">
+            <header class="page-section__header motion-stagger-title">
+              <span class="section-kicker-pill section-kicker-pill--gold">Phong trào tự quản</span>
+              <h2 class="page-section__title">Dấu Ấn Đoàn Trường & Các Phong Trào Thanh Niên Xung Kích</h2>
+            </header>
+            <div class="page-prose motion-stagger-lead">
+              <p>
+                Ban Chấp hành Đoàn trường THPT Chuyên Lương Thế Vinh giữ vai trò trung tâm trong công tác định hướng, 
+                tổ chức và đồng hành cùng các hoạt động phong trào thanh niên. Các chương trình lớn ghi dấu ấn qua nhiều thế hệ bao gồm:
+              </p>
+              <ul>
+                <li><strong>Hội Xuân Đón Tết:</strong> Không gian văn hóa truyền thống với các gian hàng ẩm thực dân gian, trang trí cổng trại và trò chơi tập thể.</li>
+                <li><strong>Đêm Nghệ Thuật "Lương Thế Vinh Tôi Yêu":</strong> Sân khấu biểu diễn tài năng ca múa nhạc, kịch nghệ và hòa tấu do học sinh dàn dựng.</li>
+                <li><strong>Cuộc thi Khoa học Kỹ thuật & Học thuật:</strong> Sân chơi nghiên cứu khoa học, Olympic Mác – Lênin và các cuộc thi tìm hiểu lịch sử, văn hóa Đồng Nai.</li>
+              </ul>
+            </div>
+
+            <!-- Movement Feature: Photo + Editorial Text -->
+            <div class="activities-page__movement-feature motion-stagger-1">
+              <div class="activities-page__movement-media motion-stagger-img">
+                <img src="../assets/images/activity-30th-anniversary-student-group-01.jpg"
+                     alt="Tập thể học sinh Chuyên Lương Thế Vinh rạng rỡ trong dịp Lễ kỷ niệm 30 năm thành lập trường"
+                     width="2048" height="1340"
+                     loading="lazy">
+              </div>
+              <div class="activities-page__movement-content motion-stagger-2">
+                <span class="activities-page__movement-tag">Tinh thần thế hệ</span>
+                <h3 class="activities-page__movement-title">Khí Chất Tự Tin Của Tuổi Trẻ Chuyên Lương Thế Vinh</h3>
+                <p class="activities-page__movement-text">
+                  Không chỉ xuất sắc trong các kỳ thi học sinh giỏi, học sinh LTV khẳng định hình ảnh thế hệ trẻ năng động, 
+                  giàu sáng tạo, tự tin thể hiện cá tính và luôn tràn đầy nhiệt huyết cống hiến cho tập thể.
+                </p>
+                <div class="citation-note">Tư liệu ảnh: 02-Assets / Dịp kỷ niệm 30 năm (11/2024)</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section Transition Divider -->
+          <div class="section-divider-prism" aria-hidden="true"></div>
+
+          <!-- Section 5: Guide to Joining or Starting a Club -->
+          <section id="huong-dan-tham-gia" class="page-section section-band--emerald">
+            <header class="page-section__header motion-stagger-title">
+              <span class="section-kicker-pill section-kicker-pill--emerald">Chỉ dẫn học sinh</span>
+              <h2 class="page-section__title">Quy Trình Gia Nhập & Thành Lập Câu Lạc Bộ Mới</h2>
+            </header>
+            <div class="page-prose motion-stagger-lead">
+              <p>
+                Mọi học sinh khi trúng tuyển vào Trường THPT Chuyên Lương Thế Vinh đều có cơ hội đăng ký tham gia hoặc 
+                khởi xướng đề án thành lập câu lạc bộ mới theo quy trình 4 bước chuẩn hóa:
+              </p>
+            </div>
+
+            <!-- Guide Steps Grid -->
+            <div class="activities-page__guide-steps">
+              <div class="activities-page__guide-step motion-stagger-1">
+                <div class="activities-page__step-badge">01</div>
+                <h3 class="activities-page__step-title">Tuần Lễ CLB (Club Fair)</h3>
+                <p class="activities-page__step-desc">
+                  Tham gia tuần lễ giới thiệu các câu lạc bộ được tổ chức đầu năm học để tìm hiểu định hướng hoạt động và lựa chọn môi trường phù hợp.
+                </p>
+              </div>
+
+              <div class="activities-page__guide-step motion-stagger-2">
+                <div class="activities-page__step-badge">02</div>
+                <h3 class="activities-page__step-title">Đăng Ký Tuyển Quân</h3>
+                <p class="activities-page__step-desc">
+                  Nộp đơn ứng tuyển vào các ban chuyên môn (Nội dung, Truyền thông, Hậu cần, Đối ngoại) theo các đợt mở đơn chính thức của từng CLB.
+                </p>
+              </div>
+
+              <div class="activities-page__guide-step motion-stagger-3">
+                <div class="activities-page__step-badge">03</div>
+                <h3 class="activities-page__step-title">Phỏng Vấn & Sinh Hoạt</h3>
+                <p class="activities-page__step-desc">
+                  Tham gia vòng phỏng vấn, thử thách nhóm và bắt đầu sinh hoạt chuyên môn định kỳ theo lịch trình đã được Đoàn trường phê duyệt.
+                </p>
+              </div>
+
+              <div class="activities-page__guide-step motion-stagger-4">
+                <div class="activities-page__step-badge">04</div>
+                <h3 class="activities-page__step-title">Khởi Xướng Đề Án Mới</h3>
+                <p class="activities-page__step-desc">
+                  Nhóm học sinh có cùng đam mê có thể xây dựng đề án hoạt động chi tiết gửi Ban Chấp hành Đoàn trường để xét duyệt thành lập CLB mới.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4 Core Operational Rules Banner -->
+            <div class="activities-page__rules-banner motion-stagger-2">
+              <div class="activities-page__rules-header motion-stagger-title">
+                <span class="section-kicker-pill section-kicker-pill--gold">Quy chuẩn học đường</span>
+                <h3 class="activities-page__rules-title">4 Nguyên Tắc Cốt Lõi Khi Sinh Hoạt Câu Lạc Bộ</h3>
+                <p class="activities-page__rules-lead">Đảm bảo sự cân bằng hài hòa giữa học tập chính khóa xuất sắc và phong trào tự quản học đường sôi nổi:</p>
+              </div>
+              <div class="activities-page__rules-grid">
+                <div class="activities-page__rules-card motion-stagger-1">
+                  <div class="activities-page__rules-badge">01</div>
+                  <h4 class="activities-page__rules-item-title">Ưu tiên Học tập</h4>
+                  <p class="activities-page__rules-item-desc">Kết quả học tập chính khóa là ưu tiên số một; tuyệt đối không sinh hoạt câu lạc bộ hoặc tổ chức sự kiện trong giờ học chính khóa.</p>
+                </div>
+                <div class="activities-page__rules-card motion-stagger-2">
+                  <div class="activities-page__rules-badge">02</div>
+                  <h4 class="activities-page__rules-item-title">Đăng ký & Báo cáo</h4>
+                  <p class="activities-page__rules-item-desc">Mọi kế hoạch hoạt động, phân bổ tài chính, vận động tài trợ và lịch trình sinh hoạt đều phải đăng ký và được Đoàn trường phê duyệt.</p>
+                </div>
+                <div class="activities-page__rules-card motion-stagger-3">
+                  <div class="activities-page__rules-badge">03</div>
+                  <h4 class="activities-page__rules-item-title">Văn hóa Ứng xử</h4>
+                  <p class="activities-page__rules-item-desc">Giữ gìn chuẩn mực văn hóa học đường, ứng xử tôn trọng, tương trợ đồng đội và phát huy tinh thần đoàn kết học sinh Chuyên LTV.</p>
+                </div>
+                <div class="activities-page__rules-card motion-stagger-4">
+                  <div class="activities-page__rules-badge">04</div>
+                  <h4 class="activities-page__rules-item-title">Tự chủ & Bảo trợ</h4>
+                  <p class="activities-page__rules-item-desc">Học sinh chủ động khởi xướng, lập đề án và điều hành dưới sự cố vấn chuyên môn, đồng hành của giáo viên phụ trách.</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+    </div>
+  </main>
+
+  <!-- Pathway CTA: Next Steps -->
+  <section class="page-pathway" aria-label="Khám phá tiếp theo">
+    <div class="page-container">
+      <div class="page-pathway__header">
+        <span class="page-pathway__eyebrow">Trải nghiệm phong phú</span>
+        <h2 class="page-pathway__title">Khám Phá Toàn Diện Đời Sống Học Đường LTV</h2>
+      </div>
+      <div class="page-pathway__grid">
+        <a href="student-life.html" class="pathway-card">
+          <span class="pathway-card__tag">Văn hóa học đường</span>
+          <h3 class="pathway-card__title">Đời Sống Học Sinh</h3>
+          <p class="pathway-card__desc">Khám phá chuỗi sự kiện truyền thống 30 năm, Đêm văn nghệ và Hội Xuân rực rỡ sắc màu.</p>
+          <span class="pathway-card__link-text">Xem đời sống học sinh &rarr;</span>
+        </a>
+        <a href="facilities.html" class="pathway-card">
+          <span class="pathway-card__tag">Không gian trải nghiệm</span>
+          <h3 class="pathway-card__title">Cơ Sở Vật Chất</h3>
+          <p class="pathway-card__desc">Khuôn viên 2,7 ha rợp bóng mát, sân bóng đá cỏ nhân tạo và các phòng chức năng chuẩn mực.</p>
+          <span class="pathway-card__link-text">Xem cơ sở vật chất &rarr;</span>
+        </a>
+        <a href="news.html" class="pathway-card">
+          <span class="pathway-card__tag">Thông tin cập nhật</span>
+          <h3 class="pathway-card__title">Tin Tức & Sự Kiện</h3>
+          <p class="pathway-card__desc">Theo dõi các hoạt động, phong trào thi đua và các bài viết chuyên đề mới nhất của nhà trường.</p>
+          <span class="pathway-card__link-text">Xem tin tức &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">Trường THPT Chuyên Lương Thế Vinh</h3>
+          <p class="footer-desc">
+            Cơ sở giáo dục trung học phổ thông chuyên duy nhất của tỉnh Đồng Nai. Nơi ươm mầm tài năng, nuôi dưỡng trí tuệ và khơi nguồn sáng tạo từ năm 1994.
+          </p>
+          <p class="footer-meta">
+            <strong>Địa chỉ:</strong> Số 2, đường Lê Quý Đôn, phường Tam Hiệp, thành phố Đồng Nai
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Khám phá Nhanh</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Giới thiệu & Lịch sử</a></li>
+            <li><a href="achievements.html">Bảng vàng Thành tích</a></li>
+            <li><a href="academics.html">Chương trình Đào tạo</a></li>
+            <li><a href="facilities.html">Cơ sở Vật chất</a></li>
+            <li><a href="admissions.html">Chỉ dẫn Tuyển sinh</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Kết nối & Hoạt động</h3>
+          <ul class="footer-links">
+            <li><a href="news.html">Tin tức & Sự kiện</a></li>
+            <li><a href="student-life.html">Đời sống Học đường</a></li>
+            <li><a href="activities.html">Câu lạc bộ & Phong trào</a></li>
+            <li><a href="contact.html">Liên hệ & Chỉ dẫn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Trường THPT Chuyên Lương Thế Vinh - Đồng Nai. Tất cả quyền được bảo lưu.</p>
+        <p class="footer-source-note">Website biên tập từ tư liệu lịch sử chính thức của nhà trường.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

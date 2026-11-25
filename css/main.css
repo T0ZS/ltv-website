@@ -1,0 +1,35 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - MASTER STYLESHEET
+ * File: css/main.css
+ * Spec: LTV Homepage Design Specification v1.0
+ * Architecture: Pure Modular CSS3 without preprocessors or build tools
+ * Direction: Editorial | Nunito Sans (Unified System) | Blue Primary + Red Accent
+ */
+
+/* 0. Font Face Layer — Local Google Fonts fallback */
+@import url("../assets/fonts/fonts.css");
+
+/* 1. Base Layer — variables first so all other files can reference tokens */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+@import url("base/motion.css");
+
+/* 2. Layout Layer */
+@import url("layout/grid.css");
+@import url("layout/header.css");
+@import url("layout/footer.css");
+@import url("layout/page-layout.css");
+
+/* 3. Component Layer */
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/badges.css");
+
+/* 4. Section Layer (Homepage Specific) */
+@import url("sections/hero.css");
+@import url("sections/intro.css");
+@import url("sections/stats.css");
+@import url("sections/timeline.css");
+@import url("sections/achievements.css");
+@import url("sections/activities.css");

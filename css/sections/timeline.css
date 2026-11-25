@@ -1,0 +1,308 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - HOMEPAGE TIMELINE HIGHLIGHT
+ * File: css/sections/timeline.css
+ * Spec: Editorial Premium Enhancement v3.0
+ * Direction: Editorial Chronology of School Milestones (Timeline + Sticky Archival Sidebar)
+ */
+
+.timeline-section {
+  padding: var(--spacing-4xl) 0;
+  background:
+    radial-gradient(ellipse 70% 35% at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(192, 57, 43, 0.08) 0%, transparent 60%),
+    var(--bg-band-warm, linear-gradient(180deg, #FEF3C7 0%, #FFFBEB 100%));
+  border-top: 1px solid #FDE68A;
+  border-bottom: 1px solid #FDE68A;
+  position: relative;
+}
+
+.timeline-header {
+  max-width: 780px;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.timeline-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.timeline-lead {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.timeline-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--spacing-3xl);
+  align-items: flex-start;
+}
+
+/* Timeline List with Gradient Track */
+.timeline-list {
+  position: relative;
+  list-style: none;
+  padding-left: var(--spacing-2xl);
+  margin: 0;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-primary-blue) 0%, var(--color-accent-red) 100%);
+  border-radius: var(--radius-pill);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  background: var(--surface-card-gold, linear-gradient(145deg, #FFFFFF 0%, #FEF3C7 100%));
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.12);
+  transition: background-color var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+              transform var(--motion-timing-normal) var(--motion-ease-out);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:hover {
+  background: #FFFFFF;
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.22);
+  transform: translateX(4px);
+}
+
+/* Timeline Marker with concentric halo */
+.timeline-marker {
+  position: absolute;
+  left: calc(-1 * var(--spacing-2xl) - 5px);
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary-blue);
+  border: 2px solid var(--color-bg-base);
+  box-shadow: 0 0 0 2px var(--color-primary-blue-light);
+  transition: transform var(--motion-timing-fast) var(--motion-ease-out),
+              box-shadow var(--motion-timing-fast) var(--motion-ease-out),
+              background-color var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.timeline-item:hover .timeline-marker {
+  background-color: var(--color-accent-red);
+  box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.25);
+  transform: scale(1.2);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-accent-red);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-2xs);
+  padding: 2px 8px;
+  background-color: var(--color-accent-red-wash);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(192, 57, 43, 0.15);
+}
+
+.timeline-heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-heading);
+}
+
+.timeline-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 0;
+}
+
+/* Sidebar with Archival Photograph & Anniversary Seal */
+.timeline-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  position: sticky;
+  top: 108px;
+}
+
+.timeline-figure {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(12, 59, 110, 0.14);
+  background-color: var(--color-bg-base);
+  box-shadow: var(--shadow-card-elevated);
+  transition: transform var(--motion-timing-emphasis) var(--motion-ease-out),
+              box-shadow var(--motion-timing-emphasis) var(--motion-ease-out);
+  /* LTV Motion v2.0: Invariant Visible-by-default */
+  opacity: 1;
+  transform: none;
+}
+
+/* LTV Editorial Premium Motion v2.0: Image Reveal */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .timeline-figure {
+      animation: ltvImageReveal var(--motion-duration-image-reveal, 750ms) var(--motion-ease-editorial, cubic-bezier(0.22, 1, 0.36, 1)) forwards;
+      animation-timeline: view(block);
+      animation-range: entry 0% cover 30%;
+      will-change: opacity, transform;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-figure {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media print {
+  .timeline-figure {
+    animation: none !important;
+    animation-timeline: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.timeline-figure:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.timeline-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s var(--motion-ease-out);
+}
+
+.timeline-figure:hover .timeline-img {
+  transform: scale(1.04);
+}
+
+.timeline-caption {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: #FEF3C7;
+  border-top: 1px solid #FDE68A;
+  font-style: italic;
+  line-height: var(--line-height-body);
+}
+
+/* Anniversary Badge Card with Warm Gold Glass */
+.timeline-badge-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  background: var(--surface-card-gold, linear-gradient(145deg, #FFFFFF 0%, #FEF3C7 100%));
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-left: 4px solid var(--color-accent-gold);
+  padding: var(--spacing-lg);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.16);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out);
+}
+
+.timeline-badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-badge-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+}
+
+.timeline-badge-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-2xs);
+}
+
+.timeline-badge-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .timeline-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .timeline-sidebar {
+    position: static;
+  }
+
+  .timeline-title {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .timeline-list {
+    padding-left: var(--spacing-lg);
+  }
+
+  .timeline-marker {
+    left: calc(-1 * var(--spacing-lg) - 5px);
+  }
+
+  .timeline-item {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .timeline-badge-card {
+    flex-direction: row;
+    text-align: left;
+  }
+}

@@ -1,0 +1,1585 @@
+/**
+ * THPT CHUYEN LUONG THE VINH - ABOUT PAGE STYLESHEET
+ * File: css/pages/about-page.css
+ * Architecture: Modular Page-Specific Stylesheet
+ * Namespace: .about-page
+ * Direction: LTV Editorial Premium Design System v1.0
+ * Benchmark: Homepage Visual Direction (Batch 1 Approved)
+ *
+ * Sections:
+ *   1. Page Hero (Editorial Historical Introduction)
+ *   2. Editorial Prose & Drop Caps
+ *   3. Pull Quotes (Educational Philosophy)
+ *   4. Archival & Campus Figure Enhancements
+ *   5. Historical Timeline Centerpiece (Biên niên sử 30 năm)
+ *   6. Campus Evolution Split (Trước & Sau 1997 vs Hiện nay)
+ *   7. School Identity & Emblem Showcase (Trời tròn Đất vuông)
+ *   8. Values & Pillars Grid (5 Trụ cột cốt lõi)
+ *   9. Organization & Institutional Callout
+ *  10. Sticky Sidebar Enhancements
+ *  11. Pathway CTA Enhancements
+ *  12. Responsive Adaptations (1024px, 768px, 480px)
+ *  13. Accessibility & Prefers-Reduced-Motion
+ */
+
+
+/* =====================================================
+   1. PAGE HERO — Editorial Historical Introduction
+   ===================================================== */
+
+.about-page .page-hero {
+  position: relative;
+  background: linear-gradient(135deg, #061830 0%, #1A1202 30%, #0C3B6E 65%, #172554 100%);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.45);
+  padding: var(--spacing-3xl) 0 var(--spacing-2xl) 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(6, 24, 48, 0.35);
+}
+
+/* Editorial Top Accent Stripe */
+.about-page .page-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #D4AF37 0%, #F59E0B 25%, #0284C7 50%, #C0392B 75%, #D4AF37 100%);
+  z-index: 1;
+}
+
+.about-page .page-hero__inner {
+  max-width: 920px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .page-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #FDE68A;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 5px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(253, 230, 138, 0.45);
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+}
+
+.about-page .page-hero__eyebrow::before {
+  display: none;
+}
+
+.about-page .page-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: #FFFFFF;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+  letter-spacing: var(--letter-spacing-heading);
+  margin-bottom: var(--spacing-md);
+  text-wrap: balance;
+}
+
+.about-page .page-hero__description {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: #E2E8F0;
+  margin-bottom: var(--spacing-lg);
+  max-width: 840px;
+}
+
+/* Historical Credentials Meta Strip */
+.about-page .about-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: var(--font-size-sm);
+  color: #CBD5E1;
+  width: fit-content;
+}
+
+.about-page .about-hero__meta-item strong {
+  color: #FDE68A;
+  font-weight: var(--font-weight-extrabold);
+}
+
+.about-page .about-hero__meta-divider {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =====================================================
+   2. EDITORIAL PROSE & DROP CAPS
+   ===================================================== */
+
+.about-page .editorial-lead {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Editorial Drop Cap on Overview Section */
+.about-page #tong-quan .editorial-lead::first-letter {
+  float: left;
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  line-height: 0.82;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue);
+  padding-right: 0.65rem;
+  padding-top: 0.15rem;
+  text-shadow: 0 1px 2px rgba(12, 59, 110, 0.1);
+}
+
+/* Editorial Drop Cap on Origins Section */
+.about-page #nguon-goc .editorial-lead::first-letter,
+.about-page #nguon-goc .page-prose > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  line-height: 0.85;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue);
+  padding-right: 0.65rem;
+  padding-top: 0.12rem;
+  text-shadow: 0 1px 2px rgba(12, 59, 110, 0.1);
+}
+
+/* Subtle Section Header Tag Styling */
+.about-page .page-section__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-red);
+  margin-bottom: var(--spacing-2xs);
+}
+
+.about-page .page-section__tag::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-accent-red);
+}
+
+.about-page .page-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+
+/* =====================================================
+   3. EDUCATIONAL DIRECTION & CALLOUTS
+   ===================================================== */
+
+.about-page .editorial-callout,
+.about-page .editorial-quote {
+  position: relative;
+  background-color: var(--color-primary-blue-wash);
+  border-left: 4px solid var(--color-primary-blue);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  color: var(--color-primary-blue-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-page .editorial-callout__label {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary-blue);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-page .editorial-callout__text {
+  font-style: italic;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-primary-blue-dark);
+  margin: 0;
+}
+
+.about-page .editorial-quote {
+  font-style: italic;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+}
+
+.about-page .editorial-quote::before {
+  content: "";
+  display: none;
+}
+
+
+/* =====================================================
+   4. ARCHIVAL & CAMPUS FIGURE ENHANCEMENTS
+   ===================================================== */
+
+.about-page .editorial-figure {
+  margin: var(--spacing-xl) 0;
+  background-color: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card-elevated);
+  overflow: hidden;
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out);
+}
+
+.about-page .editorial-figure:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.about-page .editorial-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform var(--motion-timing-emphasis) var(--motion-ease-out);
+}
+
+.about-page .editorial-figure:hover img {
+  transform: scale(1.035);
+}
+
+.about-page .editorial-figure__caption {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border-light);
+  background-color: var(--color-bg-base);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.about-page .editorial-figure__caption span:first-child {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+/* Museum Archival Matting for Historical Predecessor Photo */
+.about-page #nguon-goc .editorial-figure {
+  border: 2px solid #CBD5E1;
+  padding: 8px;
+  background-color: #FFFFFF;
+}
+
+.about-page #nguon-goc .editorial-figure img {
+  border-radius: var(--radius-sm);
+  filter: contrast(1.02);
+}
+
+
+/* =====================================================
+   4B. PAGE SECTION CARDS & BANDS (Phase 23 Anti-White)
+   ===================================================== */
+
+.about-page .page-section {
+  padding: var(--spacing-2xl);
+  border-radius: var(--bento-radius, 20px);
+  margin-bottom: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .about-page .page-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+/* =====================================================
+   4C. SECTION-BAND--NAVY DARK FEATURE BAND OVERRIDES
+   ===================================================== */
+.about-page .section-band--navy {
+  box-shadow: 0 16px 48px rgba(6, 24, 48, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.about-page .section-band--navy .page-section__header {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.about-page .section-band--navy .page-section__title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.about-page .section-band--navy .page-prose,
+.about-page .section-band--navy .page-prose p {
+  color: #E2E8F0 !important;
+}
+
+.about-page .section-band--navy strong,
+.about-page .section-band--navy b {
+  color: #FDE68A !important;
+  font-weight: var(--font-weight-bold);
+}
+
+.about-page .section-band--navy em {
+  color: #FEF08A !important;
+}
+
+.about-page .section-band--navy a:not(.btn) {
+  color: #93C5FD !important;
+}
+
+.about-page .section-band--navy a:not(.btn):hover {
+  color: #FDE68A !important;
+}
+
+/* Timeline on Navy Band */
+.about-page .section-band--navy .editorial-timeline__item {
+  background: rgba(7, 33, 64, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 3px solid var(--color-accent-gold);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.about-page .section-band--navy .editorial-timeline__item:hover {
+  background: rgba(12, 59, 110, 0.9);
+  border-color: rgba(255, 255, 255, 0.3);
+  border-left-color: #F59E0B;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(212, 175, 55, 0.25);
+}
+
+.about-page .section-band--navy .editorial-timeline__item:has(.editorial-timeline__marker--accent) {
+  border-left-color: var(--color-accent-red-light);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 18px rgba(192, 57, 43, 0.3);
+}
+
+.about-page .section-band--navy .editorial-timeline__item:has(.editorial-timeline__marker--accent):hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 24px rgba(192, 57, 43, 0.45);
+}
+
+.about-page .section-band--navy .editorial-timeline__year {
+  color: #FDE68A;
+  background-color: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.about-page .section-band--navy .editorial-timeline__marker--accent ~ .editorial-timeline__year,
+.about-page .section-band--navy .editorial-timeline__item:has(.editorial-timeline__marker--accent) .editorial-timeline__year {
+  color: #FECACA;
+  background-color: rgba(192, 57, 43, 0.25);
+  border-color: rgba(192, 57, 43, 0.5);
+}
+
+.about-page .section-band--navy .editorial-timeline__title {
+  color: #FFFFFF !important;
+}
+
+.about-page .section-band--navy .editorial-timeline__text {
+  color: #CBD5E1 !important;
+}
+
+.about-page .section-band--navy .editorial-timeline__marker {
+  border-color: #061830;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.4);
+}
+
+/* Gate Cards on Navy Band */
+.about-page .section-band--navy .gate-card {
+  background: rgba(7, 33, 64, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+.about-page .section-band--navy .gate-card__body {
+  background: transparent;
+}
+
+.about-page .section-band--navy .gate-card__title {
+  color: #FFFFFF !important;
+}
+
+.about-page .section-band--navy .gate-card__desc {
+  color: #CBD5E1 !important;
+}
+
+.about-page .section-band--navy .gate-card__meta {
+  border-top-color: rgba(255, 255, 255, 0.12);
+  color: #94A3B8;
+}
+
+.about-page .section-band--navy .gate-card--heritage {
+  border-top: 3px solid #0284C7;
+}
+
+.about-page .section-band--navy .gate-card--heritage:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(2, 132, 199, 0.35);
+  border-color: rgba(2, 132, 199, 0.6);
+}
+
+.about-page .section-band--navy .gate-card--modern {
+  border-top: 3px solid var(--color-accent-red-light);
+}
+
+.about-page .section-band--navy .gate-card--modern:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(192, 57, 43, 0.4);
+  border-color: rgba(192, 57, 43, 0.6);
+}
+
+
+/* =====================================================
+   5. HISTORICAL TIMELINE CENTERPIECE (Hành trình 30 năm)
+   ===================================================== */
+
+.about-page .editorial-timeline {
+  position: relative;
+  padding-left: 2.25rem;
+  margin: var(--spacing-2xl) 0;
+}
+
+/* Continuous Multi-Color Gradient Spine */
+.about-page .editorial-timeline::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 9px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-primary-blue) 0%, #0284C7 25%, #059669 50%, var(--color-accent-gold) 75%, var(--color-accent-red) 100%);
+  border-radius: var(--radius-pill);
+}
+
+/* Individual Milestone Card */
+.about-page .editorial-timeline__item {
+  position: relative;
+  background-color: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary-blue);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--motion-timing-fast) var(--motion-ease-out),
+              box-shadow var(--motion-timing-fast) var(--motion-ease-out),
+              border-left-color var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.about-page .editorial-timeline__item:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-card-hover);
+  border-left-color: var(--color-accent-red);
+}
+
+.about-page .editorial-timeline__item:has(.editorial-timeline__marker--accent) {
+  border-left-color: var(--color-accent-red);
+  box-shadow: var(--shadow-sm), 0 0 18px rgba(192, 57, 43, 0.12);
+}
+
+.about-page .editorial-timeline__item:has(.editorial-timeline__marker--accent):hover {
+  box-shadow: var(--shadow-card-hover-crimson);
+}
+
+.about-page .editorial-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Milestone Markers — Concentric Glowing Rings */
+.about-page .editorial-timeline__marker {
+  position: absolute;
+  top: 18px;
+  left: calc(-2.25rem + 1px);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: var(--color-primary-blue);
+  border: 3px solid var(--color-bg-base);
+  box-shadow: 0 0 0 3px rgba(12, 59, 110, 0.25);
+  transition: transform var(--motion-timing-fast) var(--motion-ease-out),
+              background-color var(--motion-timing-fast) var(--motion-ease-out),
+              box-shadow var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.about-page .editorial-timeline__item:hover .editorial-timeline__marker {
+  transform: scale(1.3);
+  background-color: var(--color-accent-red);
+  box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.3);
+}
+
+/* Highlighted Milestones (1994 Founding & 2024 Anniversary) */
+.about-page .editorial-timeline__marker--accent {
+  background-color: var(--color-accent-red);
+  box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.35);
+}
+
+/* Milestone Year Display */
+.about-page .editorial-timeline__year {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue);
+  background-color: var(--color-primary-blue-wash);
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(12, 59, 110, 0.12);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.03em;
+}
+
+.about-page .editorial-timeline__marker--accent ~ .editorial-timeline__year,
+.about-page .editorial-timeline__item:has(.editorial-timeline__marker--accent) .editorial-timeline__year {
+  color: var(--color-accent-red);
+  background-color: var(--color-accent-red-wash);
+  border-color: rgba(192, 57, 43, 0.2);
+}
+
+.about-page .editorial-timeline__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-page .editorial-timeline__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+
+/* =====================================================
+   6. CAMPUS EVOLUTION SPLIT (Cổng trường Trước & Sau)
+   ===================================================== */
+
+.about-page .editorial-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.about-page .editorial-split .editorial-figure {
+  margin: 0;
+  position: relative;
+}
+
+.about-page .editorial-split .editorial-figure img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   7. SCHOOL IDENTITY & EMBLEM (Trời tròn Đất vuông)
+   ===================================================== */
+
+.about-page .symbol-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  background: linear-gradient(145deg, #FFFFFF 0%, var(--color-primary-blue-wash) 100%);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary-blue);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card-elevated);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+.about-page .symbol-grid__media {
+  width: 140px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.about-page .symbol-grid__media img {
+  width: 130px;
+  height: 130px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-border);
+  background-color: var(--color-bg-base);
+  padding: var(--spacing-xs);
+  object-fit: contain;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out);
+}
+
+.about-page .symbol-grid:hover .symbol-grid__media img {
+  transform: scale(1.05);
+}
+
+.about-page .symbol-grid__desc .callout-box__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-page .symbol-grid__desc p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-page .symbol-grid__desc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.about-page .symbol-grid__desc li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+}
+
+.about-page .symbol-grid__desc li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 0.65rem;
+  color: var(--color-primary-blue);
+}
+
+.about-page .symbol-grid__desc li:nth-child(2)::before {
+  color: var(--color-primary-blue);
+}
+
+.about-page .symbol-grid__desc li:nth-child(3)::before {
+  color: var(--color-accent-red);
+}
+
+.about-page .symbol-grid__desc li:nth-child(4)::before {
+  color: #94A3B8;
+}
+
+
+/* =====================================================
+   8. VALUES & PILLARS GRID (5 Trụ cột Cốt lõi)
+   ===================================================== */
+
+.about-page .values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.about-page .value-card {
+  background-color: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary-blue);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--motion-timing-normal) var(--motion-ease-out),
+              box-shadow var(--motion-timing-normal) var(--motion-ease-out),
+              border-top-color var(--motion-timing-fast) var(--motion-ease-out);
+}
+
+.about-page .value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-elevated);
+  border-top-color: var(--color-accent-red);
+}
+
+.about-page .value-card__number {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue);
+  line-height: 1;
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: -0.03em;
+  transition: color var(--motion-timing-fast);
+}
+
+.about-page .value-card:hover .value-card__number {
+  color: var(--color-accent-red);
+}
+
+.about-page .value-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-page .value-card__desc {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+
+/* =====================================================
+   9. ORGANIZATION & INSTITUTIONAL CALLOUT
+   ===================================================== */
+
+.about-page .callout-box {
+  background: var(--surface-card-indigo);
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  border-left: 5px solid var(--color-accent-indigo);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  box-shadow: 0 4px 18px rgba(79, 70, 229, 0.1);
+}
+
+.about-page .callout-box__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-page .callout-box__content {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+}
+
+
+/* =====================================================
+   10. STICKY SIDEBAR ENHANCEMENTS
+   ===================================================== */
+
+.about-page .page-sidebar-card {
+  position: sticky;
+  top: 108px;
+  background-color: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-page .page-sidebar-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-accent-red);
+}
+
+.about-page .sidebar-nav-link {
+  display: block;
+  padding: 8px 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.about-page .sidebar-nav-link:hover,
+.about-page .sidebar-nav-link:focus-visible {
+  color: var(--color-primary-blue);
+  padding-left: 6px;
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* =====================================================
+   11. PATHWAY CTA BLOCK
+   ===================================================== */
+
+.about-page .pathway-card:nth-child(1) {
+  border-top: 3px solid var(--color-accent-gold);
+}
+
+.about-page .pathway-card:nth-child(1):hover,
+.about-page .pathway-card:nth-child(1):focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover-gold);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.about-page .pathway-card:nth-child(2) {
+  border-top: 3px solid #0284C7;
+}
+
+.about-page .pathway-card:nth-child(2):hover,
+.about-page .pathway-card:nth-child(2):focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(2, 132, 199, 0.6);
+}
+
+.about-page .pathway-card:nth-child(3) {
+  border-top: 3px solid var(--color-accent-red-light);
+}
+
+.about-page .pathway-card:nth-child(3):hover,
+.about-page .pathway-card:nth-child(3):focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover-crimson);
+  border-color: rgba(192, 57, 43, 0.6);
+}
+
+.about-page .pathway-card__link-text {
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.about-page .pathway-card:hover .pathway-card__link-text {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   11B. VISUAL REDESIGN v3.0: FULL-WIDTH BENTO & SHOWCASES
+   ===================================================== */
+
+/* Key Institutional Facts Ribbon */
+.about-page .about-facts-ribbon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0 var(--spacing-2xl) 0;
+}
+
+.about-page .about-fact-tile {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--bento-radius, 16px);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.about-page .about-fact-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary-blue);
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.about-page .about-fact-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(12, 59, 110, 0.2);
+}
+
+.about-page .about-fact-tile:nth-child(1) {
+  background: var(--surface-card-ice);
+  border-color: rgba(12, 59, 110, 0.2);
+}
+.about-page .about-fact-tile:nth-child(1)::before {
+  background: var(--color-primary-blue);
+}
+.about-page .about-fact-tile:nth-child(1):hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(12, 59, 110, 0.35);
+}
+
+.about-page .about-fact-tile:nth-child(2) {
+  background: var(--surface-card-emerald);
+  border-color: rgba(5, 150, 105, 0.25);
+}
+.about-page .about-fact-tile:nth-child(2)::before {
+  background: var(--color-accent-emerald);
+}
+.about-page .about-fact-tile:nth-child(2):hover {
+  box-shadow: var(--shadow-card-hover-emerald);
+  border-color: rgba(5, 150, 105, 0.4);
+}
+.about-page .about-fact-tile:nth-child(2) .about-fact-tile__val {
+  color: var(--color-accent-emerald);
+}
+
+.about-page .about-fact-tile:nth-child(3) {
+  background: var(--surface-card-gold);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+.about-page .about-fact-tile:nth-child(3)::before {
+  background: var(--color-accent-gold);
+}
+.about-page .about-fact-tile:nth-child(3):hover {
+  box-shadow: var(--shadow-card-hover-gold);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+.about-page .about-fact-tile:nth-child(3) .about-fact-tile__val {
+  color: #B45309;
+}
+
+.about-page .about-fact-tile:nth-child(4) {
+  background: var(--surface-card-rose);
+  border-color: rgba(192, 57, 43, 0.25);
+}
+.about-page .about-fact-tile:nth-child(4)::before {
+  background: var(--color-accent-red);
+}
+.about-page .about-fact-tile:nth-child(4):hover {
+  box-shadow: var(--shadow-card-hover-crimson);
+  border-color: rgba(192, 57, 43, 0.4);
+}
+.about-page .about-fact-tile:nth-child(4) .about-fact-tile__val {
+  color: var(--color-accent-red);
+}
+
+.about-page .about-fact-tile__val {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-2xs);
+  letter-spacing: -0.02em;
+}
+
+.about-page .about-fact-tile__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.about-page .about-fact-tile__sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+}
+
+/* Panoramic Gate Evolution Comparison */
+.about-page .gate-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+}
+
+.about-page .gate-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--bento-radius, 18px);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page .gate-card--heritage {
+  border-top: 3px solid var(--color-primary-blue);
+}
+
+.about-page .gate-card--heritage:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(12, 59, 110, 0.25);
+}
+
+.about-page .gate-card--modern {
+  border-top: 3px solid var(--color-accent-red);
+}
+
+.about-page .gate-card--modern:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover-crimson);
+  border-color: rgba(192, 57, 43, 0.25);
+}
+
+.about-page .gate-card__media {
+  position: relative;
+  overflow: hidden;
+  background: #0C1E34;
+  aspect-ratio: 16 / 10;
+}
+
+.about-page .gate-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page .gate-card:hover .gate-card__media img {
+  transform: scale(1.04);
+}
+
+.about-page .gate-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.about-page .gate-card__badge--heritage {
+  background: rgba(12, 59, 110, 0.85);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.about-page .gate-card__badge--modern {
+  background: rgba(192, 57, 43, 0.85);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.about-page .gate-card__body {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-bg-surface);
+}
+
+.about-page .gate-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-page .gate-card__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-page .gate-card__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--spacing-xs);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Emblem Museum Showcase */
+.about-page .emblem-museum {
+  background: linear-gradient(145deg, #FFFDF5 0%, #FEF3C7 50%, #FDE68A 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-top: 4px solid var(--color-accent-gold);
+  border-radius: var(--bento-radius, 20px);
+  padding: var(--spacing-2xl);
+  margin: var(--spacing-2xl) 0;
+  box-shadow: var(--shadow-lg), 0 0 35px rgba(212, 175, 55, 0.2);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .emblem-museum::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(12, 59, 110, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-page .emblem-museum__pedestal {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-page .emblem-museum__frame {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  padding: 16px;
+  box-shadow: 0 12px 32px rgba(12, 59, 110, 0.12), 0 0 24px rgba(212, 175, 55, 0.28);
+  border: 3px solid rgba(212, 175, 55, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.about-page .emblem-museum__frame:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: var(--glow-gold), 0 16px 40px rgba(12, 59, 110, 0.25);
+  border-color: var(--color-accent-gold);
+}
+
+.about-page .emblem-museum__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-page .emblem-museum__badge {
+  margin-top: var(--spacing-md);
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: #B45309;
+  background: #FFFFFF;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-page .emblem-museum__quotes {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.about-page .emblem-museum__content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .emblem-museum__heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-page .emblem-museum__lead {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-page .emblem-palette {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.about-page .emblem-palette__item {
+  background: var(--surface-card-ice);
+  border: 1px solid #BFDBFE;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.about-page .emblem-palette__item:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-blue);
+}
+
+.about-page .emblem-palette__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.about-page .emblem-palette__dot--circle {
+  background: var(--color-primary-blue);
+  border-radius: 50%;
+}
+
+.about-page .emblem-palette__dot--square {
+  background: var(--color-accent-red);
+  border-radius: 2px;
+}
+
+.about-page .emblem-palette__dot--blue {
+  background: #1A5B9C;
+}
+
+.about-page .emblem-palette__dot--white {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+}
+
+.about-page .emblem-palette__text strong {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: 2px;
+}
+
+.about-page .emblem-palette__text span {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* 5 Core Values Bento Architecture */
+.about-page .values-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--bento-gap, 24px);
+  margin: var(--spacing-2xl) 0;
+}
+
+.about-page .values-bento-item {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--bento-radius, 18px);
+  padding: var(--bento-padding, 28px);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page .values-bento-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(12, 59, 110, 0.25);
+}
+
+/* Top 2 Featured Values: Span 3 columns each (50% desktop) */
+.about-page .values-bento-item--hero-1 {
+  grid-column: span 3;
+  background: var(--surface-card-ice);
+  border-color: rgba(12, 59, 110, 0.25);
+  border-top: 4px solid var(--color-primary-blue);
+}
+
+.about-page .values-bento-item--hero-1:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(12, 59, 110, 0.4);
+}
+
+.about-page .values-bento-item--hero-2 {
+  grid-column: span 3;
+  background: var(--surface-card-gold);
+  border-color: rgba(212, 175, 55, 0.35);
+  border-top: 4px solid var(--color-accent-gold);
+}
+
+.about-page .values-bento-item--hero-2:hover {
+  box-shadow: var(--shadow-card-hover-gold);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Bottom 3 Foundation Values: Span 2 columns each (33.3% desktop) */
+.about-page .values-bento-item--base {
+  grid-column: span 2;
+  border-top: 3px solid #94A3B8;
+}
+
+.about-page .values-bento-item:nth-child(3) {
+  background: var(--surface-card-ice);
+  border-color: rgba(2, 132, 199, 0.25);
+  border-top-color: var(--color-accent-cyan, #0284C7);
+}
+
+.about-page .values-bento-item:nth-child(3) .values-bento-item__number {
+  color: #0284C7;
+}
+
+.about-page .values-bento-item:nth-child(3):hover {
+  border-top-color: var(--color-accent-cyan, #0284C7);
+  box-shadow: var(--shadow-card-hover-cyan);
+  border-color: rgba(2, 132, 199, 0.45);
+}
+
+.about-page .values-bento-item:nth-child(4) {
+  background: var(--surface-card-indigo);
+  border-color: rgba(79, 70, 229, 0.25);
+  border-top-color: var(--color-accent-indigo, #4F46E5);
+}
+
+.about-page .values-bento-item:nth-child(4) .values-bento-item__number {
+  color: #4F46E5;
+}
+
+.about-page .values-bento-item:nth-child(4):hover {
+  border-top-color: var(--color-accent-indigo, #4F46E5);
+  box-shadow: var(--shadow-card-hover-indigo);
+  border-color: rgba(79, 70, 229, 0.45);
+}
+
+.about-page .values-bento-item:nth-child(5) {
+  background: var(--surface-card-emerald);
+  border-color: rgba(5, 150, 105, 0.25);
+  border-top-color: var(--color-accent-emerald, #059669);
+}
+
+.about-page .values-bento-item:nth-child(5) .values-bento-item__number {
+  color: #059669;
+}
+
+.about-page .values-bento-item:nth-child(5):hover {
+  border-top-color: var(--color-accent-emerald, #059669);
+  box-shadow: var(--shadow-card-hover-emerald);
+  border-color: rgba(5, 150, 105, 0.45);
+}
+
+.about-page .values-bento-item__number {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
+  color: var(--color-primary-blue);
+  opacity: 0.9;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.04em;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.about-page .values-bento-item--hero-2 .values-bento-item__number {
+  color: var(--color-accent-red);
+}
+
+.about-page .values-bento-item:hover .values-bento-item__number {
+  transform: scale(1.06);
+}
+
+.about-page .values-bento-item__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-blue-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-page .values-bento-item__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+
+
+/* =====================================================
+   12. RESPONSIVE ADAPTATIONS
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .about-page .page-sidebar-card {
+    position: static;
+  }
+
+  .about-page .about-facts-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-page .emblem-museum {
+    grid-template-columns: 220px 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .about-page .values-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-page .values-bento-item--hero-1,
+  .about-page .values-bento-item--hero-2 {
+    grid-column: span 1;
+  }
+
+  .about-page .values-bento-item--base {
+    grid-column: span 1;
+  }
+
+  .about-page .values-bento-item--base:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page .page-hero {
+    padding: var(--spacing-2xl) 0 var(--spacing-xl) 0;
+  }
+
+  .about-page .page-hero__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about-page .about-facts-ribbon {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .about-page .gate-comparison {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-page .emblem-museum {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: var(--spacing-xl);
+  }
+
+  .about-page .emblem-museum__pedestal {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .about-page .emblem-palette {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .about-page .values-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .values-bento-item {
+    grid-column: span 1 !important;
+  }
+
+  .about-page .sidebar-nav-link {
+    padding: 12px 8px;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-page .editorial-timeline {
+    padding-left: 1.75rem;
+  }
+
+  .about-page .editorial-timeline::before {
+    left: 7px;
+  }
+
+  .about-page .editorial-timeline__marker {
+    left: calc(-1.75rem + 0px);
+    width: 15px;
+    height: 15px;
+  }
+
+  .about-page .symbol-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .about-page .symbol-grid__media {
+    margin: 0 auto;
+  }
+
+  .about-page .symbol-grid__desc ul {
+    text-align: left;
+  }
+
+  .about-page .editorial-split {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-page .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .page-hero__title {
+    font-size: 1.75rem;
+  }
+
+  .about-page .about-hero__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .about-page .about-hero__meta-divider {
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   13. ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+
+  .about-page .editorial-figure:hover img,
+  .about-page .symbol-grid:hover .symbol-grid__media img {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Đời sống học đường, văn hóa học sinh và các sự kiện truyền thống lớn tại Trường THPT Chuyên Lương Thế Vinh - Đồng Nai.">
+  <title>Đời Sống Học Sinh & Văn Hóa Học Đường - THPT Chuyên Lương Thế Vinh</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo.jpg">
+
+  <!-- Master Stylesheet & Student Life Page Stylesheet -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/student-life-page.css">
+</head>
+<body class="student-life-page">
+  <!-- Pure CSS Scroll Progress Bar (Strictly Zero-JS) -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- Skip Link for Accessibility (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-masthead">
+        <div class="site-branding">
+          <a href="../index.html" class="site-brand-link">
+            <img src="../assets/images/logo.jpg"
+                 alt="Logo Trường THPT Chuyên Lương Thế Vinh"
+                 class="site-logo"
+                 width="58" height="58">
+            <span class="site-title">THPT Chuyên Lương Thế Vinh</span>
+          </a>
+        </div>
+        <nav class="site-nav" aria-label="Điều hướng chính">
+          <!-- Desktop Navigation -->
+          <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+            <li><a href="about.html" class="nav-link">Giới thiệu</a></li>
+            <li><a href="news.html" class="nav-link">Tin tức</a></li>
+            <li><a href="academics.html" class="nav-link">Học tập</a></li>
+            <li><a href="student-life.html" class="nav-link active" aria-current="page">Hoạt động</a></li>
+            <li><a href="achievements.html" class="nav-link">Thành tích</a></li>
+          </ul>
+
+          <!-- Mobile Navigation Toggle -->
+          <details class="nav-mobile-toggle">
+            <summary class="nav-toggle-btn" aria-label="Mở menu điều hướng">
+              <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="nav-mobile-list">
+              <li><a href="../index.html" class="nav-mobile-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-mobile-link">Giới thiệu</a></li>
+              <li><a href="news.html" class="nav-mobile-link">Tin tức</a></li>
+              <li><a href="academics.html" class="nav-mobile-link">Học tập</a></li>
+              <li><a href="student-life.html" class="nav-mobile-link active" aria-current="page">Hoạt động</a></li>
+              <li><a href="achievements.html" class="nav-mobile-link">Thành tích</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-nav" aria-label="Đường dẫn trang">
+    <div class="page-container">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Trang chủ</a></li>
+        <li class="breadcrumb-item" aria-current="page">Đời sống Học đường</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- High-Contrast Immersive Page Hero (Phase 23 Violet Signature Theme) -->
+  <header class="page-hero page-hero--violet">
+    <div class="page-container">
+      <div class="page-hero__inner">
+        <span class="page-hero__eyebrow">
+          <span class="status-pulse-dot" style="margin-right: 6px;"></span>
+          Trải nghiệm & Văn hóa Tuổi trẻ LTV
+        </span>
+        <h1 class="page-hero__title motion-stagger-title">Đời Sống Học Đường & <span class="page-brand-nowrap">Văn Hóa Học Sinh Chuyên</span></h1>
+        <p class="page-hero__description motion-stagger-lead">
+          Bên cạnh học tập chuyên sâu, Trường THPT Chuyên Lương Thế Vinh kiến tạo một môi trường học đường nhân văn, 
+          nơi học sinh tự do khám phá tiềm năng, tỏa sáng đam mê và gắn kết qua các lễ hội truyền thống, văn hóa nghệ thuật và thể thao.
+        </p>
+        <div class="page-hero__meta">
+          <span class="page-hero__meta-pill">🎉 30 Năm Truyền Thống</span>
+          <span class="page-hero__meta-pill">⚽ Giải Bóng Đá Học Sinh 2024</span>
+          <span class="page-hero__meta-pill">🎭 14+ Câu Lạc Bộ Năng Động</span>
+          <span class="page-hero__meta-pill">🌱 Rèn Luyện Toàn Diện</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Horizontal Subnav Bar for Fast Anchor Navigation -->
+  <nav class="page-subnav" aria-label="Điều hướng nhanh trang Đời sống Học đường">
+    <div class="page-subnav__inner">
+      <span class="page-subnav__label" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+        Mục lục
+      </span>
+      <ul class="page-subnav__list">
+        <li><a href="#buc-tranh-doi-song" class="page-subnav__link">1. Bức tranh Đời sống</a></li>
+        <li><a href="#su-kien-truyen-thong" class="page-subnav__link">2. Sự kiện Truyền thống</a></li>
+        <li><a href="#the-thao-ren-luyen" class="page-subnav__link">3. Thể thao & Rèn luyện</a></li>
+        <li><a href="#clb-ngoai-khoa" class="page-subnav__link">4. Hệ thống CLB & Ngoại khóa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Area: Balanced Full-Width Layout (1280px) -->
+  <main id="main-content" class="page-content-wrapper">
+    <div class="page-container page-content--fullwidth">
+
+      <!-- Vibrant Editorial Photo Mosaic Gallery with Aspect Ratios, Card Depth & Staggered Scroll Motion -->
+      <section class="student-life-page__mosaic" aria-label="Hình ảnh tiêu biểu đời sống học đường">
+        <div class="student-life-page__mosaic-card student-life-page__mosaic-main motion-stagger-img">
+          <span class="badge-youth badge-youth--crimson student-life-page__mosaic-badge">
+            <span class="status-pulse-dot--crimson" style="margin-right: 4px;"></span>
+            Đại Lễ 30 Năm (1994–2024)
+          </span>
+          <img src="../assets/images/activity-30th-anniversary-student-group-01.jpg"
+               alt="Học sinh Trường THPT Chuyên Lương Thế Vinh rạng rỡ trong sự kiện kỷ niệm 30 năm thành lập"
+               class="student-life-page__mosaic-img"
+               width="2048" height="1340">
+          <div class="student-life-page__mosaic-scrim">
+            <h3 class="student-life-page__mosaic-title">Ba Thập Kỷ Hội Ngộ Rực Rỡ Sắc Áo Chuyên Lương Thế Vinh</h3>
+            <p class="student-life-page__mosaic-caption">Khoảnh khắc hội tụ các thế hệ học sinh trong không khí trang trọng và tự hào trường chuyên Đồng Nai.</p>
+          </div>
+        </div>
+
+        <div class="student-life-page__mosaic-side">
+          <div class="student-life-page__mosaic-card student-life-page__mosaic-sub student-life-page__mosaic-sub--football motion-stagger-1">
+            <span class="badge-youth badge-youth--azure student-life-page__mosaic-badge">
+              <span class="status-pulse-dot" style="margin-right: 4px;"></span>
+              Giải Bóng Đá 2024
+            </span>
+            <img src="../assets/images/football-tournament-2024.jpg"
+                 alt="Giải thi đấu bóng đá học sinh THPT Chuyên Lương Thế Vinh năm 2024"
+                 class="student-life-page__mosaic-img"
+                 width="1080" height="1080">
+            <div class="student-life-page__mosaic-scrim">
+              <h3 class="student-life-page__mosaic-title">Giải Bóng Đá Học Sinh 2024</h3>
+              <p class="student-life-page__mosaic-caption">Nhiệt huyết thể thao và tinh thần fair-play trên sân cỏ nhân tạo.</p>
+            </div>
+          </div>
+
+          <div class="student-life-page__mosaic-card student-life-page__mosaic-sub student-life-page__mosaic-sub--campus motion-stagger-2">
+            <span class="badge-youth badge-youth--emerald student-life-page__mosaic-badge">
+              <span class="status-pulse-dot" style="margin-right: 4px;"></span>
+              Khuôn Viên 2,7 ha
+            </span>
+            <img src="../assets/images/activity-school-field-aerial-01.jpg"
+                 alt="Không gian sân trường và các hoạt động tập thể ngoài trời tại cơ sở số 2 Lê Quý Đôn"
+                 class="student-life-page__mosaic-img"
+                 width="2048" height="1536">
+            <div class="student-life-page__mosaic-scrim">
+              <h3 class="student-life-page__mosaic-title">Không Gian Thể Thao Ngoài Trời</h3>
+              <p class="student-life-page__mosaic-caption">Sân bãi xanh mát phục vụ rèn luyện thể chất và sinh hoạt tập thể.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hallmark Milestones Ribbon (Tinted Surfaces & Staggered Scroll Motion) -->
+      <section class="student-life-page__highlights" aria-label="Các sự kiện trọng điểm học đường">
+        <div class="student-life-page__highlights-grid">
+          <div class="student-life-page__highlight-card student-life-page__highlight-card--crimson motion-stagger-1">
+            <div class="student-life-page__highlight-header">
+              <span class="badge-youth badge-youth--crimson">Đại Lễ Truyền Thống</span>
+              <span class="student-life-page__highlight-time">
+                <span class="status-pulse-dot--crimson" style="margin-right: 4px;"></span>
+                11 / 2024
+              </span>
+            </div>
+            <h3 class="student-life-page__highlight-title">Kỷ Niệm 30 Năm Thành Lập</h3>
+            <p class="student-life-page__highlight-desc">Mốc son ba thập kỷ (1994–2024) kết nối các thế hệ nhà giáo và cựu học sinh Lương Thế Vinh vẻ vang.</p>
+          </div>
+
+          <div class="student-life-page__highlight-card student-life-page__highlight-card--amber motion-stagger-2">
+            <div class="student-life-page__highlight-header">
+              <span class="badge-youth badge-youth--amber">Lễ Hội Thường Niên</span>
+              <span class="student-life-page__highlight-time">
+                <span class="status-pulse-dot--gold" style="margin-right: 4px;"></span>
+                Tháng 1–2
+              </span>
+            </div>
+            <h3 class="student-life-page__highlight-title">Hội Xuân Đón Tết Cổ Truyền</h3>
+            <p class="student-life-page__highlight-desc">Không gian văn hóa dân gian, trang trí cổng trại, ẩm thực truyền thống và chuỗi trò chơi gắn kết bạn bè.</p>
+          </div>
+
+          <div class="student-life-page__highlight-card student-life-page__highlight-card--azure motion-stagger-3">
+            <div class="student-life-page__highlight-header">
+              <span class="badge-youth badge-youth--azure">Âm Nhạc Tuổi Trẻ</span>
+              <span class="student-life-page__highlight-time">
+                <span class="status-pulse-dot" style="margin-right: 4px;"></span>
+                Đoàn Trường
+              </span>
+            </div>
+            <h3 class="student-life-page__highlight-title">Đêm Nhạc "LTV Tôi Yêu"</h3>
+            <p class="student-life-page__highlight-desc">Sân khấu bùng nổ tài năng nghệ thuật, ca hát, vũ đạo và hòa tấu nhạc cụ do Đoàn trường chủ trì.</p>
+          </div>
+
+          <div class="student-life-page__highlight-card student-life-page__highlight-card--emerald motion-stagger-4">
+            <div class="student-life-page__highlight-header">
+              <span class="badge-youth badge-youth--emerald">Thể Thao Rèn Luyện</span>
+              <span class="student-life-page__highlight-time">
+                <span class="status-pulse-dot" style="margin-right: 4px;"></span>
+                Mùa Giải 2024
+              </span>
+            </div>
+            <h3 class="student-life-page__highlight-title">Giải Bóng Đá Học Sinh LTV</h3>
+            <p class="student-life-page__highlight-desc">Tranh tài sôi nổi giữa các khối chuyên, thắt chặt tình đồng đội trên sân bóng đá cỏ nhân tạo hiện đại.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1: Overview of Student Culture (Indigo Anti-White Band) -->
+      <section id="buc-tranh-doi-song" class="page-section section-band--indigo">
+        <header class="page-section__header">
+          <span class="section-kicker-pill">Bản Sắc Chuyên LTV</span>
+          <h2 class="page-section__title motion-stagger-title">Bức Tranh Tổng Thể Đời Sống Học Sinh Chuyên</h2>
+        </header>
+        <div class="page-prose motion-stagger-lead">
+          <p class="editorial-lead">
+            Hình ảnh học sinh THPT Chuyên Lương Thế Vinh không chỉ gắn liền với những giờ miệt mài bên trang sách hay phòng thí nghiệm, 
+            mà còn hiện diện đầy sức sống qua các hoạt động phong trào, nghệ thuật và kết nối cộng đồng.
+          </p>
+          <p>
+            Nhà trường luôn coi giáo dục toàn diện là kim chỉ nam: bồi dưỡng kiến thức khoa học vững chắc song song với rèn luyện thể chất, 
+            thẩm mỹ, kỹ năng lãnh đạo và tinh thần phụng sự xã hội. Mỗi cá nhân khi bước chân vào ngôi trường đều được khích lệ xây dựng bản sắc riêng 
+            trong sự gắn kết chặt chẽ với tập thể.
+          </p>
+        </div>
+
+        <!-- Pillars of Holistic Development (Tinted Cards with Staggered Motion) -->
+        <div class="student-life-page__pillars-grid">
+          <article class="student-life-page__pillar-card student-life-page__pillar-card--emerald motion-stagger-1">
+            <div class="student-life-page__pillar-icon-box" aria-hidden="true">🌱</div>
+            <div style="margin-bottom: var(--spacing-xs);">
+              <span class="badge-youth badge-youth--emerald">Tự Chủ & Khát Vọng</span>
+            </div>
+            <h3 class="student-life-page__pillar-title">Tự Chủ & Sáng Tạo</h3>
+            <p class="student-life-page__pillar-desc">Khuyến khích học sinh chủ động đề xuất ý tưởng, tổ chức các dự án văn hóa và phong trào tự quản đầy sáng tạo.</p>
+          </article>
+
+          <article class="student-life-page__pillar-card student-life-page__pillar-card--azure motion-stagger-2">
+            <div class="student-life-page__pillar-icon-box" aria-hidden="true">🤝</div>
+            <div style="margin-bottom: var(--spacing-xs);">
+              <span class="badge-youth badge-youth--azure">Gắn Kết & Đồng Đội</span>
+            </div>
+            <h3 class="student-life-page__pillar-title">Gắn Kết & Đồng Đội</h3>
+            <p class="student-life-page__pillar-desc">Xây dựng tinh thần đoàn kết bền chặt qua các giải đấu thể thao, hội trại truyền thống và đêm hội âm nhạc bùng nổ.</p>
+          </article>
+
+          <article class="student-life-page__pillar-card student-life-page__pillar-card--crimson motion-stagger-3">
+            <div class="student-life-page__pillar-icon-box" aria-hidden="true">❤️</div>
+            <div style="margin-bottom: var(--spacing-xs);">
+              <span class="badge-youth badge-youth--crimson">Trách Nhiệm Xã Hội</span>
+            </div>
+            <h3 class="student-life-page__pillar-title">Trách Nhiệm Cộng Đồng</h3>
+            <p class="student-life-page__pillar-desc">Lan tỏa lòng nhân ái qua các chương trình thiện nguyện, hỗ trợ học sinh có hoàn cảnh khó khăn và đóng góp cho xã hội.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Prominent Chromatic Transition: Rainbow Prism Divider -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 2: Hallmark Events (Deep Celebratory Navy Band with Frosted Dark-Glass Cards) -->
+      <section id="su-kien-truyen-thong" class="page-section section-band--navy">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--gold">Dấu Ấn Truyền Thống</span>
+          <h2 class="page-section__title motion-stagger-title">Những Sự Kiện và Ngày Hội Học Đường Lớn</h2>
+        </header>
+        <div class="page-prose motion-stagger-lead">
+          <p>
+            Đời sống tinh thần tại trường được bồi đắp qua những dấu mốc sự kiện giàu cảm xúc, 
+            nơi các thế hệ thầy và trò cùng nhau chia sẻ niềm tự hào chung:
+          </p>
+        </div>
+
+        <div class="student-life-page__events-list">
+
+          <!-- Event 1: 30th Anniversary -->
+          <article class="student-life-page__event-item motion-stagger-1">
+            <div class="student-life-page__event-media">
+              <img src="../assets/images/birthday-cake.jpg"
+                   alt="Nghi thức cắt bánh sinh nhật kỷ niệm 30 năm thành lập trường (1994-2024)"
+                   width="2048" height="1290"
+                   loading="lazy">
+            </div>
+            <div class="student-life-page__event-body">
+              <div class="student-life-page__event-tag-row">
+                <span class="badge-youth badge-youth--dark-glass">
+                  <span class="status-pulse-dot--crimson" style="margin-right: 4px;"></span>
+                  Tháng 11 / 2024 • Mốc Son Ba Thập Kỷ
+                </span>
+              </div>
+              <h3 class="student-life-page__event-title">Đại Lễ Kỷ Niệm 30 Năm Thành Lập Trường (1994–2024)</h3>
+              <p class="student-life-page__event-desc">
+                Dấu mốc ba thập kỷ hội ngộ đầy xúc động của các thế hệ nhà giáo, cựu học sinh và học sinh đang theo học. 
+                Chương trình diễn ra trang trọng với lễ mít tinh truyền thống, phát hành kỷ yếu 30 năm và những không gian triển lãm lịch sử trường.
+              </p>
+            </div>
+          </article>
+
+          <!-- Event 2: Lunar Spring Fair -->
+          <article class="student-life-page__event-item student-life-page__event-item--reverse motion-stagger-2">
+            <div class="student-life-page__event-body">
+              <div class="student-life-page__event-tag-row">
+                <span class="badge-youth badge-youth--dark-glass">
+                  <span class="status-pulse-dot--gold" style="margin-right: 4px;"></span>
+                  Thường Niên Dịp Tết • Không Gian Dân Gian
+                </span>
+              </div>
+              <h3 class="student-life-page__event-title">Hội Xuân Đón Tết & Không Gian Văn Hóa Dân Gian</h3>
+              <p class="student-life-page__event-desc">
+                Mỗi dịp xuân về, sân trường trở thành không gian lễ hội rực rỡ sắc màu. Các chi đoàn tự tay thiết kế cổng trại, 
+                trang trí góc lớp mang đậm hồn cốt Tết cổ truyền, tổ chức các gian hàng ẩm thực dân gian và chuỗi trò chơi gắn kết tình bạn bè.
+              </p>
+            </div>
+            <div class="student-life-page__event-media">
+              <img src="../assets/images/the-campus-during-monday-morning-school-assembly.jpg"
+                   alt="Không gian sân trường nơi diễn ra các lễ hội văn hóa và chào cờ đầu tuần"
+                   width="2048" height="622"
+                   loading="lazy">
+            </div>
+          </article>
+
+          <!-- Event 3: LTV Toi Yeu Musical Night -->
+          <article class="student-life-page__event-item motion-stagger-3">
+            <div class="student-life-page__event-media">
+              <img src="../assets/images/activity-30th-anniversary-student-group-01.jpg"
+                   alt="Học sinh tự tin biểu diễn và tỏa sáng trong các đêm hội âm nhạc nghệ thuật"
+                   width="2048" height="1340"
+                   loading="lazy">
+            </div>
+            <div class="student-life-page__event-body">
+              <div class="student-life-page__event-tag-row">
+                <span class="badge-youth badge-youth--dark-glass">
+                  <span class="status-pulse-dot" style="margin-right: 4px;"></span>
+                  Đoàn Trường Tổ Chức • Sân Khấu Tuổi Trẻ
+                </span>
+              </div>
+              <h3 class="student-life-page__event-title">Đêm Văn Nghệ "Lương Thế Vinh Tôi Yêu"</h3>
+              <p class="student-life-page__event-desc">
+                Sân khấu bùng nổ nhiệt huyết tuổi trẻ do Đoàn trường tổ chức, nơi các tài năng ca hát, vũ đạo, hòa tấu nhạc cụ 
+                và kịch nghệ được tỏa sáng trọn vẹn, để lại những kỷ niệm thanh xuân khó phai trong lòng mỗi học sinh.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Prominent Chromatic Transition: Rainbow Prism Divider -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 3: Sports & Athletic Spirit (Emerald Anti-White Band) -->
+      <section id="the-thao-ren-luyen" class="page-section section-band--emerald">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--emerald">Thể Chất & Rèn Luyện</span>
+          <h2 class="page-section__title motion-stagger-title">Phong Trào Thể Thao & Rèn Luyện Thể Lực</h2>
+        </header>
+        <div class="page-prose motion-stagger-lead">
+          <p>
+            Rèn luyện thể chất luôn là một phần không thể thiếu trong hành trình phát triển toàn diện của học sinh chuyên Lương Thế Vinh. 
+            Sân bóng đá cỏ nhân tạo và khu liên hợp thể dục thể thao là nơi diễn ra các giải đấu giao lưu sôi nổi giữa các khối chuyên.
+          </p>
+        </div>
+
+        <!-- Sports Banner with Football Tournament -->
+        <div class="student-life-page__sports-banner motion-stagger-1">
+          <div class="student-life-page__sports-content">
+            <div class="student-life-page__event-tag-row">
+              <span class="badge-youth badge-youth--azure">
+                <span class="status-pulse-dot" style="margin-right: 4px;"></span>
+                Hội Thao Thường Niên
+              </span>
+            </div>
+            <h3 class="callout-box__title" style="font-size: var(--font-size-md);">Giải Bóng Đá Học Sinh Thường Niên (2024)</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-body); margin-bottom: var(--spacing-md);">
+              Giải đấu quy tụ các đội bóng đại diện cho các khối chuyên, mang đến những trận cầu kịch tính, 
+              thắt chặt tinh thần fair-play và tình đoàn kết giữa các khóa học sinh.
+            </p>
+            <ul style="font-size: var(--font-size-sm); color: var(--color-text-secondary); padding-left: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+              <li>Tham gia tích cực tại Hội khỏe Phù Đổng cấp trường và cấp tỉnh.</li>
+              <li>Các môn thể thao phát triển mạnh: Bóng đá, bóng rổ, cầu lông và cờ vua.</li>
+            </ul>
+            <div class="student-life-page__sports-chips">
+              <span class="student-life-page__sport-chip">⚽ Bóng đá cỏ nhân tạo</span>
+              <span class="student-life-page__sport-chip">🏀 Bóng rổ sân trường</span>
+              <span class="student-life-page__sport-chip">🏸 Cầu lông phong trào</span>
+              <span class="student-life-page__sport-chip">♟️ Cờ vua trí tuệ</span>
+            </div>
+          </div>
+          <div class="student-life-page__sports-media">
+            <img src="../assets/images/football-tournament-2024.jpg"
+                 alt="Giải đấu bóng đá học sinh THPT Chuyên Lương Thế Vinh năm 2024"
+                 width="1080" height="1080"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- Additional Team Photo -->
+        <figure class="editorial-figure student-life-page__figure-card motion-stagger-2">
+          <img src="../assets/images/a-certain-football-team-2024.jpg"
+               alt="Một đội bóng học sinh tranh tài tại giải bóng đá LTV 2024"
+               width="2048" height="1365"
+               loading="lazy">
+          <figcaption class="editorial-figure__caption">
+            <span>Hình ảnh đội bóng học sinh tại giải đấu thể thao thường niên trường THPT Chuyên Lương Thế Vinh</span>
+            <span class="citation-note">Tư liệu: 02-Assets / 04-school-activities</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Prominent Chromatic Transition: Rainbow Prism Divider -->
+      <div class="section-divider-prism" aria-hidden="true"></div>
+
+      <!-- Section 4: Club Ecosystem Preview & Social Responsibility (Warm Golden Band) -->
+      <section id="clb-ngoai-khoa" class="page-section section-band--warm">
+        <header class="page-section__header">
+          <span class="section-kicker-pill section-kicker-pill--gold">Hệ Sinh Thái Ngoại Khóa</span>
+          <h2 class="page-section__title motion-stagger-title">Môi Trường Giao Lưu, Câu Lạc Bộ & Thiện Nguyện</h2>
+        </header>
+        <div class="page-prose motion-stagger-lead">
+          <p>
+            Hệ sinh thái câu lạc bộ phong phú với hơn 14 tổ chức học sinh đang hoạt động sôi nổi trong các lĩnh vực: 
+            ngoại ngữ (ICIS, LTV English Speaking Club), tư duy phản biện (ISDC), âm nhạc & nghệ thuật (LTV Orpheus, Lumination) 
+            và thiện nguyện vì cộng đồng (Sẻ Chia Yêu Thương).
+          </p>
+          <p>
+            Mỗi câu lạc bộ là một môi trường thu nhỏ giúp học sinh thực hành kỹ năng làm việc nhóm, tổ chức sự kiện và xây dựng trách nhiệm xã hội.
+          </p>
+        </div>
+
+        <!-- Club Pillars Preview Grid (Tinted Surfaces with Staggered Motion) -->
+        <div class="student-life-page__club-pillars-grid">
+          <div class="student-life-page__club-pillar-card student-life-page__club-pillar-card--azure motion-stagger-1">
+            <div class="student-life-page__club-pillar-header">
+              <span class="badge-youth badge-youth--azure">Học Thuật & STEM</span>
+            </div>
+            <h3 class="student-life-page__club-pillar-title">Ngoại Ngữ & Nghiên Cứu</h3>
+            <p class="student-life-page__club-pillar-desc">Môi trường rèn luyện giao tiếp quốc tế, học thuật chuyên sâu và các dự án khoa học kỹ thuật trẻ.</p>
+            <div class="student-life-page__club-pillar-tags">Tiêu biểu: ICIS, LTV English</div>
+          </div>
+
+          <div class="student-life-page__club-pillar-card student-life-page__club-pillar-card--amber motion-stagger-2">
+            <div class="student-life-page__club-pillar-header">
+              <span class="badge-youth badge-youth--amber">Tư Duy & Kỹ Năng</span>
+            </div>
+            <h3 class="student-life-page__club-pillar-title">Tranh Biện & Lãnh Đạo</h3>
+            <p class="student-life-page__club-pillar-desc">Không gian rèn luyện tư duy phản biện sắc bén, hùng biện tiếng Anh và kỹ năng điều hành tổ chức.</p>
+            <div class="student-life-page__club-pillar-tags">Tiêu biểu: ISDC (CLB Tranh Biện)</div>
+          </div>
+
+          <div class="student-life-page__club-pillar-card student-life-page__club-pillar-card--crimson motion-stagger-3">
+            <div class="student-life-page__club-pillar-header">
+              <span class="badge-youth badge-youth--crimson">Nghệ Thuật & Sáng Tạo</span>
+            </div>
+            <h3 class="student-life-page__club-pillar-title">Âm Nhạc & Truyền Thông</h3>
+            <p class="student-life-page__club-pillar-desc">Nơi thăng hoa cảm xúc nghệ thuật, ban nhạc học sinh, nhiếp ảnh và các chiến dịch truyền thông học đường.</p>
+            <div class="student-life-page__club-pillar-tags">Tiêu biểu: LTV Orpheus, Lumination</div>
+          </div>
+
+          <div class="student-life-page__club-pillar-card student-life-page__club-pillar-card--emerald motion-stagger-4">
+            <div class="student-life-page__club-pillar-header">
+              <span class="badge-youth badge-youth--emerald">Cộng Đồng & Thể Chất</span>
+            </div>
+            <h3 class="student-life-page__club-pillar-title">Thiện Nguyện & Thể Thao</h3>
+            <p class="student-life-page__club-pillar-desc">Lan tỏa giá trị nhân ái qua các chuyến đi thiện nguyện vùng sâu và giải đấu thể thao gắn kết.</p>
+            <div class="student-life-page__club-pillar-tags">Tiêu biểu: Sẻ Chia Yêu Thương, CLB Bóng Đá</div>
+          </div>
+        </div>
+
+        <div class="callout-box motion-stagger-5">
+          <h3 class="callout-box__title">Khám phá chuyên sâu danh mục Câu lạc bộ</h3>
+          <p class="callout-box__content">
+            Để tìm hiểu chi tiết về mục tiêu hoạt động, cơ cấu ban chủ nhiệm và cách thức đăng ký tham gia vào từng câu lạc bộ, 
+            xin mời quý phụ huynh và học sinh đón đọc trang chuyên mục <strong>Hoạt Động & Câu Lạc Bộ Học Sinh</strong>.
+          </p>
+          <div style="margin-top: var(--spacing-sm);">
+            <a href="activities.html" class="pathway-card__link-text" style="font-weight: var(--font-weight-bold);">
+              Xem chi tiết 14+ Câu lạc bộ học sinh &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Pathway CTA: Next Steps -->
+  <section class="page-pathway" aria-label="Khám phá tiếp theo">
+    <div class="page-container">
+      <div class="page-pathway__header">
+        <span class="page-pathway__eyebrow">Trải nghiệm phong trào</span>
+        <h2 class="page-pathway__title motion-stagger-title">Khám Phá Các Hoạt Động & Cơ Sở Vật Chất</h2>
+      </div>
+      <div class="page-pathway__grid">
+        <a href="activities.html" class="pathway-card motion-stagger-1">
+          <span class="pathway-card__tag">Hệ sinh thái CLB</span>
+          <h3 class="pathway-card__title">Câu Lạc Bộ Học Sinh</h3>
+          <p class="pathway-card__desc">Khám phá chi tiết các câu lạc bộ học thuật, ngoại ngữ, tranh biện, nghệ thuật và phong trào thiện nguyện.</p>
+          <span class="pathway-card__link-text">Xem các CLB &rarr;</span>
+        </a>
+        <a href="facilities.html" class="pathway-card motion-stagger-2">
+          <span class="pathway-card__tag">Khuôn viên 2,7 ha</span>
+          <h3 class="pathway-card__title">Cơ Sở Vật Chất</h3>
+          <p class="pathway-card__desc">Khám phá không gian học tập hiện đại, thư viện, phòng lab và sân vận động thể thao của trường.</p>
+          <span class="pathway-card__link-text">Xem cơ sở vật chất &rarr;</span>
+        </a>
+        <a href="news.html" class="pathway-card motion-stagger-3">
+          <span class="pathway-card__tag">Dòng sự kiện</span>
+          <h3 class="pathway-card__title">Tin Tức & Thông Báo</h3>
+          <p class="pathway-card__desc">Cập nhật những hoạt động mới nhất, kỷ niệm 30 năm và các thông báo giáo dục quan trọng.</p>
+          <span class="pathway-card__link-text">Xem tin tức &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">Trường THPT Chuyên Lương Thế Vinh</h3>
+          <p class="footer-desc">
+            Cơ sở giáo dục trung học phổ thông chuyên duy nhất của tỉnh Đồng Nai. Nơi ươm mầm tài năng, nuôi dưỡng trí tuệ và khơi nguồn sáng tạo từ năm 1994.
+          </p>
+          <p class="footer-meta">
+            <strong>Địa chỉ:</strong> Số 2, đường Lê Quý Đôn, phường Tam Hiệp, thành phố Đồng Nai
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Khám phá Nhanh</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Giới thiệu & Lịch sử</a></li>
+            <li><a href="achievements.html">Bảng vàng Thành tích</a></li>
+            <li><a href="academics.html">Chương trình Đào tạo</a></li>
+            <li><a href="facilities.html">Cơ sở Vật chất</a></li>
+            <li><a href="admissions.html">Chỉ dẫn Tuyển sinh</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Kết nối & Hoạt động</h3>
+          <ul class="footer-links">
+            <li><a href="news.html">Tin tức & Sự kiện</a></li>
+            <li><a href="student-life.html">Đời sống Học đường</a></li>
+            <li><a href="activities.html">Câu lạc bộ & Phong trào</a></li>
+            <li><a href="contact.html">Liên hệ & Chỉ dẫn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Trường THPT Chuyên Lương Thế Vinh - Đồng Nai. Tất cả quyền được bảo lưu.</p>
+        <p class="footer-source-note">Website biên tập từ tư liệu lịch sử chính thức của nhà trường.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
